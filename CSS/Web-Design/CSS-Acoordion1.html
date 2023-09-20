@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accordion</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                margin: 15px;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+            input[type="radio"] {
+                display: none; /* hide the radio button because it does not look beautiful */
+            }
+            .label {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid black;
+                color: white;
+                background: #0076ff;
+                z-index: 2; /* put it above the accordion content */
+            }
+            .accordion:last-child > .label, .accordion:last-child > .accordion-content1 {
+                border: none;
+            }
+            .accordion-content1 {
+                border-bottom: 1px solid black;
+                padding: 0;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                z-index: -1;
+                transition: 0.3s linear;
+            }
+            /* select the accordion content when the label is clicked on or the input is checked */
+            input:checked ~ .accordion-content1 {
+                padding: 15px;
+                opacity: 1;
+                max-height: 500px;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="accordion">
+                <input type="radio" name="accordion" id="accordion1" checked>
+                <label for="accordion1" class="label"> >> Acordion #1 </label>
+                <div class="accordion-content1">
+                    Accordion no #1 content goes here. Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="accordion" id="accordion2">
+                <label for="accordion2" class="label"> >> Acordion #2 </label>
+                <div class="accordion-content1">
+                    Accordion no #2 content goes here. Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="accordion" id="accordion3">
+                <label for="accordion3" class="label"> >> Acordion #3 </label>
+                <div class="accordion-content1">
+                    Accordion no #3 content goes here. Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+            <div class="accordion">
+                <input type="radio" name="accordion" id="accordion4">
+                <label for="accordion4" class="label"> >> Acordion #4 </label>
+                <div class="accordion-content1">
+                    Accordion no #4 content goes here. Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

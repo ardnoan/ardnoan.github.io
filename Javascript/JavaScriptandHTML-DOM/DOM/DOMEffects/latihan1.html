@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" contetn="width=device-width, initial-scale=1.0">
+        <title> DOM Effects </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript DOM Effects </h1>
+            <h2> Fadding Effects </h2>
+
+            <h2> Fade Out </h2>
+            <div id="kotak1"></div>
+            <div><button onclick="fadeOut()"> Fade Out </button></div>
+            <script>
+                fadeOut = () => {
+                    var elem = document.getElementById("kotak1");
+
+                    elem.style.opacity = 0;
+                    setTimeout(function() {
+                        elem.style.display = "none";
+                    }, 1000);
+                }
+            </script>
+
+            <h2> Fade In </h2>
+            <div id="kotak1_1"></div>
+            <p> Click <b>Keluar</b> first then <b>Muncul</b> to see how it works. </p>
+                <button onclick="keluar()"> Keluar </button>
+                <button onclick="muncul()"> Muncul </button>
+            <script>
+                keluar = () => {
+                    var elem = document.getElementById("kotak1_1");
+
+                    elem.style.opacity = 0;
+                    setTimeout(function() {
+                        elem.style.display = "none";
+                    }, 1000);
+                }
+                muncul = () => {
+                    var elem = document.getElementById("kotak1_1");
+
+                    elem.style.display = "block";
+
+                    // wait a little bit before setting opacity to 1
+                    setTimeout(function() {
+                        elem.style.opacity = 1;
+                    }, 10);
+                }
+            </script>
+
+            <h2> Sliding Effect </h2>
+            <ul id="kotak2">
+                <li> Mercury </li>
+                <li> Venus </li>
+                <li> Earth </li>
+                <li> Mars </li>
+            </ul>
+            <div>
+                <button onclick="slideUp()"> Slide Up </button>
+                <button onclick="slideDown()"> Slide Down </button>
+            </div>
+            <p> Click <b>Slide Up</b> first then <b>Slide Down</b> to see how it works. </p>
+            <script>
+                slideUp = () => {
+                    var elem = document.getElementById("kotak2");
+
+                    elem.style.maxHeight = "0px";
+                }
+                slideDown = () => {
+                    var elem = document.getElementById("kotak2");
+                    
+                    elem.style.maxHeight = "100px";
+                }
+            </script>
+        </div>
+    </body>
+</html>

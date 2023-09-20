@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            table {
+                border-collapse: collapse;
+                font-family: sans-serif;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 3px;
+            }
+            thead th, tbody td {
+                text-align: center;
+            }
+            tfoot td {
+                text-align: right;
+            }
+            .table {
+                table-layout: fixed;
+                width: 100%;
+                border-collapse: collapse;
+                font-family: sans-serif;
+            }
+            .table, .th, .td {
+                border: 1px solid black;
+            }
+            .th, .td {
+                padding: 5px;
+                text-align: center;
+            }
+            .thead .th:nth-child(1) {
+                width: 30%;
+            }
+            .thead .th:nth-child(2) {
+                width: 30%;
+            }
+            .thead .th:nth-child(3) {
+                width: 40%;
+            }
+
+            .table-2 {
+                border-collapse: collapse;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .th-2 {
+                background: red;
+            }
+            .table-2, .th2, .td-2 {
+                border: 1px solid black;
+                text-align: center;
+            }
+            .th-2, .td-2 {
+                padding: 5px;
+            }
+            .tr-2:nth-child(odd) {
+                background: #173459;
+            }
+            .tr-2:nth-child(even) {
+                background: #903C56;
+            }
+            .thead-none {
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="../index.html#css">Dasar</a></li>
+                <li><a href="#">Table</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ardi</td>
+                        <td>Nurohman</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Zulfikar</td>
+                        <td>Margam</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Tyas</td>
+                        <td>Abqory</td>
+                        <td>Male</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Amazing and Good People</td>
+                    </tr>
+                </tfoot>
+            </table><br>
+            <table class="table">
+                <thead class="thead">
+                    <tr class="tr">
+                        <td class="td">Heading</td>
+                        <td class="td">Heading</td>
+                        <td class="td">Heading</td>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr class="tr">
+                        <td class="td">Lorem ipsum dolor sit amet</td>
+                        <td class="td">Lorem ipsum dolor sit amet</td>
+                        <td class="td">Lorem ipsum dolor sit amet</td>
+                    </tr>
+                </tbody>
+            </table><br><br>
+            <table class="table-2">
+                <thead class="thead-none">
+                    <tr class="tr-2" style="background: red">
+                        <td class="td-2">Judul Anime</td>
+                        <td class="td-2">Genre</td>
+                        <td class="td-2">Sinopis</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tr-2">
+                        <td class="td-2">Ani ni tsukeru</td>
+                        <td class="td-2">Comedy</td>
+                        <td class="td-2">Menceritakan Adik kakak beradik</td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td-2">Grand Blue</td>
+                        <td class="td-2">Comedy</td>
+                        <td class="td-2">Menceritakan mahasiswa yang tentang menyelam ke laut</td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td-2">Rikekoi</td>
+                        <td class="td-2">Romance</td>
+                        <td class="td-2">Menceritakan 2 orang ilmuwan yang sedang memecahkan apa itu cinta</td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td-2">Mikakunin</td>
+                        <td class="td-2">Romance</td>
+                        <td class="td-2">Meceritakan sepasang sma yang dijodohkan oleh kakeknya</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

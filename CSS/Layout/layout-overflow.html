@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overflow</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .x-visible {
+                overflow-x: visible;
+                width: 200px;
+                height: 100px;
+                border: 2px solid black;
+            }
+            .x-hidden {
+                overflow-x: hidden;
+                width: 200px;
+                height: 100px;
+                border: 2px solid red;
+            }
+            .x-scroll {
+                overflow-x: scroll;
+                width: 200px;
+                height: 100px;
+                border: 2px solid blue;
+            }
+            .x-auto {
+                overflow-x: auto;
+                width: 200px;
+                height: 100px;
+                border: 2px solid green;
+            }
+            .y-visible {
+                overflow-y: visible;
+                width: 200px;
+                height: 100px;
+                border: 2px solid gray;
+            }
+            .y-hidden {
+                overflow-y: hidden;
+                width: 200px;
+                height: 100px;
+                border: 2px solid navy;
+            }
+            .y-scroll {
+                overflow-y: scroll;
+                width: 200px;
+                height: 100px;
+                border: 2px solid yellow;
+            }
+            .y-auto {
+                overflow-y: auto;
+                width: 200px;
+                height: 100px;
+                border: 2px solid violet;
+            }
+            div.container-v {
+                overflow: visible;
+                width: 200px;
+                height: 200px;
+                border: 2px solid red;
+            }
+            div.container-h {
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+                border: 2px solid red;
+            }
+            div.container-s {
+                overflow: scroll;
+                width: 200px;
+                height: 200px;
+                border: 2px solid red;
+            }
+            div.container-a {
+                overflow: auto;
+                width: 200px;
+                height: 200px;
+                border: 2px solid red;
+            }
+            div.content {
+                width: 400px;
+                height: 400px;
+                background: navy;
+                color: white;
+            }
+            div.container2 {
+                overflow: scroll hidden;
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+            }
+            div.content2 {
+                width: 400px; 
+                height: 400px;
+                background: gold;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="x-visible">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="x-hidden">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="x-scroll">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="x-auto">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="y-visible">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="y-hidden">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="y-scroll">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <div class="y-auto">
+                <p>
+                    Hello world!<br><br>
+                    lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala
+                    alalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalallalalalalalalalalalalallalalaallalalaalaalllalalalala
+                </p>
+            </div><br>
+            <br>
+    
+            <div class="container-v">
+                <div class="content">Hello World</div>
+            </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="container-h">
+                <div class="content">Hello World</div>
+            </div><br>
+            <div class="container-s">
+                <div class="content">Hello World</div>
+            </div><br>
+            <div class="container-a">
+                <div class="content">Hello World</div>
+            </div><br><br>
+    
+            <div class="container2">
+                <div class="content2">Hello world</div>
+            </div>
+            <p>
+                The <b>overflow-x</b> property is set to <b>scroll</b> while the <b>overflow-y</b>
+                property is set to hidden.
+            </p>
+        </div>
+    </body>
+</html>

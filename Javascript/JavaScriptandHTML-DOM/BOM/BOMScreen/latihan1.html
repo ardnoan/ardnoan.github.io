@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8 ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BOM Screen </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript BOM Screen </h1>
+            <ul>
+                <li> width </li>
+                <li> availWidth </li>
+                <li> height </li>
+                <li> availHeight </li>
+                <li> orientation </li>
+                <li> pixelDepth </li>
+                <li> colorDepth </li>
+            </ul>
+
+            <h2> The Width Property </h2>
+            <p> Width of the Screen: <span id="cekWidth"></span></p>
+            <script>
+                document.getElementById("cekWidth").innerHTML = screen.width;
+            </script>
+
+            <h2> The availWidth Property </h2> 
+            <p> available HOrizontal space of the screen: <span id="availWidth"></span></p>
+            <script>
+                document.getElementById("availWidth").innerHTML = screen.availWidth;
+            </script>
+
+            <h2> The height Property </h2>
+            <p> Height of the Screen: <span id="cekHeight"></span></p>
+            <script>
+                document.getElementById("cekHeight").innerHTML = screen.height;
+            </script>
+
+            <h2> The availHeight Property </h2>
+            <p> available Vertical space of the screen: <span id="availHeight"></span></p>
+            <script>
+                document.getElementById("availHeight").innerHTML = screen.availHeight;
+            </script>
+
+            <h2> The orientation Property </h2> 
+            <p> Orientation of the screen: <span id="orientation"></span></p>
+            <script>
+                document.getElementById("orientation").innerHTML = screen.orientation.type;
+            </script>
+
+            <h2> The pixelDepth Property </h2>
+            <p>Bit or pixel depth of the screen: <span id="pixel"></span></p> 
+            <script>
+                document.getElementById("pixel").innerHTML = screen.pixelDepth;
+            </script>
+
+            <h2> The colorDepth Property </h2>
+            <p> Color Depth of the screen: <span id="depth"></span></p>
+            <script>
+                document.getElementById("depth").innerHTML = screen.colorDepth;
+            </script>
+        </div>
+    </body>
+</html>

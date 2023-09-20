@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigator Bar</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 5px;
+            }
+            hr {
+                margin-top: 200px;
+            }
+            .nav-bar a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar1 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar1 > ul {
+                list-style-type: none;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .nav-bar2 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar2 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar2 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar2 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+
+            .nav-bar3 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar3 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar3 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar3 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar3 .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+
+            .nav-bar4 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar4 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar4 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar4 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar4 .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar4 li {
+                border-bottom: 1px solid #333;
+            }
+            .nav-bar4 li:last-child {
+                border: none;
+            }
+
+            .nav-bar5 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar5 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar5 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar5 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar5 .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar5 > ul > li {
+                float: left;
+                width: 25%; /* 100% / (numer of li elements ) = 25 */
+                text-align: center;
+            }
+
+            .nav-bar7 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar7 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar7 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar7 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar7 .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar7 li {
+                float: left;
+                width: 25%; /* 100% / (numer of li elements ) = 25 */
+                text-align: center;
+                border-right: 1px solid #333;
+            }
+            .nav-bar7 li:last-child {
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="nav-bar1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="nav-bar2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="nav-bar3">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="nav-bar4">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="nav-bar5">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+
+        <div class="nav-bar7">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <hr>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="UTF-8">
+        <meta name="viewport" content="width=deivce-width, initial-scale=1.0">
+        <title>Layout max width and max height</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            #width {
+                width: 500px;
+                background: gold;
+            }
+            #width2 {
+                width: 600px;
+                background: gold;
+            }
+            #max-width {
+                max-width: 600px;
+                background: gold;
+            }
+            #max-width2 {
+                margin: 0 auto;
+                width: 270px;
+                height: 300px;
+                background: pink;
+            }
+            #max-width3 {
+                margin: 0 auto;
+                width: 600px;
+                height: 300px;
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div id="width">Hello World</div>
+            <p>Rotate your device to landcape so we can have a bifer browser window</p>
+            <div id="width2">Hello world</div>
+            <p>
+                Now the browser window is scrollable because the width of the <b>Div</b> element is bigger than the browser window
+            </p>
+            <div id="max-width">Hello world </div>
+            <p>Try rotating your device to landcape then vack to portrait.</p>
+            <p>
+                Now the browser will no longer render the <b>div</b> element with <b>600px</b> on smaller (window).
+                But will still render the <b>div</b> element width <code>600px</code> width if there is space available.
+            </p>
+            <div id="max-width2">Hello world</div>
+            <div id="max-width3">Hello world</div>
+        </div>
+    </body>
+</html>

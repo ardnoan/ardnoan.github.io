@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width=1.0">
+        <title>Footer</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+            main {
+                flex: 1.0 auto;
+            }
+            footer {
+                color: #fff;
+                background: #333;
+                position: relative; /* required to position the copyright at the bottom */
+                font-size: 80%;
+            }
+            .footer-copyright {
+                width: 100%;
+                height: 40px;
+                background: #111;
+                /* positions the copyright at the bottom of the footer */
+                padding: 10px;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+            .footer-body {
+                margin-bottom: 40px;
+                padding: 30px;
+            }
+
+            /* the clearfix hack */
+            .footer-body::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            
+            /* float the divs */
+            .footer-body > div {
+                float: left;
+                padding: 20px;
+            }
+
+            /* sets the width of the first column */
+            .footer-body > div:first-child {
+                font-size: 150%;
+                width: 35%;
+                text-align: center;
+            }
+
+            /* sets the width of the second column */
+            
+            .footer-body > div:last-child {
+                width: 65%;
+            }
+            .footer-body ul {
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+            .footer-body li > a {
+                color: white;
+                text-decoration: none;
+                margin-bottom: 7px;
+            }
+            .footer-body li > a:hover {
+                background: #f8f9f9;
+                color: #173459;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <main></main>
+        <footer>
+            <div class="footer-body">
+                <div>Your Brand Here</div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Duis interdun dignissimnisl posuere efficitur.</p>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright"> &copy; Copyright goes here.</div>
+        </footer>
+    </body>
+</html>

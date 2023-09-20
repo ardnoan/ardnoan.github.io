@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borderss</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            .container div {
+                width: 250px;
+                height: 250px;
+                background: white;
+                text-align: center;
+            }
+            p.ardi {
+                /* Maksud dari titik adalah fungsi yang tidak bisa dipanggil
+                oleh element lain selain element dari belakang titiknya tersebut.*/
+                border-style: dotted;
+                color: aliceblue;
+                background-color: black;
+            }
+            .none {
+                border: 5px none;
+            }
+            .hidden {
+                border: 5px hidden;
+            }
+            .dotted {
+                border: 5px dotted;
+                color: green;
+            }
+            .dashed {
+                border: 5px dashed;
+                color: blue;
+            }
+            .solid {
+                border: 5px solid;
+                color: tan;
+            }
+            .solid-thin {
+                border: 5px solid;
+                color: green;
+                border-width: thin;
+            }
+            .solid-medium {
+                border: 5px solid;
+                color: green;
+                border-width: medium;
+            }
+            .solid-thick {
+                border: 5px solid;
+                color: green;
+                border-width: thick;
+            }
+            .grove {
+                border: 5px groove;
+                color: coral;
+            }
+            .double {
+                border: 5px double;
+                color: brown;
+            }
+            .ridge {
+                border: 5px ridge;
+                color: teal;
+            }
+            .inset {
+                border: 5px inset;
+                color: red;
+            }
+            .outset {
+                border: 5px outset;
+                color: blueviolet;
+            }
+            p.solid {
+                border-style: solid;
+                color: black;
+            }
+            p.none {
+                border-style: none;
+            }
+            p.hidden {
+                border-style: hidden;
+            }
+            p.dotted {
+                border-style: dotted;
+                color: black;
+            }
+            p.dashed {
+                border-style: dashed;
+                color: black;
+            }
+            p.grove {
+                border-style: groove;
+                color: black;
+            }
+            p.double {
+                border-style: double;
+                color: black;
+            }
+            p.ridge {
+                border-style: ridge;
+                color: black;
+            }
+            p.inset {
+                border-style: inset;
+                color: black;
+            }
+            p.outset {
+                border-style: outset;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Borders</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="none"> border : none</div><br>
+            <div class="hidden">border : hidden</div><br>
+            <div class="dotted">border : dotted</div><br>
+            <div class="dashed">border : dashed</div><br>
+            <div class="solid">border : solid</div><br>
+            <div class="double">border : double</div><br>
+            <div class="grove">border : grove</div><br>
+            <div class="ridge">border : ridge</div><br>
+            <div class="inset">border : inset</div><br>
+            <div class="outset">border : outset</div><br>
+            
+            <p class="none">border ini adalah none</p>
+            <p class="hidden">border ini adalah hidden</p>
+            <p class="dotted">border ini adalah dotted</p>
+            <p class="dashed">border ini adalah dashed</p>
+            <p class="double">border ini adalah double</p>
+            <p class="grove">border ini adalah grove</p>
+            <p class="ridge">border ini adalah ridge</p>
+            <p class="inset">border ini adalah inset</p>
+            <p class="outset">border ini adalah outset</p>
+            <p class="solid">border ini adalah solid</p>
+
+            <div class="solid-thin">Ini adalah border kecil</div><br>
+            <div class="solid-medium">Ini adalah border medium</div><br>
+            <div class="solid-thick">Ini adalah border besar</div><br>
+
+            <p class="ardi">testes</p>
+            <h1 class="ardi">utut</h1>
+
+            <div class="solid" style="border-width: 100px">Hello world</div>
+        </div>
+    </body>
+</html>

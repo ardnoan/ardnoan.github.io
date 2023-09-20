@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan Javascript Exceptio Handling </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > thead, tbody {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Exception Handling </h1> 
+            <h2> The try...catch Statement </h2>
+            <p> In this example, the following <b>exception</b> is thrown because <b>myFunction</b> is not defined. </p>
+            <p id="demo"></p>
+            <script>
+                try {
+                    myFunction();
+                }
+                catch(err) {
+                    document.getElementById("demo").innerHTML = err;
+                }
+            </script>
+
+            <h2> The throw Statement </h2>
+            <p id="demo_1"></p>
+            <script>
+                try {
+                    throw "An error occurred, please fix it! / Sedang diperbaiki!";
+                }
+                catch(err) {
+                    document.getElementById("demo_1").innerHTML = err;
+                }
+                throw "Error occurred!"; //a string
+                throw 21; //a numbers
+                throw false; // a boolean
+                throw {errorText: "Error occurred!"}; //an object
+            </script>
+
+            <h2> The finally Statement </h2> 
+            <p id="demo_2"></p>
+            <p> Notice that <b>Statement</b> inisde the <b>finally</b> statement was executed even though an <b>exception</b> was <b>thrown</b></p>
+            <p> Try to remove the <b>thrown</b> statement, and see what happens </p>
+            <script>
+                try {
+                    throw "An error occurred, please fix it!";
+                }
+                catch(err) {
+                    document.getElementById("demo_2").innerHTML = err;
+                }
+                finally {
+                    alert("Assalamualaikum Brother tachi / finally statement ");
+                }
+            </script>
+
+            <h2> Illustrative Example </h2> 
+            <p> Beritahu kami umur kamu <b>usia 18 tahun</b></p>
+            <form>
+                <label> Umur: <input type="number" id="age"/></label>
+                <button type="button" id="submit"> Kirim </button>
+            </form>
+            <p id="demo_4"></p>
+            <script>
+                var submit = document.getElementById("submit");
+
+                submit.onclick = function() {
+                    var age = parseInt(document.getElementById("age").value);
+                    try {
+                        if(age < 18) {
+                            throw "Umur belum terpenuhi! Silahkan datang kembali";
+                        } else {
+                            document.getElementById("demo_4").innerHTML = "Umur terpenuhi! Silahkan melanjutkan!";
+                        }
+                    }
+                    catch(err) {
+                        document.getElementById("demo_4").innerHTML = err;
+                    }
+                }
+            </script>
+
+            <h2> Error Object </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Error Name </th>
+                        <th> Error Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> RangeError </td>
+                        <td> Error that occurs when a numeric variable or parameter is outside of its valid tange </td>
+                    </tr>
+                    <tr> 
+                        <td> ReferenceError </td>
+                        <td> Error that occurs when de-referencing an invalid reference </td>
+                    </tr>
+                    <tr>
+                        <td> SyntaxError </td>
+                        <td> Error that occurs while parsing code in eval() method. </td> 
+                    </tr>
+                    <tr>
+                        <td> TypeError </td> 
+                        <td> Error that occurs when a variable or parameter is not of a valid type. </td> 
+                    </tr>
+                    <tr>
+                        <td> URIError </td>
+                        <td> Error that occuts when encodeURI() or decodeURI() are passed invalid parameter </td>
+                    </tr>
+                </tbody>
+            </table>
+                <br><br><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Property </th>
+                        <th> Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> name </td>
+                        <td> Returns the error name. </td>
+                    </tr>
+                    <tr>
+                        <td> message </td> 
+                        <td> Returns the error message. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2> RangeError </h2>
+            <p> Name: <span id="name"></span></p>
+            <p> Message: <span id="message"></span></p>
+            <script>
+                var number = 21.555;
+                try {
+                    number.toExponential(-2);
+                }
+                catch(err) {
+                    document.getElementById("name").innerHTML = err.name;
+                    document.getElementById("message").innerHTML = err.message;
+                }
+            </script>
+
+            <h2> ReferenceError </h2> 
+            <p> Name: <span id="name1"></span></p>
+            <p> Message: <span id="message1"></span></p>
+            <script>
+                var num1 = 21.555;
+                try {
+                    var total = num1 + num2;
+                }
+                catch(err) {
+                    document.getElementById("name1").innerHTML = err.name;
+                    document.getElementById("message1").innerHTML = err.message;
+                }
+            </script>
+
+            <h2> SyntaxError </h2>
+            <p> Name: <span id="name2"></span></p>
+            <p> Message: <span id="message2"></span></p>
+            <script>
+                var text = "Hello world!";
+                try {
+                    var x = text.toFixed(2);
+                }
+                catch(err) {
+                    document.getElementById("name2").innerHTML = err.name;
+                    document.getElementById("message2").innerHTML = err.message;
+                }
+            </script>
+            
+            <h2> URIError </h2>
+            <p> Name: <span id="name3"></span></p>
+            <p> Message: <span id="message3"></span></p>
+            <script>
+                try {
+                    var x1 = decodeURI("%E0%A4%A");
+                }
+                catch(err) {
+                    document.getElementById("name3").innerHTML = err.name;
+                    document.getElementById("message3").innerHTML = err.message;
+                }
+            </script>
+        </div>
+    </body>
+</html>

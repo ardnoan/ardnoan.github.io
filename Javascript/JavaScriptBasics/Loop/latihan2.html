@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF_8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 2 loop </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript for...of Loop </h1>
+            <p id="demo"></p>
+            <script>
+                var cities = ["Mumbai", "Abuja", "Manila"];
+                for(value of cities) {
+                    document.getElementById("demo").innerHTML += value + "<br>";
+                }
+            </script>
+            <p id="demo_1"></p>
+            <script>
+                var text = "Ardi Nurohman";
+
+                for(letter of text) {
+                    document.getElementById("demo_1").innerHTML += letter + "<br>";
+                }
+            </script>
+        </div>
+    </body>
+</html>

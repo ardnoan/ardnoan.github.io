@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droptdown list HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Droptdown list HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Daftar tarik turun HTML</h1>
+        <p>Daftar dropdown HTMl adalah kontrol yang menyediakan menu pilihan. Ini adalah bentuk dari element inline.</p>
+        <p>Element &lt;select&gt; mendefinisikan daftar dropdown HTML. itu harus menyertakan beberapa element
+            &lt;option&gt; dengan attribut value untuk masing-masing.</p>
+        <h1>Attribut tarik turun HTML</h1>
+        <p>Multiple menentukan apakah beberapa pilihan dapat dipilih dari daftar dropdown, attribut ini tidak memerlukan
+            nilai, hanya perlu ada di tag awal.</p>
+        <p>Dengan javascript kita dapat dengan mudah mendapatkan nilai dari element &lt;select&gt;, untuk melihat
+            bagaimana melakukannya.</p>
+        <h1>Contoh</h1>
+        <div class="sampul">
+            <p>&lt;select id="percobaan"&gt;</p>
+            <p>&lt;option value="apel"&gt;apel&lt;/option&gt;</p>
+            <p>&lt;option value="jeruk"&gt;jeruk&lt;/option&gt;</p>
+            <p>&lt;option value="anggur"&gt;anggur&lt;/option&gt;</p>
+            <p>&lt;option value="pisang"&gt;pisang&lt;/option&gt;</p>
+            <p>&lt;option value="stroberi"&gt;stroberi&lt;/option&gt;</p>
+            <p>&lt;/select&gt;</p>
+            <p>&lt;button onclick="ambilNilai();"&gt;ambil nilai&lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function ambilNilai() {</p>
+            <p>var nilai = document.getElementById('percobaan').value;/p>
+                <p>alert(nilai);</p>
+                <p>}</p>
+                <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Multiple Options allowed contoh :</h1>
+        <div class="sampul">
+            <p>&lt;select id="percobaan" multiple&gt;</p>
+            <p>&lt;option value="apel"&gt;apel&lt;/option&gt;</p>
+            <p>&lt;option value="jeruk"&gt;jeruk&lt;/option&gt;</p>
+            <p>&lt;option value="anggur"&gt;anggur&lt;/option&gt;</p>
+            <p>&lt;option value="pisang"&gt;pisang&lt;/option&gt;</p>
+            <p>&lt;option value="stroberi"&gt;stroberi&lt;/option&gt;</p>
+            <p>&lt;/select&gt;</p>
+            <p>&lt;button onclick="ambilNilai();"&gt;ambil nilai&lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function ambilNilai() {</p>
+            <p>var pengaturan = document.getElementById('percobaan').options;</p>
+            <p>var pengaturan_nilai = document.getElementById('percobaan').options.length;</p>
+            <p>var nilai = [];</p>
+            <p>for(var i = 0; i < pengaturan_nilai; i++) {</p> <p>if(pengaturan[i].selected) {</p>
+            <p>nilai.push(pengaturan[i].value);</p>
+            <p>}</p>
+            <p>}</p>
+            <p>alert(JSON.stringify(nilai));</p>
+            <p>alert(nilai);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <select id="sampel" multiple>
+                <option value="apel">apel</option>
+                <option value="jeruk">jeruk</option>
+                <option value="anggur">anggur</option>
+                <option value="pisang">pisang</option>
+                <option value="stroberi">stroberi</option>
+            </select>
+            <button onclick="getValues();">ambil nilai</button>
+            <script type="text/javascript">
+                function getValues() {
+                    var pengaturan = document.getElementById('sampel').options;
+                    var pengaturanNilai = document.getElementById('sampel').options.length;
+                    var nilai = [];
+
+                    for (var i = 0; i < pengaturanNilai; i++) {
+                        if (pengaturan[i].selected) {
+                            nilai.push(pengaturan[i].value);
+                        }
+                    }
+                    alert(JSON.stringify(nilai));
+                }
+            </script>
+        </div>
+
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="#" class="pag active">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+</body>
+
+</html>

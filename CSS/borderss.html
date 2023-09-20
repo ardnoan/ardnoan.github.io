@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" contet="width=device-width, initial-scale=1.0">
+        <title>Borderss</title>
+        <style type="text/css">
+            div {
+                border-top-style: solid;
+                border-right-style: double;
+                border-bottom-style: dashed;
+                border-left-style: groove;
+                border-width: 5px;
+                border-width: blue;
+                border-color: gold;
+                width: 250px;
+                height: 250px;
+                background: lightgrey;
+            }
+            p {
+                border-top-width: 5px;
+                border-right-width: 10px;
+                border-bottom-width: 15px;
+                border-left-width: 20px;
+                border-color: red;
+                border-style: solid;
+                height: 120px;
+                width: 120px;
+                background: lightgrey;
+            }
+            h5 {
+                border-top-color: red;
+                border-right-color: yellow;
+                border-bottom-color: blue;
+                border-left-color: green;
+                border-style: solid;
+                border-width: 5px;
+                width: 500px;
+                height: 500px;
+                background: lightgrey;
+            }
+            h4 {
+                border: 1px solid black;
+                width: 250px;
+                height: 250px;
+                background: lightgrey;
+            }
+            .box {
+                width: 250px;
+                height: 250px;
+                background: lightgrey;
+                margin: 100px;
+            }
+            #style {
+                border-style: dashed;
+                border-width: 10px;
+                border-color: red;
+            }
+            #width {
+                border-style: solid;
+                border-width: 10px;
+                border-color: blue;
+            }
+            #color {
+                border-style: double;
+                border-width: 10px;
+                border-color: green;
+            }
+            h2#style {
+                border-style: groove dotted dashed;
+                border-width: 10px;
+                border-color: red;
+            } 
+            h2#width {
+                border-style: solid;
+                border-width: 10px 15px 10px;
+                border-color: green;
+            }
+            h2#color {
+                border-style: solid;
+                border-width: 10px;
+                border-color: blue red green;
+            }
+            h1#style {
+                border-style: solid dashed double dashed;
+                border-width: 10px;
+                border-color: red;
+            }
+            h1#width {
+                border-style: solid;
+                border-width: 5px 10px 15px 20px;
+                border-color: blue;
+            }
+            h1#color {
+                border-style: double;
+                border-width: 10px;
+                border-color: blue red green yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <p></p>
+        <h5></h5>
+        <h4></h4>
+        <h3 class="box" id="style">Border-style with two values</h3>
+        <h3 class="box" id="width">Border-width with two values</h3>
+        <h3 class="box" id="color">Border-color with two values</h3>
+
+        <h2 class="box" id="style"></h2>
+        <h2 class="box" id="width"></h2>
+        <h2 class="box" id="color"></h2>
+
+        <h1 class="box" id="style"></h1>
+        <h1 class="box" id="width"></h1>
+        <h1 class="box" id="color"></h1>
+    </body>
+</html>

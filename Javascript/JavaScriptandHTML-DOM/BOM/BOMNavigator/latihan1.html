@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BOM Navigator </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript BOM Navigator </h1>
+            <ul>
+                <li> platform </li>
+                <li> language </li>
+                <li> appName </li>
+                <li> appCodeName </li>
+                <li> appVersion </li>
+                <li> userAgent </li>
+                <li> onLine </li>
+            </ul>
+            <h2> The platform Property </h2>
+            <p id="a"></p>
+            <script>
+                document.getElementById("a").innerHTML = navigator.platform;
+            </script>
+            <h2> The language Propety </h2>
+            <p id="b"></p>
+            <script>
+                document.getElementById("b").innerHTML = navigator.language;
+            </script>
+            <h2> The appName Property </h2>
+            <p id="c"></p>
+            <script>
+                document.getElementById("c").innerHTML = navigator.appName;
+            </script>
+            <h2> The appCodeName Property </h2>
+            <p id="e"></p>
+            <script>
+                document.getElementById("e").innerHTML = navigator.appCodeName;
+            </script>
+            <h2> The appVersion Property </h2>
+            <p id="f"></p>
+            <script>
+                document.getElementById("f").innerHTML = navigator.appVersion;
+            </script>
+            <h2> The userAgent Propety </h2>
+            <p id="g"></p>
+            <script>
+                document.getElementById("g").innerHTML = navigator.userAgent;
+            </script>
+            <h2> The onLine Property </h2>
+            <p id="h"></p>
+            <script>
+                document.getElementById("h").innerHTML = navigator.onLine;
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigator Bar1</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar {
+                position: fixed;
+                top: 0px; /* sticks the side nav to the top */
+                left: 0px; /* sticks the side nav to the left side */
+                width: 100%;
+            }
+            .content {
+                margin-top: 50px;
+            }
+            .content > div {
+                padding: 15px;
+            }
+            .nav-bar a {
+                text-decoration: none;
+                color: black;
+                display: block;
+                height: 50px; /* sets fiexed height */
+                line-height: 50px; /* vertically center the text */
+            }
+            .nav-bar > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar > ul > li > a {
+                background: lightgrey;
+            }
+            .nav-bar > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+                
+            }
+            .nav-bar .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar li {
+                float: left;
+                width: 25%; /* 100% / 4 (number of li elements) = 25 */
+                text-align: center;
+                border-right: 1px solid #333; /* for the borders */
+            }
+            .nav-bar li:last-child {
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div style="height: 700px; background: lightgreen;">Lorem ipsum dolor sit amet.</div>
+            <div style="height: 700px; background: gold;">Lorem ipsum dolor sit amet.</div>
+            <div style="height: 700px; background: yellow;">Lorem ipsum dolor sit amet.</div>
+        </div>
+    </body>
+</html>

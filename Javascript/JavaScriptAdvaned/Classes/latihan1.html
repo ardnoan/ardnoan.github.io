@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width=1.0">
+        <title> Latihan 1 Classes </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid silver;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Classes </h1>
+            <h2> Declaring a class </h2>
+            <p id="demo"></p>
+            <script>
+                class Fruit {
+                    constructor(fruitName) {
+                        this.name = fruitName;
+                    }
+                }
+                var fruit = new Fruit("Cau atau pisang");
+
+                // accesing the object created 
+                document.getElementById("demo").innerHTML = fruit.name;
+            </script>
+
+            <p id="demo_1"></p>
+            <script>
+                class Buah {
+                    constructor(buahName, buahColor) {
+                        this.name = buahName;
+                        this.color = buahColor;
+                        this.taste = "manis";
+                    }
+                }
+                var buah = new Buah("Mangga", "kuning");
+
+                // accesing the object created 
+                document.getElementById("demo_1").innerHTML = "The " + buah.name + " is " + buah.color + " and " + buah.taste;
+            </script>
+
+            <h2> Methods in Classes </h2>
+            <p id="demo2"></p>
+            <script>
+                class Pisang {
+                    constructor(pisangName, pisangColor) {
+                        this.name = pisangName;
+                        this.color = pisangColor;
+                        this.taste = "amis";
+                    }
+                    showInfo() {
+                        document.getElementById("demo2").innerHTML = "Nama " + this.name + " Warna " + this.color + " dan " + this.taste;
+                    }
+                }
+                
+                var pisang = new Pisang("Pisang", "Oren");
+                pisang.showInfo();
+            </script>
+
+            <p id="demo2_1"></p>
+            <script>
+                class Banana {
+                    constructor(bananaName, bananaColor) {
+                        this.name = bananaName;
+                        this.color = bananaColor;
+                        this.taste = "Sweet";
+                    }
+                    showMessage(text) {
+                        document.getElementById("demo2_1").innerHTML = text;
+                    }
+                }
+
+                var banana = new Banana("Banana", "Yellow");
+                banana.showMessage("I Love banana is fruits!");
+            </script>
+
+            <h2> Static Methods </h2>
+            <p id="demo3"></p>
+            <script>
+                class bu {
+                    constructor(buNama, buWarna) {
+                        this.name = buNama;
+                        this.color = buWarna;
+                    }
+                    static sayHello(teks) {
+                        return teks;
+                    }
+                }
+                
+                document.getElementById("demo3").innerHTML = bu.sayHello("Halo buah-buahhan aku suka buah!");
+            </script>
+
+            <h2> Class Inheritance </h2>
+            <p id="demo4"></p>
+            <script>
+                class Animal {
+                    constructor(animalName) {
+                        this.name = animalName;
+                    }
+                    walk() {
+                        return this.name + " walks.";
+                    }
+                }
+
+                class Cat extends Animal {
+                    constructor(animalName) {
+                        super(animalName);
+                    }
+                    speak() {
+                        return this.name + " meows.";
+                    }
+                }
+                var cat = new Cat("nyaaa nyaaa");
+                document.getElementById("demo4").innerHTML = cat.walk() + " and " + cat.speak();
+            </script>
+        </div>
+    </body>
+</html>

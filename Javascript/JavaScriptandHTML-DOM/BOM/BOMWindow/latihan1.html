@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BOM Window </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> What is the BOM? </h1>
+            <ul>
+                <li> <b>BOM</b> stands for <b>Browser Object Mode</b>.</li>
+                <li> <b>BOM</b> deals with browser components. </li>
+            </ul>
+            <h2> The Window Object </h2>
+            <p id="say"></p>
+            <script>
+                var txt = "Hello World!";
+                sayHello = () => {
+                    // window.txt refers to the txt variable above
+                    document.write(window.txt);
+                }
+                // call sayHello() function using window object
+                window.sayHello();
+            </script>
+
+            <h2> Window Width and Height </h2>
+            <p id="cek"></p>
+            <script>
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+
+                document.getElementById("cek").innerHTML = "Width: " + width + "<br> Height: " + height;
+            </script>
+
+            <h2> Window Object Properties </h2>
+            <ul>
+                <li> document </li>
+                <li> screen </li>
+                <li> location </li>
+                <li> history </li>
+                <li> navigator </li>
+            </ul>
+        </div>
+    </body>
+</html>

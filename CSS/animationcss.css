@@ -1,0 +1,12 @@
+@keyframes buricak {
+    0% {
+        border: 3px solid blue;
+        box-shadow: 0 0 30px blue;
+        background-color: black;
+    }
+    100% {
+        background-color: pink;
+        border: 1px solid black;
+        box-shadow: 0 0 10px black;
+    }
+}

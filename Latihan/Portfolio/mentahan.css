@@ -1,0 +1,68 @@
+.aboutme {
+    /* position: absolute; */
+    /* overflow: hidden;
+    opacity: 0; */
+    display: grid;
+    /* position: absolute; */
+    /* justify-content: center;
+    align-items: center; */
+    /* place-items: center; */
+    justify-content: stretch;
+    /* background: black; */
+    height: 100vh;
+    color: white;
+    position: relative;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-areas: 
+        'image'
+        'teks';
+    }
+.aboutme .image {
+    margin: auto;
+}
+.aboutme img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* margin-top: -100px; */
+    /* grid-area: image; */
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 100%; */
+}
+.aboutme .image-text {
+    background: pink;
+    align-self: stretch;
+    /* grid-area: teks; */
+    /* margin-bottom: -100px; */
+    /* overflow: hidden; */
+    /* height: 200px; */
+}
+.image-text p,
+.image-text h2 {
+opacity: 0;
+}
+ /* About me */
+ .aboutme {
+    grid-template-columns: 50% 25%;
+    /* grid-template-rows: 50%; */
+    justify-content: center;
+    align-items: center;
+    place-items: center center;
+    /* background: black; */
+    /* margin-top: 100px; */
+    /* top: 200px; */
+    /* align-items: center; */
+    /* margin-top: 100px; */
+}
+.aboutme .image img {
+    margin: auto;
+    grid-area: none;
+}
+.aboutme .image-text {
+    color: white;
+    line-height: 23px;
+    word-spacing: 7px;
+}

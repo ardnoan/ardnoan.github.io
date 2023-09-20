@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Contional Statenment </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript if...else Statement </h1>
+            <h2> The if Statement </h2>
+            <button onclick="jika()"> Button </button>
+            <script>
+                function jika() {
+                    var age = 21;
+                    if(age > 18) {
+                        alert("User is old enough to enter");
+                    }
+                }
+            </script>
+
+            <h2> The if...else Statement </h2>
+            <button onclick="jika_1()"> Button </button>
+            <script>
+                function jika_1() {
+                    var age = 15;
+                    if(age > 18) {
+                        alert("User is old enough to enter");
+                    } else {
+                        alert("User is NOT old enough to enter");
+                    }
+                }
+            </script>
+            <br><br><br><br><br><br><br><br>
+
+            <form>
+                <label> Berapa umurmu? <input type="number" name="age" id="age"></label>
+                <button type="button" id="submit"> Submit </button>
+            </form>
+            <script>
+                document.getElementById("submit").addEventListener("click", function() {
+                    var age = document.getElementById("age").value;
+                    if(age > 18) {
+                        alert("Selamat Datang");
+                    } else {
+                        alert("Kamu belum cukup umur");
+                    }
+                });
+            </script>
+
+            <h2> The else if Statement </h2>
+            <p id="demo"></p>
+            <p> Try to change the value <b>x</b> to a value that's <b>less than 10</b>, more than 10 <b>equal to 10</b> to see how it works.</p>
+            <script>
+                var x = 15;
+                if(x < 10) {
+                    document.getElementById("demo").innerHTML = "x kurang dari 10";
+                } else if(x > 10) {
+                    document.getElementById("demo").innerHTML = "x lebih dari 10";
+                } else {
+                    document.getElementById("demo").innerHTML = "x adalah 10 karena tidak kurang dari atau lebih dari 10";
+                }
+            </script>
+            <hr>
+            <p id="demo_1"></p>
+            <script>
+                function greetUser() {
+                    var time = new Date().getHours();
+                    if(time < 11) {
+                        return "Ohayoo Gozaimasu gozaru";
+                    } else if(time < 18) {
+                        return "Konbawa gozaru";
+                    } else {
+                        return "Yoo gozaru";
+                    }
+                }
+                document.getElementById("demo_1").innerHTML = greetUser();
+            </script>
+        </div>
+    </body>
+</html>

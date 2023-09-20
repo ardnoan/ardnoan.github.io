@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box Models</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            .box {
+                padding: 20px;
+                border: 5px solid lightgrey;
+                margin: 40px;
+            }
+            .box2 {
+                width: 200px;
+                height: 200px;
+                padding: 50px;
+                border: 20px solid black;
+            }
+            .box3 {
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;
+                padding: 50px;
+                border: 20px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Box-models</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="box">I an the content of this css box</div><br>
+            <div class="box2"></div><br>
+            <div class="box3"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css reset sekarang css asli */
+body {
+    background: #64BADE;
+    font-family: arial;
+}
+b {
+    font-weight: bold;
+}
+/* bar */
+.bar {
+    padding: 15px;
+}
+.bar ul > li {
+    display: inline-block;
+    text-align: center;
+}
+.bar ul > li::before {
+    margin: 0 8px;
+    content: ":";
+    color: white;
+}
+.bar ul > li:first-child::before {
+    content: "/";
+    color: white;
+}
+.bar ul > li > a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.bar ul > li > a:hover {
+    color: black;
+}
+.bar ul > li:last-child > a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+/* container */
+.container {
+    margin: 0 auto;
+    padding: 12px;
+    max-width: 800px;
+    background: #fff;
+    border: 1px dotted black;
+    border-radius: 5px;
+    position: relative;
+    animation-name: buricak;
+    animation-duration: infinite;
+}
+.container > h1 {
+    font-size: 180%;
+    padding: 8px;
+}
+.container p {
+    text-indent: 15px;
+    margin-bottom: 18px;
+    line-height: 17px;
+    word-spacing: 5px;
+    text-align: justify;
+    font-size: 94%;
+    padding: 8px;
+}
+
+/* contoh */
+.sampul {
+    max-width: 100%;
+    color: white;
+    background: #64BADE;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 1px 0 black;
+}
+.sampul.border {
+    margin: auto;
+    max-width: 250px;
+}
+.sampul.border.b-full .b-full {
+    border: 1px solid red;
+}
+.sampul.border.b-div p:nth-child(1) {
+    border: 1px solid red;
+    display: inline-block;
+    padding: 5px;
+    /* margin-left: -5px; */
+    text-align: center;
+    text-indent: 0;
+}
+.sampul.border.b-kurawal span:nth-child(2) {
+    border: 1px solid red;
+    /* max-width: 100%; */
+    /* display: inline-block; */
+    /* background-color: red; */
+}
+.sampul.border.b-pfull p.border {
+    border: 1px solid red;
+    margin: 2px 0 2px 0;
+    /* padding: 5px; */
+    /* background: red; */
+    display: inline-block;
+}
+.sampul.border.b-gede p span {
+    padding: 5px;
+    margin: 1px;
+}
+.sampul.border.b-gede p span:nth-child(1) {
+    border: 1px solid red;
+    display: inline-block;
+    text-indent: 0;
+}
+.sampul.border.b-gede p span:nth-child(2) {
+    border: 1px solid blue;
+    display: inline-block;
+    text-indent: 0;
+}
+.sampul.border.b-gede p span:nth-child(3) {
+    border: 1px solid green;
+    display: inline-block;
+    text-indent: 0;
+}
+.sampul pre {
+    color: white;
+    margin: 0 50px 0 -50px;
+    padding: 5px;
+    line-height: 30px;
+}
+.sampul h1 {
+    font-size: 140%;
+}
+.sampul p {
+    margin: 0;
+}
+.container .pagination {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #64BADE;
+    box-shadow: -2px -2px #555,
+                2px -2px #555,
+                1px 1px 5px #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.pagination a {
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, .25);
+    /* box-shadow: 2px 2px black; */
+    box-shadow: -2px -2px black, 0 0 3px black;
+    border: 1px solid #ddd;
+    transition: .5s;
+}
+.pagination a:hover {
+    font-size: 1.1em;
+    box-shadow: -1px 1px black, 1px 1px black;
+    border: 1px solid #fff;
+}
+.pagination a.active {
+    box-shadow: -1px -1px black, 1px -1px black;
+    box-shadow: rgba(255, 255, 255, .5);
+    font-size: 1.1em;
+}
+
+
+
+ol {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+ol li {
+    line-height: 17px;
+    word-spacing: 5px;
+    text-align: justify;
+    padding: 0 20px 0 5px;
+    margin-bottom: 10px;
+    font-size: 90%;
+}
+
+.sampul_1 {
+    background-color: blue;
+}
+.sampul_1 p {
+    color: aqua;
+    font-size: 14px;
+}
+
+/* clear float */
+.cf:before, .cf:after {
+    content: " "; 
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+

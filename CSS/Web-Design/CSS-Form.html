@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <title>Form</title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+        * {
+            box-sizing: border-box;
+        }
+        select {
+            margin-bottom: 20px;
+        }
+        .textarea {
+            margin-bottom: 20px;
+        }
+        
+        .input {
+            outline: none;
+            padding: 15px;
+        }
+        .input1 {
+            outline: none;
+            padding: 15px;
+            border: 2px solid #0076ff;
+        }
+        .input2 {
+            outline: none;
+            padding: 15px;
+            border: none;
+            border-bottom: 2px solid #0076ff;
+        }
+        .input3 {
+            outline: none;
+            padding: 15px;
+            border: 2px solid #0076ff;
+            border-radius: 10px;
+        }
+        .input4 {
+            outline: none;
+            padding: 15px;
+            border: 2px solid #0076ff;
+            border-radius: 10px;
+            background: #0076ff;
+            color: #f9f8f8;
+        }
+        .input4::placeholder {
+            color: #f9f8f8;
+        }
+        .input5 {
+            outline: none;
+            padding: 15px;
+            border: none;
+            background: #0076ff;
+            color: #f9f8f8;
+        }
+        .input5::placeholder {
+            color: #f9f8f8;
+        }
+        .input6 {
+            outline: none;
+            padding: 15px;
+            border: none;
+            background: #0076ff;
+            color: #f9f8f8;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        .input6::placeholder {
+            color: #f9f8f8;
+        }
+        .textarea {
+            width: 200px;
+            height: 100px;
+            outline: none;
+            border: none;
+            padding: 10px;
+            background: #0076ff;
+            color: white;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        .textarea::placeholder {
+            color: white;
+        }
+        .input7, .textarea {
+            outline: none;
+            border: none;
+            padding: 10px;
+            background: #0076ff;
+            color: white;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 8px 32px 0 rgba(0, 0, 0, 0.20);
+        }
+        .input7::placeholder, .textarea::placeholder {
+            color: white;
+        }
+        .input7:focus, .textarea:focus {
+            background: #173459;
+            border-bottom: 5px solid navy;
+        }
+        .input8, .textarea1 {
+            outline: none;
+            border: none;
+            padding: 10px;
+            background: #0076ff;
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        .input8::placeholder, .textarea1::placeholder {
+            color: white;
+        }
+        .input8:focus::placeholder, .textarea1:focus::placeholder {
+            color: lightgreen;
+        }
+        .input8:focus, .textarea1:focus {
+            background: #173459;
+            border-bottom: 5px solid navy;
+            border-radius: 0 0 30px 30px;
+        }
+        .fruits {
+            outline: none;
+            border: none;
+            background: #173459;
+            color: white;
+            padding: 15px;
+        }
+        .fruits1 {
+            outline: none;
+            border: none;
+            background: #173459;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .input9[type="checkbox"], .input9[type="radio"] {
+            display: none;
+        }
+        .label {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #0076ff;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 10px 50px 0 rgba(0, 0, 0, 0.20);
+        }
+        .label > span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 3px solid #0076ff;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        .input9[type="checkbox"]:checked + .label, .input9[type="radio"]:checked + .label {
+            background: #173459;
+            color: white;
+        }
+        .input9[type="checkbox"]:checked + .label > span, .input9[type="radio"]:checked + .label > span {
+            background: #0076ff;
+        }
+        .input-cnt {
+            display: flex;
+        }
+        .input-cnt > i {
+            min-width: 40px;
+            padding: 10px;
+            text-align: center;
+            background: lightgrey;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .input-cnt > .input10 {
+            outline: none;
+            border: none;
+            padding: 10px;
+            border: 1px solid lightgrey;
+        }
+        .input-cnt1 {
+            display: flex;
+        }
+        .input-cnt1 > i {
+            min-width: 40px;
+            padding: 10px;
+            text-align: center;
+            background: lightgrey;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .input-cnt1 > .input11 {
+            outline: none;
+            border: none;
+            padding: 10px;
+            border: 1px solid lightgrey;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 60%;
+            transition: width .5s;
+        }
+        .input-cnt1:hover > .input11 {
+            border: 1px solid #0076ff;
+            width: 100%;
+        }
+        .input-cnt1:hover > i {
+            background: #0076ff;
+            color: white;
+        }
+
+        .form-container {
+            margin: 20px;
+            padding: 15px;
+            background: #173459;
+            color: white;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        .input-cnt2 {
+            display: flex; /* display the icon and the input in a line */
+            margin-bottom: 15px;
+        }
+        .input-cnt2:last-child {
+            margin-bottom: 0px;
+        }
+        .input-cnt2 > i {
+            min-width: 40px; /* set a minimum width for the icon */
+            padding: 10px; /* make sure the icon is centered vertically */
+            text-align: center; /* horizontally center the icon */
+            background: lightgrey;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color: #0076ff;
+        }
+        .input-cnt2:hover > i {
+            background: #0076ff;
+            color: white;
+        }
+        .input-cnt2 > .input12[type="text"], .input-cnt2 > textarea {
+            outline: none;
+            border: none;
+            padding: 10px;
+            border: 1px solid lightgrey;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100%;
+        }
+        /* center textarea icon and increase size */
+        .textarea-icons {
+            padding: 60px 10px !important; /* top and bottom paddings are set to 60px; */
+        }
+        /* style the submit button */
+        .input-cnt2 > .input12[type="submit"] {
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            width: 75%;
+            margin: 0 auto;
+            font-size: 105%;
+            padding: 8px;
+            color: #0076ff;
+            background: white;
+            transition-duration: .5s;
+        }
+        /* add a hover effect for the sumbit button */
+        .input-cnt2 > .input12[type="submit"]:hover {
+            color: white;
+            background: #0076ff;
+        }
+
+        .form-container1 {
+            margin: 20px;
+            padding: 15px;
+            background: #173459;
+            color: white;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        .input-cnt3 {
+            display: flex; /* display the icon and the input in a line */
+            margin-bottom: 15px;
+        }
+        .input-cnt3:last-child {
+            margin-bottom: 0px;
+        }
+        .input-cnt3 > i {
+            min-width: 40px; /* set a minimum width for the icon */
+            padding: 10px; /* make sure th eicon is centered vertically */
+            text-align: center; /* horizontally center the icon */
+            background: lightgrey;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color: #0076ff;
+        }
+        .input-cnt3 > .input13[type="text"], .input-cnt3 > .input13[type="password"] {
+            outline: none;
+            border: none;
+            padding: 10px;
+            border: 1px solid lightgrey;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100%;
+        }
+        .input-cnt3 > .input13[type="submit"] {
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            width: 75%;
+            margin: 0 auto;
+            font-size: 105%;
+            padding: 8px;
+            color: #0076ff;
+            background: white;
+            transition-duration: .5s;
+        }
+        /* add a hover effect for the submit button */
+        .input-cnt3 > .input13[type="submit"]:hover {
+            color: white;
+            background: #0076ff;
+        }
+
+        .input14:disabled, .textarea2:disabled, .select:disabled {
+            background: grey;
+            opacity: 0.7;
+        }
+        </style>
+    </head>
+    <body>
+     <input type="text" placeholder="Tap to text new"/><br><br>
+     <input type="text" class="input" placeholder="Text.."/><br><br>
+     <input type="text" class="input1" placeholder="text.."/><br><br>
+     <input type="text" class="input2" placeholder="text.."/><br><br>
+     <input type="text" class="input3" placeholder="text.."/><br><br>
+     <input type="text" class="input4" placeholder="text.."/><br><br>
+     <input type="text" class="input5" placeholder="text.."/><br><br>
+     <input type="text" class="input6" placeholder="text.."/><br><br>
+     <textarea class="textarea" placeholder="text.."></textarea><br><br>
+     <input type="text" class="input7" placeholder="text.."/><br><br>
+     <textarea class="textarea" placeholder="text.."></textarea><br><br>
+     <input type="text" class="input8" placeholder="text.."/><br><br>
+     <textarea class="textarea1" placeholder="text.."></textarea><br><br>
+     <select name="fruits" class="fruits"><br><br>
+         <option value="banana">Banana</option>
+         <option value="strawberry">Strawberry</option>
+         <option value="lemon">lemon</option>
+         <option value="apple">apple</option>
+     </select>
+     <select name="fruits" class="fruits1"><br><br>
+         <option value="banana">Banana</option>
+         <option value="strawberry">Strawberry</option>
+         <option value="lemon">lemon</option>
+         <option value="apple">apple</option>
+     </select>
+     <br>
+     <hr>
+     <h2>Styling Check box</h2>
+     <p>Check boxes all users to select multiple option from a list of choices</p>
+     <form>
+         <input type="checkbox" class="input9" name="buah" value="apple" id="apple"/>
+         <label class="label" for="apple"><span></span>Apple</label>
+         
+         <input type="checkbox" class="input9" name="buah" value="banana" id="banana"/>
+         <label class="label" for="banana"><span></span>Banana</label>
+         
+         <input type="checkbox" class="input9" name="buah" value="mangga" id="mangga"/>
+         <label class="label" for="mangga"><span></span>mangga</label>
+         
+         <input type="checkbox" class="input9" name="buah" value="strawberry" id="strawberry"/>
+         <label class="label" for="strawberry"><span></span>Strawberry</label>
+     </form>
+     <h2>Styling Radio Inputs</h2>
+     <p>radio input allow users to select only one option form a list of choices</p>
+     <form>
+         <input type="radio" class="input9" name="person" value="Mang Asep" id="MangAsep"/>
+         <label class="label" for="MangAsep"><span></span>Mang Asep</label>
+         
+         <input type="radio" class="input9" name="person" value="Mang Agus" id="MangAgus"/>
+         <label class="label" for="MangAgus"><span></span>Mang Agus</label>
+         
+         <input type="radio" class="input9" name="person" value="Mang Elon" id="MangElon"/>
+         <label class="label" for="MangElon"><span></span>Mang Elon</label>
+         
+         <input type="radio" class="input9" name="person" value="Mang Dadang" id="MangDadang"/>
+         <label class="label" for="MangDadang"><span></span>Mang Dadang</label>
+     </form>
+     <p><b>note!</b> This demo requires internet connection</p>
+     <div class="input-cnt">
+         <i class="material-icons">search</i>
+         <input type="search" class="input10" placeholder="Search..."/>
+     </div><br>
+     <div class="input-cnt1">
+        <i class="material-icons">search</i>
+        <input type="search" class="input11" placeholder="Search..."/>
+     </div>
+     <br>
+     <p>
+         <b>Note</b>! This demo requires internet connection<br>
+         <b>This is only a contact form design it has no real functionality</b>
+         A functionality like this cannot be created without the help of scripting and server-side languages
+     </p>
+     <h2 style="text-align: center">Contact Form</h2>
+     <div class="form-container">
+         <form action="#">
+             <div class="input-cnt2">
+                 <i class="material-icons">person</i>
+                 <input type="text" class="input12" placeholder="Name" name="name"/>
+             </div>
+             <div class="input-cnt2">
+                 <i class="material-icons">email</i>
+                 <input type="text" class="input12" placeholder="Email" name="email"/>
+             </div>
+             <div class="input-cnt2">
+                 <i class="material-icons textarea-icons">message</i>
+                 <textarea placeholder="Your message here..." name="message"></textarea>
+             </div>
+             <div class="input-cnt2">
+                 <input type="submit" class="input12"/>
+             </div>
+         </form>
+     </div>
+     <br>
+     <h2 style="text-align: center"> Sign Up</h2>
+     <div class="form-container1">
+         <form action="#">
+             <div class="input-cnt3">
+                 <i class="material-icons">person</i>
+                 <input type="text" class="input13" placeholder="Name" name="name"/>
+             </div>
+             <div class="input-cnt3">
+                 <i class="material-icons">face</i>
+                 <input type="text" class="input13" placeholder="Username" name="username"/>
+             </div>
+             <div class="input-cnt3">
+                 <i class="material-icons">email</i>
+                 <input type="text" class="input13" placeholder="Email" name="email"/>
+             </div>
+             <div class="input-cnt3">
+                 <i class="material-icons">lock</i>
+                 <input type="password" class="input13" placeholder="Password" name="password"/>
+             </div>
+             <div class="input-cnt3">
+                 <input type="submit" class="input13" value="Sign Up"/>
+             </div>
+         </form>
+     </div>
+     <br>
+     <h2 style="text-align: center">Login</h2>
+     <div class="form-container1">
+         <form action="#">
+             <div class="input-cnt3">
+                 <i class="material-icons">person</i>
+                 <input type="text" class="input13" placeholder="Email of username" name="email"/>
+             </div>
+             <div class="input-cnt3">
+                 <i class="material-icons">lock</i>
+                 <input type="text" class="input13" placeholder="Passowrd" name="password"/>
+             </div>
+             <div class="input-cnt3">
+                 <input type="submit" class="input13" value="Login"/>
+             </div>
+         </form>
+     </div>
+     <br>
+     <p><input type="text" class="input14" disabled/></p>
+     <p><textarea disabled></textarea></p>
+     <p>
+         <select name="fruits" class="select" disabled>
+             <option value="apple">Apple</option>
+             <option value="orange">Orange</option>
+             <option value="mango">Mango</option>
+             <option value="strawberry">Strawberry</option>
+         </select>
+     </p>
+    </body>
+</html>

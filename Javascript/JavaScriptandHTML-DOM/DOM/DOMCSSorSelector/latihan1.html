@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DOM CSS or Styling </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript DOM CSS or Styling </h1>
+            <h2> Styling Element With DOM </h2>
+            <p id="green"> Lorem ipsum dolor sit amet. </p>
+            <script>
+                document.getElementById("green").style.color = "green";
+            </script>
+
+            <h2> Hidding and Showing an Element </h2>
+            <div id="kotak"></div>
+            <button onclick="hide()"> Hide </button><button onclick="show()"> Show </button>
+            <script>
+                hide = () => document.getElementById("kotak").style.display = "none";
+                show = () => document.getElementById("kotak").style.display = "block";
+            </script>
+
+            <h2> What about properties with hyphen? </h2>
+            <p id="style" style="padding: 20px;"> Hello World </p>
+            <script>
+                var element = document.getElementById("style");
+
+                element.style.fontSize = "18px";
+                element.style.textDecoration = "gold underline overline wavy";
+                element.style.backgroundColor = "pink";
+            </script>
+        </div>
+    </body>
+</html>

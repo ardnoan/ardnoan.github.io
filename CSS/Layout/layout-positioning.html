@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout positioning</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .position1 { /* Position statix */
+                position: static;
+                width: 200px;
+                height: 200px;
+                background: red;
+                color: white;
+            }
+            .position2 { /* Position relative */
+                position: relative;
+                width: 100px;
+                height: 100px;
+                left: 25px;
+                top: 25px;
+                background: red;
+                color: white;
+            }
+            .position3 {
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                top: 10px;
+                right: 10px;
+                background: rgba(0, 100, 255, .2);
+                margin: 50px;
+            }
+            div.containerr {
+                position: relative;
+                width: 300px;
+                background: pink;
+            }
+            div.absolute {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                width: 50px;
+                height: 50px;
+                background: red;
+                margin: 20px 0;
+            }
+            .relative {
+                position: relative;
+            }
+            p.top-left {
+                position: absolute;
+                top: 5px;
+                left: 8px;
+            }
+            p.top-right {
+                position: absolute;
+                top: 5px;
+                right: 8px;
+            }
+            p.centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 16px;
+            }
+            p.bottom-left {
+                position: absolute;
+                bottom: 5px;
+                left: 8px;
+            }
+            p.bottom-right {
+                position: absolute;
+                bottom: 5px;
+                right: 8px;
+            }
+            #sticky {
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                color: white;
+                padding: 5px;
+                font-size: 18px;
+                margin-top: 50px;
+            }
+            .sticky2 {
+                background: black;
+            }
+            .sticky3 {
+                background: silver;
+            }
+            .sticky4 {
+                background: navy;
+            }
+            #stacking-p {
+                position: fixed;
+                margin: 50px;
+                width: 60px;
+                height: 60px;
+            }
+            .stacking {
+                z-index: 1;
+                top: 10px;
+                left: 10px;
+                background: red;
+            }
+            .stacking2 {
+                z-index: 2;
+                top: 20px;
+                left: 20px;
+                background: blue;
+            }
+            .stacking3 {
+                z-index: 3;
+                top: 30px;
+                left: 30px;
+                background: green; 
+            }
+            .stacking4 {
+                z-index: 4;
+                top: 40px;
+                left: 40px;
+                background: yellow;
+            }
+            .stacking5 {
+                z-index: 5;
+                top: 50px;
+                left: 50px;
+                background: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+
+            <div class="position1">Position static</div>
+            <div class="position2">Position relative</div>
+            <div class="position3"></div>
+            <p>
+                Lorem ipsum dolor sit amet, consectuler adipiscing elit. Suspendiesse iaculis, arcu a bibendum fermentum, quam nunc acchmansan
+                nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tmepur est maximus nex. Proin egestas justo
+                facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursu tristique. NUllam non duil velit. NUllam sit amet lacus quis nibh
+                vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volutpa at.
+                <br><br>
+                Vivamus magna velit, convallis ut purus at, facilisis loborties elit. Aenen lacinia efficitur, leo, vitae volupat odio lacinia vitae. Proin
+                nex sodales mauris. Quisque lacus orci, consectetur molesties dolor at, elementum pretium nibh. Morbi ornare risus urna, nec
+                ultricies augue pharetra non. Nulla pulvinar ornare ipsum, cursus sagitis dolor suscipit vel. Proin augue justo, consequat a nulla ac,
+                veestbulum ferenum orci. Donec hendreit massa mauris, quis bibendum lectus alque at. Donex matties nisi nex ipsum tincidunt eusmod.
+                Proin inerdum tellus a elit pellentesque, vel condimentum lectus ulticies. Sed malesuada urna nec quam placerat 
+                bibendum. Etiam a quam vitae mauries blandit efficitur.
+                <br><br>
+                maecenas dictum metus in leo aliquam, nec pellentesque maruis vulputate. Phasellus dui eros, efficitur et turpis a, lacinia
+                sollicitudin lectus. In hac habitasse platea dictumst. SEd dictum auffue lectus, sit amete consimentum mauris maxiums nex. Fusce
+                at ante id lorem volutpat tincidunt. In a rhoncus quam. Morb sollictidudin accumsan velit.
+                <br><br>
+                Aliquam laoreet lectus a est venestis a semper in sit amet arcu. suspendisse pontenti. Curabitur quis luctus ante. Curabitur vechicula
+                libero a odieo euismod, sed aliquam. Maecenas accumsan, ipsum vel pharetra euismod, nunc lectus faucibus ligula, id
+                malesuada risus lectus in metus. Nunc ligula lextus, ornare sit amet tortor at, dignissim dictum ex. Cras finibus posuere diam, non
+                suscipit diam venenatis vitae. Fusce laoreet, erat vel volutpat cursor, tortor diam venenatis elit, sit amet commodo aufue mi eget
+                eros. Mauris ac viverra velit, id duscipit leo.
+                <br><br>
+                Mauris et lectus dolor. Maecenas tincidunt lacinia convallis. Donec facilisis turpis ut fringilla laoreet. Mauris eget tortr mauris.
+                Curabitur sed consequat aecu. Curabitur quam sem, pharetra consequat hendreit sed, vblandid at nisi. Proin elemntum, nulla sed
+                blandid efficitur, erat turpis volupat velit, vel sodales nisi mauris vel nibh. Vestibulum ulticles, urna eu lacullis commodo, quam urna
+                vulputate dui, sit amet lobortis erat purus a mi. Prasent ensque ipsum, egestas non feugiat vitae, commodo non nisi. Curabitur eget
+                lectus orci. Integer feugiat facillsis nunc, at facilisis risus sceleriques id. Quisque eu euismod leo. Quisque sem enim, laoreet et 
+                vestobulum efet, varius sed neque, Nulla ornare et orci ac imperdiet. Duis dapibus sagittis metus ac viveerra.
+            </p>
+            <div class="containerr">
+                <div class="absolute"></div>
+            </div><br><br>
+            
+            <div class="relative">
+                <img style="max-width: 100%; opacity: 1" src="../../no-copyright/komputer1.jpeg"/>
+                <p class="top-left">Top Left</p>
+                <p class="top-right">Top Right</p>
+                <p class="centered">Centered</p>
+                <p class="bottom-left">Bottom left</p>
+                <p class="bottom-right">Bottom right</p>
+            </div>
+    
+            <div id="sticky"class="sticky2">Hello world</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectuler adipiscing elit. Suspendiesse iaculis, arcu a bibendum fermentum, quam nunc acchmansan
+                    nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tmepur est maximus nex. Proin egestas justo
+                    facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursu tristique. NUllam non duil velit. NUllam sit amet lacus quis nibh
+                    vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volutpa at.
+                    <br><br>
+                    Vivamus magna velit, convallis ut purus at, facilisis loborties elit. Aenen lacinia efficitur, leo, vitae volupat odio lacinia vitae. Proin
+                    nex sodales mauris. Quisque lacus orci, consectetur molesties dolor at, elementum pretium nibh. Morbi ornare risus urna, nec                  ultricies augue pharetra non. Nulla pulvinar ornare ipsum, cursus sagitis dolor suscipit vel. Proin augue justo, consequat a nulla ac,
+                    veestbulum ferenum orci. Donec hendreit massa mauris, quis bibendum lectus alque at. Donex matties nisi nex ipsum tincidunt eusmod.
+                    Proin inerdum tellus a elit pellentesque, vel condimentum lectus ulticies. Sed malesuada urna nec quam placerat 
+                    bibendum. Etiam a quam vitae mauries blandit efficitur.
+                    <br><br>
+                    maecenas dictum metus in leo aliquam, nec pellentesque maruis vulputate. Phasellus dui eros, efficitur et turpis a, lacinia
+                    sollicitudin lectus. In hac habitasse platea dictumst. SEd dictum auffue lectus, sit amete consimentum mauris maxiums nex. Fusce
+                    at ante id lorem volutpat tincidunt. In a rhoncus quam. Morb sollictidudin accumsan velit.
+                    <br><br>
+                    Aliquam laoreet lectus a est venestis a semper in sit amet arcu. suspendisse pontenti. Curabitur quis luctus ante. Curabitur vechicula
+                    libero a odieo euismod, sed aliquam. Maecenas accumsan, ipsum vel pharetra euismod, nunc lectus faucibus ligula, id
+                    malesuada risus lectus in metus. Nunc ligula lextus, ornare sit amet tortor at, dignissim dictum ex. Cras finibus posuere diam, non
+                    suscipit diam venenatis vitae. Fusce laoreet, erat vel volutpat cursor, tortor diam venenatis elit, sit amet commodo aufue mi eget
+                    eros. Mauris ac viverra velit, id duscipit leo.
+                    <br><br>
+                    Mauris et lectus dolor. Maecenas tincidunt lacinia convallis. Donec facilisis turpis ut fringilla laoreet. Mauris eget tortr mauris.                    Curabitur sed consequat aecu. Curabitur quam sem, pharetra consequat hendreit sed, vblandid at nisi. Proin elemntum, nulla sed
+                    blandid efficitur, erat turpis volupat velit, vel sodales nisi mauris vel nibh. Vestibulum ulticles, urna eu lacullis commodo, quam urna
+                    vulputate dui, sit amet lobortis erat purus a mi. Prasent ensque ipsum, egestas non feugiat vitae, commodo non nisi. Curabitur eget
+                    lectus orci. Integer feugiat facillsis nunc, at facilisis risus sceleriques id. Quisque eu euismod leo. Quisque sem enim, laoreet et 
+                    vestobulum efet, varius sed neque, Nulla ornare et orci ac imperdiet. Duis dapibus sagittis metus ac viveerra.
+                </p>
+            <div id="sticky" class="sticky3">Hello world</div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectuler adipiscing elit. Suspendiesse iaculis, arcu a bibendum fermentum, quam nunc acchmansan
+                    nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tmepur est maximus nex. Proin egestas justo
+                    facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursu tristique. NUllam non duil velit. NUllam sit amet lacus quis nibh
+                    vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volutpa at.
+                    <br><br>
+                    Vivamus magna velit, convallis ut purus at, facilisis loborties elit. Aenen lacinia efficitur, leo, vitae volupat odio lacinia vitae. Proin
+                    nex sodales mauris. Quisque lacus orci, consectetur molesties dolor at, elementum pretium nibh. Morbi ornare risus urna, nec
+                    ultricies augue pharetra non. Nulla pulvinar ornare ipsum, cursus sagitis dolor suscipit vel. Proin augue justo, consequat a nulla ac,
+                    veestbulum ferenum orci. Donec hendreit massa mauris, quis bibendum lectus alque at. Donex matties nisi nex ipsum tincidunt eusmod.
+                    Proin inerdum tellus a elit pellentesque, vel condimentum lectus ulticies. Sed malesuada urna nec quam placerat 
+                    bibendum. Etiam a quam vitae mauries blandit efficitur.
+                    <br><br>
+                    maecenas dictum metus in leo aliquam, nec pellentesque maruis vulputate. Phasellus dui eros, efficitur et turpis a, lacinia
+                    sollicitudin lectus. In hac habitasse platea dictumst. SEd dictum auffue lectus, sit amete consimentum mauris maxiums nex. Fusce
+                    at ante id lorem volutpat tincidunt. In a rhoncus quam. Morb sollictidudin accumsan velit.
+                    <br><br>
+                    Aliquam laoreet lectus a est venestis a semper in sit amet arcu. suspendisse pontenti. Curabitur quis luctus ante. Curabitur vechicula                    libero a odieo euismod, sed aliquam. Maecenas accumsan, ipsum vel pharetra euismod, nunc lectus faucibus ligula, id
+                    malesuada risus lectus in metus. Nunc ligula lextus, ornare sit amet tortor at, dignissim dictum ex. Cras finibus posuere diam, non
+                    suscipit diam venenatis vitae. Fusce laoreet, erat vel volutpat cursor, tortor diam venenatis elit, sit amet commodo aufue mi eget
+                    eros. Mauris ac viverra velit, id duscipit leo.
+                    <br><br>
+                    Mauris et lectus dolor. Maecenas tincidunt lacinia convallis. Donec facilisis turpis ut fringilla laoreet. Mauris eget tortr mauris.
+                    Curabitur sed consequat aecu. Curabitur quam sem, pharetra consequat hendreit sed, vblandid at nisi. Proin elemntum, nulla sed
+                    blandid efficitur, erat turpis volupat velit, vel sodales nisi mauris vel nibh. Vestibulum ulticles, urna eu lacullis commodo, quam urna
+                    vulputate dui, sit amet lobortis erat purus a mi. Prasent ensque ipsum, egestas non feugiat vitae, commodo non nisi. Curabitur eget                    lectus orci. Integer feugiat facillsis nunc, at facilisis risus sceleriques id. Quisque eu euismod leo. Quisque sem enim, laoreet et 
+                    vestobulum efet, varius sed neque, Nulla ornare et orci ac imperdiet. Duis dapibus sagittis metus ac viveerra.
+                </p>
+            <br><br>
+            <div id="stacking-p" class="stacking"></div>
+            <div id="stacking-p" class="stacking2"></div>
+            <div id="stacking-p" class="stacking3"></div>
+            <div id="stacking-p" class="stacking4"></div>
+            <div id="stacking-p" class="stacking5"></div>
+        </div>
+    </body>
+</html>

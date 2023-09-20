@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Date formats </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid silver;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Date Formats </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Format Name </th>
+                        <th> Example </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Short Date </td>
+                        <td> "06/04/2000" </td>
+                    </tr>
+                    <tr> 
+                        <td> Long Date </td>
+                        <td> "June 04 2000" or "Jun 04 2000" </td>
+                    </tr>
+                    <tr>
+                        <td> ISO Date </td>
+                        <td> "2000-06004" </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2> Short Date </h2> 
+            <p id="demo"></p>
+            <script>
+                var date = new Date("06/04/2000");
+                var date1 = new Date("6/4/2000");
+                document.getElementById("demo").innerHTML = date + "<br>" + date1;
+            </script>
+
+            <h2> Long Date </h2>
+            <p id="demo_1"></p>
+            <script>
+                var date2_1 = new Date("Oct 21 1999");
+                var date2_2 = new Date("21 October 1999");
+                var date2_3 = new Date("04 Jun 2000");
+                var date2_4 = new Date("21 Oct 1999");
+                var date2 = date2_1 + "<br>" + date2_2 + "<br>" + date2_3 + "<br>" + date2_4;
+                document.getElementById("demo_1").innerHTML = date2;
+            </script>
+
+            <h2> ISO Date </h2>
+            <p id="demo_2"></p>
+            <script>
+                var date3_1 = new Date("2019-03-21");
+                var date3_2 = new Date("2019-03");
+                var date3_3 = new Date("2019");
+                var date3 = date3_1 + "<br>" + date3_2 + "<br>" + date3_3;
+                document.getElementById("demo_2").innerHTML = date3;
+            </script>
+
+            <h2> Specifying Time Zone </h2> 
+            <p id="demo_3"></p>
+            <script>
+                var date4 = new Date("2019-03-21T00:00+06:00");
+                document.getElementById("demo_3").innerHTML = date4;
+            </script>
+            
+        </div>
+    </body>
+</html>

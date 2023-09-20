@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 3 While loop </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript while loop </h1>
+            <p id="demo"></p>
+            <script>
+                var i = 0;
+                while(i < 3) {
+                    document.getElementById("demo").innerHTML += "<p> Hello world </p>";
+                    i++;
+                }
+            </script>
+
+            <h2> Looping over an array using while loop </h2> 
+            <p id="demo_1"></p>
+            <script>
+                var fruits = ["apples", "banans", "oranges"];
+                var len = fruits.length;
+                var i = 0;
+                var html = "";
+                
+                while( i < len) {
+                    html += "<p> I like " + fruits[i] + ". </p>";
+                    i++;
+                }
+                document.getElementById("demo_1").innerHTML = html;
+            </script>
+
+            <h2> The do...while Loop </h2>
+            <p id="demo_2"></p>
+            <script>
+                var i = 0;
+                do {
+                    document.getElementById("demo_2").innerHTML += "<p> Hello bang";
+                    i++;
+                } while(i < 3);
+            </script>
+
+            <h2> Looping over an array using do...while loop </h2> 
+            <p id="demo_3"></p>
+            <script>
+                var cities = ["Berlin", "Tokyo", "Rio", "Danver", "Stockholm"];
+                var len = cities.length;
+                var a = 0;
+                var html = "";
+                
+                while(a < len) {
+                    html += "<p> Someday, I want ot go to " + cities[a] + ". </p>";
+                    a++;
+                }
+                document.getElementById("demo_3").innerHTML = html;
+            </script>
+            <hr>
+
+            <p id="demo_3_1"></p>
+            <script>
+                var kecamatan = ["Cidaun", "Sindangbarang", "Rancabuaya"];
+                var len = kecamatan.length;
+                var an = 0;
+                var camat = "";
+
+                 do {
+                    document.getElementById("demo_3_1").innerHTML = camat;
+                    camat += "<p> Hari ini, Saya akan pergi ke " + kecamatan[an] + ". </p>";
+                    an++;
+                } while (an <= len);
+            </script>
+        </div>
+    </body>
+</html>

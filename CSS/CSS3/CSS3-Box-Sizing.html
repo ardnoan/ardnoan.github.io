@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box Sizing</title>
+        <style type="text/css">
+            .box {
+                width: 200px;
+                height: 200px;
+                padding: 20px;
+                border: 10px solid black;
+            }
+            .content-box {
+                box-sizing: content-box;
+            }
+            .border-box {
+                box-sizing: border-box;
+            }
+            .div {
+                width: 200px;
+                height: 200px;
+                padding: 20px;
+                border: 10px solid black;
+                background: yellow;
+            }
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <P>The width (and height) of the element below is <b>230px</b>.</P>
+        <p>calaculation: <b>200px</b> (width) + <b>20px</b> (padding) + <b>10px</b> (border) = <b>230px</b></p>
+        <div class="box
+        
+        
+        
+        "></div>
+        <br>
+        <div class="div content-box">content-box</div>
+        <br>
+        <div class="div border-box">border-box</div>
+        <br>
+        <div>
+            All elements are now set to <b>box-sizing: border-box</b>
+        </div>
+    </body>
+</html>

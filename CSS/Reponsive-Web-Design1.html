@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Web Design</title>
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .row:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .row > div {
+                float: left;
+                color: white;
+                height: 500px;
+                padding: 10px;
+            }
+            .side-nav {
+                width: 30%;
+                background: #903c56;
+            }
+            .content {
+                width: 70%;
+                background: #173459;
+            }
+            .side-nav > ul {
+                list-style-type: none;
+                padding: 0;
+                line-height: 175%;
+            }
+            .side-nav > ul > li > a {
+                text-decoration: none;
+                color: white;
+            }
+            .side-nav > ul > li > a:hover {
+                background: lightblue;
+                color: black;
+            }
+
+            .row1::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            [class*="col-"] {
+                float: left;
+                height: 200px;
+                background: lightgrey;
+                border-right: 1px solid black;
+            }
+            .col-1 { width: 8.33333333% }
+            .col-2 { width: 16.66666667% }
+            .col-3 { width: 25% }
+            .col-4 { width: 33.33333333% }
+            .col-5 { width: 41.66666667% }
+            .col-6 { width: 50% }
+            .col-7 { width: 58.33333333% }
+            .col-8 { width: 66.66666667% }
+            .col-9 { width: 75% }
+            .col-10 { width: 83.33333333% }
+            .col-11 { width: 91.66666667% }
+            .col-12 { width: 100% }
+        </style>
+    </head>
+    <body>
+        <img src="kobeni/kobeni1.jpg"/>
+        <p>
+            Pellentesque habitant morbie tristique senectus et netus et malesuada fames ac turpis egestas.
+            Donec sed vestibulum leo, vitar tincidunt orci. Cras quis orci vitae nibh porta rhoncus.
+            Integer nisl dui, posuere viverra mollis vel, pretium vel tellus> Sed in feugiat tincidunt orci.
+            Etiam eget metus nunc. SEd elefien ex et ex eleifend voultpat. Nunc a ex sed turpis consequat interdum.
+            Vestibulum ipsum in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam rutrum metus ac egestas luctus.
+            Mauris pharetra luctus mattis.
+        </p>
+        <hr>
+
+        <div class="row">
+            <div class="side-nav">
+                <h3>Side Nav</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipscing elit. Duis interdum dignissim nisl posuerre
+                    efficitur. Suspendisse sit amet lorem scelerisque, pellentesque mauris at, blandit arcu.
+                    Suspendisse lectus erat, henderit at neque a, posuere convallis lacus. Vivamus facillisis sed nisl nec lobortis.
+                    Ut purus sapien, tincidunt a leo sit amet, sagittis laoreet erat. Integer sed sapiend ut enim placerat ultrices ut quis nibh.
+                    Morbie malesuada orci a purus interdum malesuada. Vivamus id rhoncus tellus. Phasellus sed velit enim. Prasent
+                    interdum euismod ullamcorper.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <p>Two-column layout with equal widths.</p>
+        <div class="row1">
+            <div class="col-6"></div>
+            <div class="col-6"></div>
+        </div>
+        <p>Three-column layout with equal widths.</p>
+        <div class="row1">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+        <p>Four-column layour with equal widths.</p>
+        <div class="row1">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+        </div>
+        <p>Two-column layout. The first box is smaller the second is wider.</p>
+        <div class="row1">
+            <div class="col-4"></div>
+            <div class="col-8"></div>
+        </div>
+        <p>Two-column layout. The first box is wider the second is smaller.</p>
+        <div class="row1">
+            <div class="col-8"></div>
+            <div class="col-4"></div>
+        </div>
+        <p>12-column layout with equal widths.</p>
+        <div class="row1">
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+            <!-- the following coded will be rendered onto the nex row -->
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4">
+
+                
+                
+            </div>
+        </div>
+    </body>
+</html>

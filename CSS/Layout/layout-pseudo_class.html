@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pscode</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .container .p:hover {
+                color: red;
+                font-size: 20px;
+                height: auto;
+            }
+            .container .p {
+                transition-duration: 2s;
+            }
+            .a:link {
+                color: pink;
+            }
+            .a:visited {
+                color: red;
+            }
+            .a:hover {
+                color: green;
+                font-size: 20px;
+                transition-duration: 1s;
+            }
+            .a:active {
+                color: navy;
+            }
+            .a2:active, .button:active {
+                color: red;
+            }
+
+            input:checked {
+                outline: 2px solid navy;
+            }
+            input:checked + label {
+                color: navy;
+            }
+            #checkbox:checked {
+                box-shadow: 2px 2px 4px 4px navy;
+            }
+            #checkbox:checked + label {
+                box-shadow: 2px 2px 4px 4px navy;
+            }
+            .input:disabled {
+                color: red;
+            }
+            .div:empty {
+                width: 200px;
+                height: 200px;
+                background: lightblue;
+            }
+            .input2:enabled {
+                color: red;
+                border: 2px solid navy;
+            }
+
+            .p2:first-child {
+                background: navy;
+                color: white;
+            }
+            .p4:last-child {
+                background: navy;
+                color: white;
+            }
+
+            .h2:first-of-type {
+                background: pink;
+                color: navy;
+            }
+            .h2-2:last-of-type {
+                background: pink;
+                color: navy;
+            }
+
+            .blue-input:focus {
+                color: blue;
+                outline: 2px solid navy;
+            }
+            .green-input:focus {
+                color: green;
+                outline: 2px solid green;
+            }
+
+            .button2 {
+                color: white;
+                background: navy;
+                padding: 15px;
+                border: none;
+                outline: none;
+                transition-duration: 2s;
+            }
+            .button2:hover {
+                color: white;
+                background: lightblue;
+                padding: 15px;
+                border: none;
+                outline: none;
+            }
+
+            .input3:in-range {
+                color: green;
+                border: 2px solid green;
+            }
+            .input3:out-of-range {
+                color: red;
+                border: 2px solid red;
+            }
+
+            .input4:invalid {
+                color: red;
+                border: 2px solid red;
+            }
+            .input4:valid {
+                color: green;
+                border: 2px solid green;
+            }
+
+            .p3:lang(en) > q {
+                color: blue;
+                quotes: '\201C' '\201D' '\2018' '\2019';
+            }
+            .p3:lang(fr) > q {
+                color: red;
+                quotes: '<<' '>>';
+            }
+            .p3:lang(de) q {
+                color: green;
+                quotes: '>>' '<<' '\2039' '\203A';
+            }
+
+            .container a:link {
+                color: navy;
+            }
+
+            .div2:not(p) {
+                /* Selects all elements which is not a <p> element
+                    inside the <div class="div1"> element
+                */
+                color: red;
+            }
+            /*
+                selects all element which is not a <p> element
+                and don't have the class sorry nside the
+                <div class="div2"> element
+            */
+            .div3 p:not(.sorry) {
+                color: red
+            }
+
+            .container table {
+                border-collapse: collapse;
+                font-family: sans-serif;
+            }
+            .container table, th, td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            .table1 tbody > tr:nth-child(2), .table1 tr:nth-child(5) {
+                background: navy;
+                color: white;
+            }
+            .table2 tbody > tr:nth-child(odd) {
+                background: navy;
+                color: white;
+            }
+            .table3 tbody > tr:nth-child(even) {
+                background: navy;
+                color: white;
+            }
+
+            .span:nth-last-of-type(1), .span:nth-last-of-type(2) {
+                background: navy;
+                color: white;
+            }
+
+            .span1:nth-of-type(1), .span1:nth-of-type(2) {
+                background: navy;
+                color: white;
+            }
+            
+            .span2:only-of-type {
+                background: lightblue;
+                color: white;
+            }
+
+            .p5:only-child, .span3:only-child {
+                background: gold;
+                color: navy;
+            }
+            .input5:optional {
+                background: lightgrey;
+                color: navy;
+            }
+            .input6:in-range {
+                color: green;
+                border: 2px solid green;
+            }
+            .input6:out-of-range {
+                color: red;
+                border: 2px solid red;
+            }
+
+            .div4 > :read-only {
+                outline: 2px solid navy;
+            }
+
+            .div5 > :read-write {
+                outline: 2px solid yellow;
+            }
+
+            .input7:required {
+                background: lightgrey;
+                color: red;
+            }
+            .div6:root {
+                background: #78969D;
+            }
+
+            .p6:target {
+                background: navy;
+                color: white;
+                padding: 20px;
+                transition-duration: 1.5s;
+                text-align: justify;
+            }
+
+            .input8:valid {
+                color: green;
+                border: 2px solid green;
+            }
+            .input8:invalid {
+                color: red;
+                border: 2px solid red;
+            }
+
+            .a3:visited {
+                color: green;
+                border: 2px solid navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Layout</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="p">
+                Since we are on mobile we can't mouse over (hover) an element. However, clicking or clicking
+                then holding the element will also trigger the effect.
+            </div>
+            <br>
+            <div class="p">
+                Hello World 
+            </div>
+            <br>
+    
+            <div>Go to
+                <a class="a" href="#">Goo to isekai</a>
+            </div>
+            <br><hr>
+    
+            <h2>:active</h2>
+            <p>
+                The <b>:active</b> CSS pseucode-class represents an element that is being activated by user.
+                It is commonly used inlinks and buttons.
+            </p>
+            <h3>Example: </h3>
+            <div>
+                <button class="button">Button</button> Go to <a class="a2" href="#">Nowhere</a>
+            </div>
+            <p>Try clicking them to see the effec!t</p>
+            <hr>
+            
+            <h2>input:checked</h2>
+            <p>The <b>:checked</b> CSS pseucode-class selector represents any...</p>
+            <ul>
+                <li><b>Radio</b> (&lt; input type="radio" &lt;)</li>
+                <li><b>checkbox</b> (&lt; input type="checkbox" &lt;)</li>
+                <li><b>option</b> (&lt; option &gt; in a &lt; select &gt;)</li>
+            </ul>
+            <p>... That is checked or toggled to an on state.</p>
+            
+            <h3>Example</h3>
+            <form action="#">
+                <p>Gender: </p>
+                <div>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+    
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </div>
+                <p>Are you brilliant?</p>
+                <div>
+                    <input type="checkbox" name="mv-checkbox" id="checkbox">
+                    <label for="checbox">Yes, I am!</label>
+                </div>
+            </form>
+            <hr>
+    
+            <h2>input:disabled</h2>
+            <p>
+                The <b>:disabled</b> CSS pseucode-class represents any disabled element. An elementi is disabledi
+                if it can't be activated (selected, clicked, typed into, etc.) or accept focus.
+            </p>
+            <form action="#">
+                <input type="text" value="I am not disabled">
+                <input class="input" type="text" value="I am disabled" disabled>
+            </form>
+            <hr>
+    
+            <h2>div:empty</h2>
+            <p>
+                The <b>:empty</b> CSS pseucode-class represents any element that has no children. 
+                Children can either be element nodes or text.
+            </p>
+            <h3>Example:</h3>
+            <div class="div"></div>
+            <div> Hey I am a div!! I am not empty!</div>
+            <div><p>Hey! I am a prograph element iside a div so the div is not empty.</p></div>
+            <hr>
+    
+            <h2>Input:enable</h2>
+            <p>
+                The <b>:enabled</b> CSS pseudo-class represents any enabled element. An element is
+                enabled if it can be activated (selected, clicked on, type into, etx.) or accept focus.
+            </p>
+            <p>Input elements are enabled by default.</p>
+            <h3>Example:</h3>
+            <form action="#">
+                First Name: <input class="input2" type="text" name="first-name" value="Juan"/>
+                <br/>
+                Last Name: <input type="text" name="last-name" value="Dela Crz" disabled />
+            </form>
+            <hr>
+    
+            <h2>p:first-child</h2>
+            <p class="p2">
+                The <b>:first-enabled</b> CSS pseudo-class represents the first elementn among a group
+                of sibling elements.
+            </p>
+            <h3>Example:</h3>
+            <div>
+                <p class="p2">I am selected</p>
+                <p class="p2">I am not selected</p>
+            </div>
+            
+    
+            <h2>h2:first-of-type</h2>
+            <p>
+                The <b>:first-of-type</b> CSS pseudo-class represents the first element of its type
+                among a group of sibling elements.
+            </p>
+            <h3>Example:</h3>
+            <p>The content of the <b>&lt;div&lt;</b> element below is a group of sibling elements</p>
+            <div>
+                <h3>Hello world</h3>
+                <h2 class="h2">Hello World</h2>
+                <h2 class="h2">Hello World aaswp</h2>
+            </div>
+            <p>
+                the first &lt;h2&gt; element gets selected because it's the first of its type
+                among the group of sibling elements.
+            </p>
+            <hr>
+    
+            <h2>input:focus</h2>
+            <p>
+                The <b>:focus</b> CSS pseudo-class represents an element (such as a form input) That
+                has focus.
+            </p>
+            <p>
+                It is generally triggered when the user clicks or taps on an element or selects it with 
+                the keyboards "tab" key.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <input type="text" class="blue-input" value="I will turn blue when focused"/>
+                <input type="text" class="green-input" value="I will turn green when focused"/>
+            </form>
+            <hr>
+    
+            <h2>button:hover</h2>
+            <p>
+                The <b>:hover</b> CSS pseudo-class is generally triggered when the user hovers over
+                an element with the cursor (mouse pointer).
+            </p>
+            <p>
+                It is commonly used in clickable elements
+            </p>
+            <h2>Example: </h2>
+            <button class="button2">Button</button>
+            <p>try to click or click the hold to see the effect.</p>
+            <hr>
+    
+            <h2>input:in-range</h2>
+            <p>
+                The <b>:in-range</b> CSS pseudo-class represents an &lt;input&gt; element whose current value
+                is within the range limits specified by the <b>min</b> and <b>max</b> attributes.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <input type="number" class="input3" min="10" max="20"/>
+            </form>
+            <p>
+                If the value is 10, 20 or between them the &lt;input&gt; element turns green otherwise red.
+            </p>
+            <hr>
+    
+            <h2>input:invalid</h2>
+            <p>
+                The :invalid CSS pseudo-class represents any &lt;input&gt; or other &lt;form&gt;
+                element whose contents fail to validate.
+            </p>
+            <h3>Example: </h3>
+            <form action="#">
+                <label for="website-url">Website URL: </label>
+                <input type="url" class="input4" name="website-url" id="website-url"/>
+                <br>
+                <label for="email">Your Email Adress: </label>
+                <input type="email" class="input4" name="email" id="email"/>
+            </form>
+            <p>
+                If the value is valid the <b>&lt;input&gt;</b> turns green<br>
+                If the value is invalid the <b>
+                    
+                    &lt;input&gt;</b> turns red
+            </p>
+            <hr>
+    
+            <h2>p:lang</h2>
+            <p>
+                The: <b>:lang (&lt;language-code&gt;)</b> CSS pseudo-class matches elements based on the language they
+                are determined to be in.
+            </p>
+            <h3>Example:</h3>
+            <p lang="en" class="p3"><q>Hello world!</q></p>
+            <p lang="fr" class="p3"><q>Hello world</q></p>
+            <p lang="de" class="p3"><q>Hello World</q></p>
+            <p>
+                In the example above we use the child combinaor to select the &lt;q&gt; elements inside the &lt;q&gt;
+                element then we specified the quotaiton marks using the <b>quotes</b> CSS property.
+            </p>
+            <hr>
+    
+            <h2>p:last-child</h2>
+            <p>
+                The <b>:last-child</b> CSS pseudo-class represents the last element among a group of sibling elments.
+            </p>
+            <h3>Example:</h3>
+            <p class="p4">I am first</p>
+            <p class="p4">I am second</p>
+            <p class="p4">I am last</p>
+            <hr>
+    
+            <h2>h2:last-of-type</h2>
+            <p>
+                the <b>:last-of-type</b> CSS pseudo-class represents the last element of its type among a group of 
+                simbling elements.
+            </p>
+            <h3>Example:</h3>
+            <h4>Hello World</h4>
+            <h2 class="h2-2">Hello world guys</h2>
+            <h2 class="h2-2">Hello world bang</h2>
+            <h4>Hello world!</h4>
+            <hr>
+    
+            <h2>a:link</h2>
+            <p>
+                go to <a href="#">Example</a>
+            </p>
+            <hr>
+    
+    
+            <h2>:not(p)</h2>
+            <p>
+                The <b>:not(p)</b> pseudo-classs represents elements that do not match a list of selector.
+                Since it prevents specific items from being selected, it is known as the negation pseudo-class.
+            </p>
+            <h3>Example:</h3>
+            <p>
+                On the example below all elements inside the &lt;div&gt; except the &lt;p&gt; element are selected.
+            </p>
+            <div class="div2">
+                <h4>I am a heading element</h4>
+                <span>I am a span element</span>
+                <p>I am a paragraph element I don't get selected.</p>
+            </div>
+            <p>
+                On the example below all elements inside the &lt;div&gt; except the &lt;p&gt; element with the class
+                name <b>sorry are selected.</b>
+            </p>
+            <div class="div3">
+                <p>I am paragraph I DON'T have <b>sorry</b> class name</p>
+                <p class="sorry">I am a paragraph I have the <b>sorry</b> class name</p>
+                <p> I am a paragraph I DON'T have the <b>sorry</b> class name.</p>
+            </div>
+            <hr>
+    
+            <h2>tr:nth-child(2)</h2>
+            <p>
+                The <b>:nth-child</b> CSS pseudo-class matches elements based their position in group of siblings.
+                <br>
+                Valid Values: 
+            </p>
+            <ul>
+                <li><b>&ltnumber&gt;</b></li>
+                <li><b>odd</b> : represensts elements whose numericc position in a series of siblings id odd e.g. 1,3,5</li>
+                <li><b>even</b> : represents elements whose numeric position in a series of siblings id odd e.g. 2,4,6</li>
+            </ul>
+            <h3>Example 1# :</h3>
+            <p>
+                In this example, only the <b>2nd</b> and <b>5th</b> rows are selected from the table's body
+            </p>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rickert</td>
+                        <td>Gonnet</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Jesica</td>
+                        <td>Fortie</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Lindon</td>
+                        <td>Scarse</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Ezechiela</td>
+                        <td>Mortlock</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Abran</td>
+                        <td>Coatts</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Dewskie</td>
+                        <td>Suda</td>
+                        <td>Male</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Example 2#:</h3>
+            <p>In this example, onl the <b>odd</b> rows are selected from the table's body.</p>
+            <table class="table2">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rickert</td>
+                        <td>Gonnet</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Jesica</td>
+                        <td>Fortie</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Lindon</td>
+                        <td>Scarse</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Ezechiela</td>
+                        <td>Mortlock</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Abran</td>
+                        <td>Coatts</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Dewskie</td>
+                        <td>Suda</td>
+                        <td>Male</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Example 3# :</h3>
+            <p>In this example, only the <b>even</b> rows are selected from the table's body</p>
+            <table class="table3">
+                <thead>
+                    <tr>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Gender</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rickert</td>
+                        <td>Gonnet</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Jesica</td>
+                        <td>Fortie</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Lindon</td>
+                        <td>Scarse</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Ezechiela</td>
+                        <td>Mortlock</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td>Abran</td>
+                        <td>Coatts</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Dewskie</td>
+                        <td>Suda</td>
+                        <td>Male</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            
+    
+            <h2>span:nth-last-of-type</h2>
+            <p>
+                The <b>:nth-last-of-type(&lt;number&gt;)</b> CSS pseudo-class marches elements of a given type,
+                based on their position among a group of siblings, counting from the end.
+            </p>Example:</h3>
+            <div>
+                <em>Hello World!</em>
+                <span class="span">this is the first span.</span>
+                <tt>Danger</tt>
+                <span class="span">This is the second span.</span>
+                <strike>Lorem ipsum dolor sit amet.</strike>
+                <u>Lorem hello this is a text.</u>
+                <span class="span">This is the third span.</span>
+                <span class="span">This is the fourth span.</span>
+            </div>
+            <hr>
+    
+            <h2>span:nth-of-type</h2>
+            <p>
+                The <b>:nth-of-type(&lt;number&gt;)</b> CSS pseudo-class matches elements of a given type,
+                based on their position among a group of siblings.
+            </p>
+            <h3>Example: </h3>
+            <div>
+                <em>Hello World!</em>
+                <span class="span1">this is the first span.</span>
+                <tt>Danger</tt>
+                <span class="span1">This is the second span.</span>
+                <strike>Lorem ipsum dolor sit amet.</strike>
+                <u>Lorem hello this is a text.</u>
+                <span class="span1">This is the third span.</span>
+                <span class="span1">This is the fourth span.</span>
+            </div>
+            <hr>
+    
+            <h2>span:only-of-type</h2>
+            <p>
+                The <b>:only-of-type</b> CSS pseudo-class represents an element that has no siblings of the same type.
+            </p>
+            <h3>Example:</h3>
+            <p>
+                In this example, the <b>&lt;span&gt;</b> element is only selected if it is the only <b>&lt;span&gt;</b>
+                element inside its parent.
+            </p>
+            <div>
+                <em>Hello World! </em>
+                <span class="span2">I am the only <b>span</b> element inside this <b>div</b> element.</span>
+            </div>
+            <div>
+                <i>Lorem ipsum dolor sit amet.</i>
+                <span class="span2">I am NOT THE ONLY <b>span</b> element inside this <b>div</b> element.</span>
+                <span class="span2">I am NOT THE ONLY <b>span</b> element inside this <b>div</b> element.</span>
+            </div>
+            <hr>
+    
+            <h2>p:only-child</h2>
+            <p>
+                The <b>:only-child</b> CSS pseudo-class represents an element whithour any siblings.
+            </p>
+            <h3>Example:</h3>
+            <div>
+                <p class="p5">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div>
+                <p class="p5">Lorem ipsum dolor sit amet.</p>
+                <p class="p5">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <h3>Example 2# :</h3>
+            <div>
+                <p class="p5">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div>
+                <p class="p5"><span class="span3">Lorem</span> Ipsum dolor sit amet.</p>
+                <p class="p5">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <p>
+                On the example above <b>&lt;span&gt;</b> element inside the <b>&lt;p&gt;</b> element gets selected because
+                it's the only child element (has no sibling elements).
+            </p>
+            <hr>
+    
+            <h2>input:optional</h2>
+            <p>
+                The <b>:optional</b> CSS pseudo-class represents any form element that does not have the 
+                <b>required</b> attribute set on it.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <label>
+                    * First Name: <input type="text" class="input5" name="first-name" required />
+                </label>
+                <br/>
+                <label>
+                    * Last Name: <input type="text" class="input5" name="last-name" required />
+                </label>
+                <br/>
+                <label>
+                    Age: <input type="number" class="input5" name="age"/>
+                </label>
+            </form>
+            <hr>
+            
+            <h2>input:in-range</h2>
+            <p>
+                The <b>:out-of-range</b> CSS pseudo-class represents an <b>&lt;input&gt;</b> element whose current value
+                is outside the range limits specified by the <b>min</b> and <b>max</b> attributes.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <input type="number" class="input6" min="10" max="20"/>
+            </form>
+            <p>
+                If the value is 10, 20 or between them the <b>&lt;input&gt;</b> element turns green otherwise red.
+            </p>
+            <hr>
+    
+            <h2>input:read-only</h2>
+            <p>
+                The <b>:read-only</b> CSS pseudo-class represents an element (such as <b>&lt;input&gt; or &lt;textarea&gt;</b>)
+                that is not editable by the user.
+            </p>
+            <h3>Exampel:</h3>
+            <div class="div4">
+                <input type="text" class="input6" value="this field is editable"/>
+                <input type="text" class="input6" value="This field is NOT editable" readonly />
+                <p contenteditable="true">This paragraph is editable.</p>
+                <p>This paragraph is NOT editable</p>
+            </div>
+            <hr>
+    
+            <h2>input:read-write</h2>
+            <p>
+                The <b>:read-write</b> CSS pseudo-class represents an element (such as <b>&lt;input&gt; or <b>&lt;textarea&gt;</b>)
+                that is editable by the user.
+            </p>
+            <h3>Example:</h3>
+            <div class="div5">
+                <input type="text" value="this field is editable"/>
+                <input type="text" value="this field is NOT editable" readonly />
+                <p contenteditable="true">This paragraph is editable</p>
+                <p>This paragraph is NOT editable</p>
+            </div>
+            <hr>
+    
+            <h2>input:required</h2>
+            <p>
+                This <b>:required</b> CSS pseudo-class represens any form element that has the <b>requried</b>
+                attribute set on it.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <label>
+                    * First Name: <input type="text" class="input7" name="first-name" required/>
+                </label>
+                <br/>
+                <label>
+                    * Last Name: <input type="text" class="input7" name="last-name" required />
+                </label>
+                <br/>
+                <label>
+                    Age: <input type="text" class="input7" name="age"/>
+                </label>
+            </form>
+            <hr>
+    
+            <h2>:root</h2>
+            <p>
+                the <b>:root</b> CSS pseudo-class marches the root element of a tree representing the document. In HTML,
+                <b>:root</b> represents the <b>&lt;html&gt;</b> element.
+            </p>
+            <h3>Example:</h3>
+            <div class="div6"></div>
+            <div class="div6">
+                As an example, we have shanged the document's background color.
+            </div>
+            <hr>
+    
+            <h2>p:target</h2>
+            <p>
+                The <b>:target</b> CSS pseudo-class represents a unique element (the target element) with an id matching
+                the UR'Ls fragment.
+            </p>
+            <h3>Example:</h3>
+            <p>Click the links to go to those paragraphs (or framents in this case).</p>
+            <div>
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#p1">Paragraph 1</a></li>
+                    <li><a href="#p2">Paragraph 2</a></li>
+                    <li><a href="#p3">Paragraph 3</a></li>
+                    <li><a href="#p4">Paragraph 4</a></li>
+                    <li><a href="#p5">Paragraph 5</a></li>
+                </ol>
+            </div>
+            <div>
+                <p id="p1" class="p6">
+                    1. Lorem ipsum dolor sit amet. consectetur adpscing elit. Suspendisse iaculis, arcu a bibendum fermentum,
+                    quam nunc accumsan nisl, eu porttitor lectus lectus eget lectus. Nulla congues euismod neque, quis tempus
+                    est maximus nec. proin egestas justo sollicitudin sapien sollicitudin, nec congues eros lobortis. Curabitur
+                    ultricis laoreet ex quis ullacorper.
+                </p>
+                <p id="p2" class="p6">
+                    2. Vivamus Magma velit, convalis ut purus at, facilisis lobortis elit. Aenean lacinia efficitur leo, vitae
+                    volutpat odio lacinia vitae. Proin nec sodales mauris. Quisque lacus orci, consectetur moleties dolor at,
+                    elementum pretium nibh. Morbi ornare risus urna, nec ultricies augue pharetra non. Nulla pulvinar ornare ipsum,
+                    cursus sagittis dolor suscipit vel.
+                </p>
+                <p id="p3" class="p6">
+                    3. Maecenas dictum metus in leo aliquam, nec pellentesque mauris vulputate. Phasellus dui eros, efficitur et
+                    turpis a, lacinia sollicitudinlectus. In hac habiasse platea dictumst. Sed dictum augue lectus, sit amet
+                    condimentum mauris maximus nec. Fusce at ante id lorem volupat tincidunt. In a rhoncus quam. Morbi sollicituidn
+                    accumsan velit.
+                </p>
+                <p id="p4" class="p6">
+                    4. Vivamus magna velit, convallis ut purus at, facillirs loborties elit. Aenean lacinia efficitur leo, vitae
+                    volutpat odio lacinia vitae. Proin nec sodales mauris. Quisque lacus orci, consectetur molestie dolor at,
+                    elementum pretium nibh. Morbi ornare risus urna, nec ultricies augue pharetra non. Nulla pulvinar onare ipsum, cursus 
+                    sagittis dolor suscipit vel.
+                </p>
+                <p id="p5" class="p6">
+                    5. Lorem ipsum dolor sit amet. consectetur adpscing elit. Suspendisse iaculis, arcu a bibendum fermentum,
+                    quam nunc accumsan nisl, eu porttitor lectus lectus eget lectus. Nulla congues euismod neque, quis tempus
+                    est maximus nec. proin egestas justo sollicitudin sapien sollicitudin, nec congues eros lobortis. Curabitur
+                    ultricis laoreet ex quis ullacorper.
+                </p>
+            </div>
+            <hr>
+    
+            <h2>input:invalid</h2>
+            <p>
+                the <b>:valid</b> CSS pseudo-class represents any <b>&lt;input&gt;</b> or other form element whose
+                contents validate successfully.
+            </p>
+            <h3>Example:</h3>
+            <form action="#">
+                <label for="website-url">Your Dream Website URL: </label>
+                <input type="url" class="input8" name="website-url" id="website-url">
+                <br>
+    
+                <label for="email">Your Email Address: </label>
+                <input type="email" class="input8" name="email" id="email">
+            </form>
+            <p>
+                If the value is valid the <b>&lt;input&gt;</b> turns green
+                <br>
+                If the value is invalid the <b>&lt;input&gt;</b> turns red
+            </p>
+            <hr>
+    
+            <h2>a:visited</h2>
+            <p>
+                The <b>:visited</b> CSS pseudo-class represents links that the user has already visited.
+            </p>
+            <h3>Example :</h3>
+            <p>
+                You may need to test this example on a real browser. To do that, just save this file as <b>filename.html</b>
+                and open it with any browser of your choice.
+            </p>
+            <p>
+                Go to <a class="a3" href="#">Example.com</a>
+            </p>
+            <h3>Example 2# :</h3>
+            <p>
+                Go to <a class="a3" href="#p6">Paragraph 1#</a>
+                <p id="p6" class="p6">
+                    1. Lorem ipsum dolor sit amet, consectetur adipscing elit. Suspendisse iaculis, arcu a bibendum fermentu,
+                    quam nunc accumsan nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tempus
+                    est maximus nec. Proin egestas justo sollicitudin sapien sollicitudin, nec congue eros lobortis. Curabitur laoreet
+                    ex quis ullamcorper.
+                </p>
+            </p>
+        </div>
+    </body>
+</htmL>

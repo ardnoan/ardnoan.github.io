@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Navigator bar2</title>
+        <style type="text/css">
+            
+            .nav-bar6 {
+                background: lightgrey; /* same color as the li */
+                width: 5%;
+                height: 100%;  /*takes the full width */
+                position: fixed;
+                top: 0px; /* sticks the side nav to the top */
+                left: 0px; /* top sticks side nav to the left side */
+                overflow-y: auto; /* adds a vertical scrollling functionality when neede */
+            }
+
+            .nav-bar6 a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+            .nav-bar6 > ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar6 > ul > li > a {
+                padding: 10px;
+                background: lightgrey;
+            }
+            .nav-bar6 > ul > li > a:hover {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar6 .active {
+                background: #173459;
+                color: #f8f9f9;
+            }
+            .nav-bar6 li {
+                border-bottom: 1px solid #333;
+            }
+            .nav-bar6 li:last-child {
+                border: none;
+            }
+            .content {
+                width: 95%;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar6">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Galery</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>
+                This is where the content of the page goes. Its container has 30% left margin (width of the side nav-bar)
+                and has a 70% width. Try scrolling this page to see how the sidr nav works.
+            </p>
+            <div style="background: green; height: 2000px;">
+                Thsi is a dummy text to make the page crolliable: Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+    </body>
+</html>

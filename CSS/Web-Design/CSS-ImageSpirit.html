@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>spirit Image</title>
+        <style type="text/css">
+            .i {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                background-image: url(home.png);
+            }
+            .i1 {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                background-image: url(home.png);
+                background-position: top 0 left 0;
+            }
+            .i2 {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+            }
+            .home-icon {
+                background-image: url(home.png);
+                background-position: top 0 left 0;
+                text-align: none;
+            }
+            .mail-icon {
+                background-image: url(mail.png);
+                text-align: none;
+            }
+            .notip-icon {
+                background-image: url(notip.png);
+            }
+            .info-icon {
+                background-image: url(info.png);
+                background-position: top 0 left -100px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            .i3 {
+                display: inline-block;
+                width: 47px;
+                height: 47px;
+                margin-bottom: -17px;
+                margin-right: 10px;
+            }
+            .dd {
+                position: relative;
+                display: inline-block;
+            }
+            .dd-btn {
+                padding: 15px;
+                text-align: center;
+                background: #173459;
+                border: none;
+                width: 300px;
+                color: #f9f8f8;
+            }
+            .dd-content {
+                position: absolute;
+                width: 100%;
+                box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
+                height: 0px;
+                transition: height 1s;
+                overflow: hidden;
+            }
+            .dd:hover > .dd-content {
+                height: 240px;
+            }
+            .dd-content > a {
+                display: block;
+                height: 60px;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                border-bottom: 1px solid black;
+            }
+            .dd-content > a:hover {
+                background: #173459;
+                color: #f9f8f8;
+            }
+        </style>
+    </head>
+    <body>
+        <i class="i"></i>
+        <br>
+        <i class="i1"></i>
+        <br>
+        <h3>The Icons</h3>
+        <p><i class="i2 home-icon"></i></p>
+        <p><i class="i2 mail-icon"></i></p>
+        <p><i class="i2 notip-icon"></i></p>
+        <p><i class="i2 info-icon"></i></p>
+        <hr>
+
+        <br><br><br>
+        <div class="dd">
+            <button class="dd-btn">Hover or Tap Me!</button>
+            <div class="dd-content">
+                <a href="#"><i class="i3 home-icon"></i>Home</a>
+                <a href="#"><i class="i3 mail-icon"></i>Mail</a>
+                <a href="#"><i class="i3 notip-icon"></i>Notip</a>
+                <a href="#"><i class="i3 info-icon"></i>Info</a>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>

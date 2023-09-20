@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Opacity</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .opacity {
+                opacity: 0;
+                color: white;
+                background: navy;
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+            .opacity2 {
+                opacity: 1;
+                color: lightblue;
+                background-color: blue;
+                padding: 20px;
+                margin: 20px;
+            }
+            #opacity3 {
+                color: lightblue;
+                background-color: navy;
+                padding: 20px;
+            }
+            .light {
+                opacity: 0.3;
+            }
+            .medium {
+                opacity: 0.7;
+            }
+            .heavy {
+                opacity: 0.9;
+            }
+            img {
+                opacity: 0.7;
+                /* make img responsive */
+                max-width: 100%;
+                height: auto;
+                /* optimal: set transition's duration */
+                transition-duration: 2s;
+                border: 1px solid white; 
+                box-sizing: border-box;
+            }
+            img:hover {
+                opacity: 1;
+                border: 20px solid navy;
+                width: 300px;
+                height: 300px;
+                transition: 2s;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Layout</a></li>
+                <li><a href="#">Opacity</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="opacity">Hello World</div>
+            <div class="opacity2">Hello World</div>
+            <div id="opacity3" class="light">Hello world</div>
+            <div id="opacity3" class="medium">Hello World</div>
+            <div id="opacity3" class="heavy">Hello World</div>
+            <br>
+    
+            <img src="../../no-copyright/school.jpg" style="width: 200px; height: 200px;"/>
+        </div>
+    </body>
+</html>

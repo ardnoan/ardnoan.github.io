@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devie-width, initial-scale=1.0">
+        <title> DOM Events </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript DOM Events </h1>
+            <h2> The addEventListener() Method </h2>
+            <h2> Click Event </h2>
+            <button id="btn"> Show Dialog </button>
+            <script>
+                var btn = document.getElementById("btn");
+                
+                btn.addEventListener("click", function() {
+                    alert("Hello World!");
+                });
+            </script>
+
+            <h2> Load Event </h2>
+            <img src="../../../kobeni.jpg" id="image">
+            <script>
+                var img = document.getElementById("image");
+                
+                img.addEventListener("load", function() {
+                    alert("The image has loaded!");
+                });
+            </script>
+
+            <h2> Change Event </h2>
+            <p> Try to write something, then click outside the <b>input</b>.</p>
+            <input type="text">
+            <p id="demo"></p>
+            <script>
+                var input = document.getElementsByTagName("input")[0];
+
+                input.addEventListener("change", function() {
+                    document.getElementById("demo").innerHTML = input.value;
+                });
+            </script>
+        </div>
+    </body>
+</html>

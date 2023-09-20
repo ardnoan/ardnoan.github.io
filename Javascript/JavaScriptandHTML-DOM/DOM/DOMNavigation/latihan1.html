@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Navigating Nodes </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JS Navigating Nodes </h1>
+            <h2> Navigating Nodes </h2>
+            <ul>
+                <li> parentNode </li>
+                <li> firstChild </li>
+                <li> lastChild </li>
+                <li> childNodes[index] </li>
+                <li> previousSibling </li>
+                <li> nextSibling </li>
+            </ul>
+            <h2> Navigating Element Nodes </h2> 
+            <ul>
+                <li> parentElement </li>
+                <li> firstElementChild </li>
+                <li> lastElementChild </li>
+                <li> children[index] </li>
+                <li> previousElementSibling </li>
+                <li> nextElementSibling </li>
+            </ul>
+            <h2> Parent and Children </h2>
+            <div id="container">
+                <h1> Lorem ipsum </h1>
+                <p id="demo">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium ipsam consectetur expedita temporibus maiores
+                    laborum rerum, ea, nobis voluptatem optio distinctio velit, maxime accusamus ab nemo modi. Doloremque, consectetur? </p>
+                <a href="latihan1.html"> Go to latihan1 (halaman ini) </a>
+            </div>
+            <script>
+                // let's select the <p> element 
+                var pElement = document.getElementById("demo");
+
+                // let's select the <p> element's parent and style it 
+                pElement.parentElement.style.background = "gold";
+            </script>
+
+            <div id="container1">
+                <h1> Lorem ipsum </h1>
+                <p id="demo1"> 
+                    , ipsum dolor sit amet consectetur adipisicing elit. Sint quae molestiae corrupti, perspiciatis quisquam ex
+                    accusamus pariatur ab provident eligendi nihil at qui, voluptas aliquid tempora quidem eius porro eaque? </p>
+                <a href="../../../JavaScriptAdvaned/thisKeyword/latihan1.html"> Goooooooooooooooooo </a>
+            </div>
+            <script>
+                // let's select the <div> element
+                var divElement = document.getElementById("container1");
+
+                // let's select the <div>'s first child element and style it
+                divElement.firstElementChild.style.color = "pink";
+            </script>
+
+            <div id="container2">
+                <h1> Lorem ipsum </h1>
+                <p id="demo2"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quidem obcaecati et sint, dignissimos voluptas nam enim,
+                    nihil quibusdam nemo maiores molestiae non fugiat inventore! Quia dolorem consequatur reprehenderit at.</p>
+                <a href="../../../JavaScriptBasics/JS-Operator.js"> Goooo </a>
+            </div>
+            <script>
+                // let's select the <div> element 
+                var divElement1 = document.getElementById("container2");
+
+                // let's select the <div>'s last child element and style it
+                divElement1.lastElementChild.style.color = "pink";
+                divElement1.lastElementChild.style.textDecoration = "blue underline overline";
+            </script>
+
+            <div id="container3" class="spacing">
+                <h1> Lorem ipsum </h1>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos aperiam aliquam est tenetur sed, obcaecati rerum eius, unde sint numquam mollitia veritatis veniam possimus dolores recusandae consequatur repellat quam quod?</p>
+                <a href="latihan1.html"> Go to example.com </a>
+            </div>
+            <script>
+                // let's select the <div> element
+                    var divElement2 = document.getElementById("container3");
+
+                // let's select the <div>'s second child element and style it
+                divElement2.children[1].style.color = "navy";
+                divElement2.children[1].style.textDecoration = "blue underline overline wavy";
+            </script>
+
+            <h2> Siblings </h2>
+            <div id="container4">
+                <h1> Lorem ipsum </h1>
+                <p id="demo3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque, quidem magni quas iusto doloribus illum magnam quibusdam earum ullam, illo adipisci recusandae voluptatem, voluptate unde dicta quaerat omnis aperiam! </p>
+                <a href="latihan1.html"> goo to example.com </a>
+            </div>
+            <script>
+                // let's select the <p> element
+                var pElement1 = document.getElementById("demo3");
+
+                // let's select the <h1> element and style it
+                    pElement1.previousElementSibling.style.color = "green";
+                    pElement1.previousElementSibling.style.textDecoration = "blue underline overline";
+            </script>
+            
+            <div id="container5">
+                <h1> Lorem ipsum </h1>
+                <p id="demo4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex vel reprehenderit enim debitis iure minus earum corrupti quia aliquam veniam soluta repellendus, nesciunt consequuntur dolor, tenetur possimus aliquid doloremque. </p>
+                <a href="latihan1.html"> Go to example.com </a>
+            </div>
+            <script>
+                // let's select the <p> element
+                    var pElement2 = document.getElementById("demo4");
+
+                // let's select the <a> element and style it
+                pElement2.nextElementSibling.style.color = "navy";
+                pElement2.nextElementSibling.style.textDecoration = "white solid overline";
+            </script>
+        </div>
+    </body>
+</html>

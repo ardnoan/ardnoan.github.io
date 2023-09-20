@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Border-Images</title>
+        <style type="text/css">
+            div {
+                margin: 10px;
+                width: 250px;
+                height: 250px;
+            }
+            #border-image1 {
+                border: 10px solid transparent;
+                padding: 1px;
+                border-image: url("pp.jpg") round 50;
+            }
+            #border-image2 {
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url("pp.jpg") round 20%;
+            }
+            #border-image3 {
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url("pp.jpg") round 30%;
+            }
+            #border-image4 {
+                border: 10px solid transparent;
+                padding: 15px;
+                border-image: url("pp.jpg") fill 30;
+            }
+            #outset {
+                width: 10rem;
+                background: #cef;
+                border: 1.4rem solid;
+                border-image: url("pp.jpg") 40;
+                border-image-outset: 1.5; /* = 1.5 * 1.4rem = 2.1rem */
+            }
+            .none {
+                width: auto;
+                height: auto;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="border-image1">
+            <img src="pp.jpg" style="width: 250px; height: 250px;"/>
+        </div>
+        <div id="border-image2"></div>
+        <div id="border-image3"></div>
+        <div id="border-image4"></div><br><br>
+        <div class="none" id="outset">this element has an outset border-image</div><br><br>
+    </body>
+</html>

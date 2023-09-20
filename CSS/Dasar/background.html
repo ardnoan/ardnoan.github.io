@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Background and font</title>
+        <link rel="stylesheet" href="css.css">
+        <style>
+            .container p {
+                background-color: black;
+            }
+            p {
+                font-size:large;
+                color: fuchsia;
+            }
+            .container div {
+                background: pink url("minlin.jpg") no-repeat center;
+                background-attachment: scroll local;
+            }
+
+            .last {
+                color: white;
+            }
+            .last h1 {
+                background-color: yellow;
+            }
+            .last p {
+                background-color: pink;
+            }
+            .last div {
+                background-color: gray;
+                width: 100px;
+                height: 500px;
+            }
+            .last .image {
+                background-image: url("minlin.jpg");
+                background-repeat: x; /* x untuk kesamping */
+                background-repeat: y; /* y untuk kebawah */
+                background-repeat: no-repeat; /* no repeat */
+                background-position: center;
+            }
+            .last a {
+                background: green url("minlin.jpg");
+                width: 500px;
+                height: 800px;
+            }
+            br {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+            <li><a href="#">Background</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>
+                Hello World!
+                My name is Ardi Nurohman 
+            </p>
+
+            <div style="color: white">
+                AA<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ZZ
+            </div>
+            <br>
+            <div class="last">
+                <h1>Hallo guys</h1>
+                <p>Belajar css di software di playstore</p>
+                <div>P</div>
+                <a class="image">AStagfirullah ardinurohman dari smkn 1 cidaun alamt kampung girang</a>
+            </div>
+        </div>
+    </body>
+</html>

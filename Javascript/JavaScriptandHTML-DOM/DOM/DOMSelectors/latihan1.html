@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> DOM Selector </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> Javascript DOM Selector </h1>
+            <h2> Select the Topmost Elements </h2>
+            <h3> A header </h3>
+            <p> A Paragraph </p>
+            <script>
+                // gets the value of the lang attribute of <html>
+                alert(document.documentElement.getAttribute("lang"));
+
+                // gets the content of <title> inside the <head> 
+                alert(document.head.firstElementChild.innerHTML);
+                
+                // changes the background color of the <body>
+                document.body.style.backgroundColor = "navy";
+            </script>
+
+            <h2> Select an Element By ID </h2>
+            <p id="demo"> Lorem ipsum </p>
+            <script>
+                document.getElementById("demo").innerHTML = "Hello World!";
+            </script>
+
+            <h2> Select Elements By Class Name </h2>
+            <p class="big-green"> My class name is <b>" big-green "</b>. Welcome to the coding world! </p>
+            <p> I have no class </p>
+            <p class="big-green"> My class name is <b>" big-green "</b>. Hello world! </p>
+            <p> I have no class name </p>
+            <script>
+                // let's select elements with "big-green" class name
+                var elements = document.getElementsByClassName("big-green");
+
+                // let/s access each selected element
+                for(let i = 0; i < elements.length; i++) {
+                    // let's style each selected element
+                    elements[i].style.fontSize = "20px";
+                    elements[i].style.color = "white";
+                }
+            </script>
+
+            <h2> Select Elements By Tag Name </h2>
+            <h3> Hello World </h3>
+            <p> Welcome to study, welcome to the solo study </p>
+            <h3> Lorem ipsum </h3>
+            <p> Lorem ipsum dolor sit amet. </p>
+            <script>
+                // let's select all <h3> elements
+                var elements1 = document.getElementsByTagName("h3");
+
+                // let's access each selected elements 
+                for(let a = 0; a < elements1.length; a++) {
+                    // let's style each selected element
+                    elements1[a].style.color = "navy";
+                }
+            </script>
+
+            <h2> Select Elements By Name </h2>
+            <p><label> First name: <input type="text" name="firstName"></label></p>
+            <p><label> Last name: <input type="text" name="lastName"></label></p>
+            <button onclick="getValues()"> Kirim </button> 
+            <script>
+                function getValues() {
+                    var firstName = document.getElementsByName("firstName")[0].value;
+                    var lastName = document.getElementsByName("lastName")[0].value;
+                    var fullName = "Your full name is " + firstName + " " + lastName;
+
+                    alert(fullName);
+                }
+            </script>
+
+            <h2> Select Elements Using CSS Selectors </h2>
+            <p> Notice that we used <b>[0]</b> which selects the first item in an array. It is because the <b>document.querySelectorAll()</b> returns an array of objects (elements). </p>
+            <p id="demo1"> Lorem Ipsum </p>
+            <script>
+                document.querySelectorAll("#demo1")[0].innerHTML = "Halo sayank";
+            </script>
+
+            <h4 class="big-blue"> Hello World </h4>
+            <p> Welcome to Study, Welcome to the Study solo </p>
+            <h4 class="big-blue"> Lorem ipsum </h4>
+            <p> Lorem ipsum dolor sit amet </p>
+            <script>
+                // let's select element with "big-blue" class name
+                var ele = document.querySelectorAll(".big-blue");
+
+                // let's access each selected element
+                for(let b = 0; b < ele.length; b++) {
+                    // let's style each selected element
+                    ele[b].style.color = "lightblue";
+                }
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 let Statement </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > thead, tbody {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript let Statement </h1>
+            <h2> Scoping Rules </h2>
+            <button onclick="varTest()"> Call varTest </button>
+            <button onclick="letTest()"> Call letTest </button>
+            <script>
+                function varTest() {
+                    var x = 5;
+                    {
+                        var x = 10; //same variable
+                        alert(x); //shows 10
+                    }
+                    alert(x); // shows 10
+                }
+
+                function letTest() {
+                    let x = 5;
+                    {
+                        let x = 10; //same variable
+                        alert(x); //shows 10
+                    }
+                    alert(x); // shows 5
+                }
+            </script>
+
+            <h2> Using let in a Loop </h2>
+            <p id="demo"></p>
+            <script>
+                var num = 10;
+                for(var num = 0; num < 15; num++) {
+                    // block of codes
+                }
+                // num is 15 here 
+                document.getElementById("demo").innerHTML = num;
+            </script>
+            <p id="demo_1"></p>
+            <script>
+                var sum = 10;
+
+                for(let sum = 0; sum < 15; sum++) {
+                    // block of codes 
+                }
+                // sum is 10 here 
+                document.getElementById("demo_1").innerHTML = sum;
+            </script>
+
+            <h2> Window Object Properties for Varibles </h2>
+            <p id="demo_2"></p>
+            <script>
+                var fruit = "mango";
+                document.getElementById("demo_2").innerHTML = window.fruit;
+            </script>
+            <p id="demo_2_1"></p>
+            <script>
+                let fruit1 = "banana";
+                document.getElementById("demo_2_1").innerHTML = window.fruit1;
+            </script>
+
+            <h2> les hoisting </h2> 
+            <p id="demo_3"> ada sesuatu tapi tidak ditampilkan karena NOT be used here </p>
+            <script>
+                fruit2 = "Strawberry";
+                document.getElementById("demo_3").innerHTML = fruit2; // fruit can NOT be used here 
+                let fruit2; // replace let wiht var to see the difference 
+            </script>
+        </div>
+    </body>
+</html>

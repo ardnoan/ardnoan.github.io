@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Backgrounds</title>
+        <style type="text/css">
+            .block {
+                width: 500px; 
+                height: 500px;
+                border: 1px solid navy;
+            }
+            .body {
+                background-image: url("pp.jpg"), url("minlin.jpg");
+            }
+            .body1 {
+                background-image: url("pp.jpg");
+                background-size: cover;
+            }
+            .body2 {
+                background-image: url("pp.jpg");
+                background-size: contain;
+            }
+            .body3 {
+                background-image: url("pp.jpg");
+                background-size: inherit;
+            }
+            .body4 {
+                background-image: url("pp.jpg");
+                background-size: initial;
+            }
+            .body5 {
+                background-image: url("pp.jpg");
+                background-size: unset;
+            }
+            .body6 {
+                background-image: url("pp.jpg");
+                background-size: 70px;
+            }
+            .body7 {
+                background-image: url("pp.jpg");
+                background-size: 40%;
+            }
+            .body8 {
+                background-image: url("pp.jpg");
+                background-image: 60px 100px;
+            }
+            .body9 {
+                background-image: url("pp.jpg");
+                background-size: 30% 40%;
+            }
+            .body10 {
+                background-image: url("pp.jpg"), url("settings.png");
+                /* Try charging the values below to see the effect */
+                background-image: 50px, 100px;
+            }
+            .body11 {
+                background-image: url("pp.jpg");
+                background-repeat: no-repeat;
+                background-position: fixed;
+                background-attachment: center;
+                /* 
+                    keep increasing the value of 
+                    the background-size property
+                    untill the background covers
+                    the entire page 
+                */
+                background-size: 200%;
+            }
+            #div1 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-repeat: no-repeat;
+                background-origin: border-box;
+            }
+            #div2 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-repeat: no-repeat;
+                background-origin: padding-box;
+            }
+            #div3 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-repeat: no-repeat;
+                background-origin: content-box;
+            }
+            #div4 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-clip: border-box;
+                -webkit-background-clip: border-box;
+            }
+            #div5 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-clip: padding-box;
+                -webkit-background-clip: padding-box;
+            }
+            #div6 {
+                color: white;
+                width: 300px;
+                height: 300px;
+                border: 10px double black;
+                padding: 20px;
+                background: url("pp.jpg");
+                background-clip: content-box;
+                -webkit-background-clip: content-box;
+            }
+            #div7 {
+                color: transparent;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+                width: 300px;
+                height: 300px;
+                border: 15px dotted navy;
+                padding: 20px;
+                background: url("minlin.jpg");
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        </style>
+    </head>
+    <body></body>
+            <div id="div1">Hello World - border box</div>
+            <hr>
+            <div id="div2">Hello World - padding box</div>
+            <hr>
+            <div id="div3">Hello World - content box</div>
+            <hr>
+            <div id="div4">Hello World - clip and -webkit - border box</div>
+            <hr>
+            <div id="div5">Hello World - clip and -webkit - padding box</div>
+            <hr>
+            <div id="div6">Hello World - clip and -webkit - content box</div>
+            <hr>
+            <div id="div7">Hello World!!</div>
+    </body>
+</html>

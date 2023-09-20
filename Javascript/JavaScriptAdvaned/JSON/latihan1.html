@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 JSON </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid silver;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Object Notation </h1>
+            <h2> JSON Syntax </h2>
+            <p> " " </p>
+
+            <h2> Converting JSON to JavaScript Object </h2>
+            <p id="text"></p>
+            <script>
+                var text = `{
+                    "firstName": "Ardi",
+                    "lastName": "Nurohman",
+                    "age": 16,
+                    "isMarried": true
+                }`;
+                var obj = JSON.parse(text); // returns an object
+
+                // now you can access its properties 
+                document.getElementById("text").innerHTML = obj.firstName + " " + obj.lastName + " is " + obj.age + " years old.";
+            </script>
+
+            <h2> Converting JavaScript Object to JSON </h2>
+            <p id="demo"></p>
+            <script>
+                var ect = {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "age": 30,
+                    "isMarried": true
+                };
+                var text1 = JSON.stringify(ect); // returns a string 
+
+                // now you can print the JSON text
+                document.getElementById("demo").innerHTML = text1;
+            </script>
+        </div>
+    </body>
+</html>

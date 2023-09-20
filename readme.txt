@@ -1,0 +1,1 @@
+Utamakan dibicarakan terlebih dahulu atau meminta izin terlebih dahulu

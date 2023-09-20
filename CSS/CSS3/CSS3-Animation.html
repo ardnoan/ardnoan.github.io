@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation</title>
+        <style type="text/css">
+        div {
+            text-align: center;
+        }
+            @keyframes myAnimation {
+                from {
+                    background-color: gold;
+                    top: 0px;
+                }
+                to {
+                    background-color: green;
+                    top: 100px;
+                }
+            }
+            @keyframes myAnimation1 {
+                0% {
+                    background-color: red;
+                    top: 0px;
+                    left: 0px;
+                }
+                25% {
+                    background: blue;
+                    top: 100px;
+                    left: 100px;
+                }
+                50% {
+                    background-color: red;
+                    top: 0px;
+                    left: 100px;
+                }
+                75% {
+                    background-color: blue;
+                    top: 100px;
+                    left: 0px;
+                }
+                100% {
+                    background-color: red;
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+            @keyframes myAnimation2 {
+                from {
+                    background-color: gold;
+                    top: 0px;
+                    left: 0px;
+                }
+                to {
+                    background-color: green;
+                    top: 100px;
+                    left: 100px;
+                }
+            }
+            @keyframes myAnimation3 {
+                from {
+                    background-color: gold;
+                    left: 0px;
+                }
+                to {
+                    background-color: green;
+                    left: 300px;
+                }
+            }
+            @keyframes myAnimation4 {
+                from {
+                    font-size: 18px;
+                    color: blue;
+                }
+                to {
+                    font-size: 40px;
+                    color: red;
+                }
+            }
+            @keyframes running {
+                from {
+                    top: 0px;
+                }
+                to {
+                    top: 500px;
+                }
+            }
+            .div1 {
+                animation-name: myAnimation;
+                animation-duration: 5s;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div2 {
+                animation-name: myAnimation1;
+                animation-duration: 5s;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            .div3 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-timing-function: ease;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div4 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-timing-function: linear;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div5 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-timing-function: ease-in;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div6 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-timing-function: ease-out;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div7 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div8 {
+                animation-name: myAnimation2;
+                animation-duration: 3s;
+                animation-delay: 5s;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div9 {
+                animation-name: myAnimation1;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: gold;
+            }
+            .div10 {
+                animation-name: myAnimation3;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+            .div11 {
+                animation-name: myAnimation3;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: reverse;
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+            .div12 {
+                animation-name: myAnimation3;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+            .div13 {
+                animation-name: myAnimation3;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+
+            .running {
+                animation-name: running;
+                animation-duration: 3s;
+                animation-delay: 10s;
+                animation-play-state: running;
+                background: #173459;
+            }
+            
+            .paused {
+                animation-name: paused;
+                animation-duration: 3s;
+                animation-play-state: paused;
+            }
+            
+            .div14 {
+                width: 150px;
+                height: 100px;
+                position: relative;
+                background: black;
+                color: white;
+            }
+            .p1 {
+                animation-name: myAnimation4;
+                animation-duration: 4s;
+                animation-delay: 10s;
+                animation-fill-mode: none;
+            }
+            .p2 {
+                animation-name: myAnimation4;
+                animation-duration: 4s;
+                animation-delay: 10s;
+                animation-fill-mode: forwards;
+            }
+            .p3 {
+                animation-name: myAnimation4;
+                animation-duration: 4s;
+                animation-delay: 10s;
+                animation-fill-mode: backwards;
+            }
+            .p4 {
+                animation-name: myAnimation4;
+                animation-duration: 4s;
+                animation-delay: 10s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes Berjalan {
+                from {
+                    background: blue;
+                    color: white;
+                    border: 2px solid navy;
+                    left: 0px;
+                }
+                to {
+                    background: lightblue;
+                    color: black;
+                    border: 2px solid aqua;
+                    left: 200px;
+                }
+            }
+            .kotak {
+                animation: Berjalan 2s linear 1s infinite alternate;
+                animation-delay: 15s;
+                width: 100px;
+                padding: 10px;
+                margin: 10px;
+                background: navy;
+                color: white;
+                border: 2px solid lightblue;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">myAnimation</div>
+        
+        <!-- 
+            Note!! The from and 0% selectors are the same
+            and to and 100%!!
+        -->
+        <div class="div2">myAnimation1</div>
+        <div class="div3">myAnimation ease</div>
+        <div class="div4">myAnimation linear</div>
+        <div class="div5">myAnilinear ease-in</div>
+        <div class="div6">myAnimation ease-out</div>
+        <div class="div7">myAnimation ease-in-out</div>
+        <div class="div8">myAnimation Delay</div>
+        <div class="div9">myAnimation infinite<div>
+            
+        <div class="div10">myAnimation Normal</div>
+        <div class="div11">myAnimation reverse</div>
+        <div class="div12">myAnimation alternate</div>
+        <div class="div13">myAnimation alternate-reverse</div>
+            
+        <br><br><br><br><br>
+        <p class="p1">Hello world</p>
+        <p class="p2">Hello world</p>
+        <p class="p3">Hello world</p>
+        <p class="p4">Hello world</p>
+        <hr>
+        <div class="div14 running">Running</div>
+        <br>
+        <div class="div14 paused">Paused</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="kotak">Kotak Berjalan</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>

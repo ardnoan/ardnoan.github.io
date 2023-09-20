@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="charset" content="width=device-width, initial-scale=1.0">
+        <title>Pseudo-elements</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            p {
+                text-align: justify;
+            }
+            .true::after {
+                content: "True ->";
+                color: green;
+            }
+            .true2::before {
+                content: "<- True";
+                color: green;
+            }
+            .false::after {
+                content: "False ->";
+                color: red;
+            }
+            .false2::before {
+                content: "<- False";
+                color: red;
+            }
+
+            .ul-none {
+                list-style-type: none;
+            }
+            .li::before {
+                content: "-__-";
+                color: blue;
+            }
+
+            .p::first-letter {
+                text-decoration: overline;
+                font-size: 250%;
+                color: red;
+                font-family: 'Times New Roman';
+                background: navy;
+                margin-left: 20px;
+                padding: 10px;
+                border: 2px solid lightblue;
+                /* Allowed CSS Properteis
+                word-spacing: 5px;
+                letter-spacing: 5px;
+                text-transform: capitalize;
+                line-height: 5px;
+                text-shadow: 2px 2px 4px 4px lightblue;
+                text-decoration-color: red;
+                text-decoration-line: yellow;
+                text-decoration-style: double;
+                vertical-align: top;
+                */
+            }
+            .p2::first-line {
+                color: white;
+                background: navy;
+                border-radius: 30px;
+            }
+            .p3::selection, textarea::selection {
+                color: white;
+                background-color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href=".././index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Layout</a></li>
+                <li><a href="#">Pseudo Elements</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p class="true true2"> Birds can fly </p>
+            <p class="false false2"> Monkey can fly </p>
+            <hr>
+    
+            <ul class="ul-none">
+                <li class="li"> Apple </li>
+                <li class="li"> Oranges</li>
+                <li class="li"> Mangos</li>
+                <li class="li"> Bananas</li>
+            </ul>
+            <hr>
+    
+            <br></br><br>
+            <p class="p">Ardi</p>
+            <br></br><br>
+            <hr>
+    
+            
+            <p class="p2">
+                Lorem ipsum dolor sit amet, consectetur adipscing elit. Suspendisse lacullis, arcu a bibendum fermentum, quam
+                nunc accumsan nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tempus est maximus
+                nec. Proin egestas justo sollicitudion sapien sollicitudin, nec congue eros lobortis. Curabitur ultricies laoreet 
+                ex quis ullamorcoper. Suspendisse potenti. Donec facillisis lacinia ullamcorper. Aenean ac erat vitae arcu cursus
+                trsisque. Nullam non dui velit.
+            </p>
+            <hr>
+    
+            <p class="p3">
+                Hello world! Try to long-press a word to heighlight it or double-click a word on the textarea.
+            </p>
+            <textarea>Hello World! Halo Banh</textarea>
+            <hr>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AJAX Introduction </title>
+        <link rel="stylesheet" href="../css.css">
+    </head>
+    <body>
+        <div class="div">
+            <h1> AJAX Introduction </h1>
+            <h2> What is AJAX? </h2>
+            <ul>
+                <li><b>AJAX</b> stands for ASynchronous JavaScript and XML </li>
+                <li><b>AJAX</b> can send information to a server </li>
+                <li><b>AJAX</b> can receive information from a server </li>
+            </ul>
+            <h2> Major Features of Ajax</h2>
+            <ul>
+                <li> Make <b>Request</b> to the server without reloading th page. </li>
+                <li> Receive and work with data from the server. </li>
+            </ul>
+            <h2> Simple Example </h2>
+            <button onclick="makeRequest()"> Reqeust </button>
+            <div id="demo"></div>
+            <script>
+                var httpRequest = new XMLHttpRequest();
+
+                makeRequest = () => {
+                    httpRequest.onreadystatechange = writeContent;
+
+                    httpRequest.open("GET", "#");
+                    httpRequest.send();
+                }
+
+                writeContent = () => {
+                    if(httpRequest.readyState === 4) {
+                        if(httpRequest.status == 200) {
+                            document.getElementById("demo").innerHTML = httpRequest.responseText;
+                        } else {
+                            alert('Ada masalah dengan permintaan');
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 4 Arrays Iterasi </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Array Iteration </h1>
+            <h2> Using for loop </h2>
+            <p id="demo_1"></p>
+            <script>
+                var fruits = ["Apple", "Bananas", "Oranges"];
+                for(var i = 0; i < fruits.length; i++) {
+                    document.getElementById("demo_1").innerHTML += fruits[i] + "<br>";
+
+                }
+            </script>
+            <h2> Using forEach() Method </h2>
+            <p id="demo_2"></p>
+            <script>
+                var fruits = ["Apples", "Bananas", "Orange"];
+                fruits.forEach(function(value, index, array) {
+                    document.getElementById("demo_2").innerHTML += '<p>Index: ' + index + '<br>Value: ' + value + '<p>';
+                });
+            </script>
+            <h2> Using map() Method </h2>
+            <p id="demo_3"></p>
+            <script>
+                var numbers = [10, 20, 30, 40, 50];
+                var numbersTimesTwo = numbers.map(function(value) {
+                    return value * 2;
+                });
+                document.getElementById("demo_3").innerHTML += numbersTimesTwo;
+            </script>
+            <h2> Using filter() Method </h2>
+            <p id="demo_4"></p>
+            <script>
+                var numbers = [1, 2, 3, 4, 5];
+                var newArr = numbers.filter(function(value) {
+                    return value < 4;
+                });
+                document.getElementById("demo_4").innerHTML += newArr;
+            </script>
+        </div>
+    </body>
+</html>

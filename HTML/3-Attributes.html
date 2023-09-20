@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribut HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Attribut HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Attributes HTML</h1>
+        <p>Attribut HTML dapat digunakan untuk menambahhkan lebih banyak informasi element.</p>
+        <h1>Element penting HTML</h1>
+        <ol>
+            <li>Attribut HTML ditemukan dalam tag HTML.</li>
+            <li>Attribut HTML hanya muncul di awal tag. Itu tidak akan pernah ada di tag akhir.</li>
+            <li>Element HTML dapat memiliki banyak attribut.</li>
+            <li>Attribut HTML terdiri dari pasangan nama/ nilai.</li>
+            <li>Ada beberapa attribut yang bisa digunakan pada semua HTML, Diingat meskipun attribut tersebut mungkin
+                tidak berpengaruh pada beberapa element. Mereka disebut Attribut Global.</li>
+        </ol>
+
+        <p>Attribut HTML terdiri dari</p>
+        <ol>
+            <li>Nama Attribut</li>
+            <li>Tanda sama dengan (=)</li>
+            <li>Nilai yang diapit oleh tanda kutip situasi</li>
+        </ol>
+        <p>Ini terlihat seperti ini : attributename="value"</p>
+        <p>Kamu juga dapat menggunakan tanda kutip tunggal tergantung pada "nilai" esp. ketika nilainya mengandung tanda
+            kutip ganda. hanya akan mengguanakan tanda kutip ganda.</p>
+        <p>Dalam pelajaran ini kita akan mempelajari beberapa attribut HTML dengan contoh.</p>
+
+        <h1>Attribut lang Contoh:</h1>
+        <div class="sampul">
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en-US"&gt;
+                &lt;!-- Isi dokumen html ada disini --&gt;
+                . . . 
+                &lt;html&gt;</pre>
+        </div>
+        <p>Kami menggunakan attribut lang untuk menentukan bahasa file HTML yang didefinisikan di atas adalah bahasa
+            inggris America.</p>
+        <h1>Attribut href Contoh:</h1>
+        <div class="sampul">
+            <p>&lt;a href="http://www.example.com"&gt; Goo to example &lt;/a&gt;</p>
+        </div>
+        <p>Tautan ditentukan menggunakan element &lt;a&gt; jangkar.</p>
+        <p>Pada contoh diatas kami menggunakan attribut href untuk memberi tahu browser ke mana harus pergi.</p>
+        <p>Saat diklik, pengguna akan dialihkan ke http://www.example.com.</p>
+
+        <h1>Contoh judul Attribut</h1>
+        <div class="sampul">
+            <p>&lt;a href="#link" title="Saya melayani sebagai tooltip"&gt;Link&lt;/a&gt;</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p><a href="http://www.example.com" title="Saya melayani sebagai tolltip">Link</a></p>
+        </div>
+
+        <p>Attribut judul menyediakan tooltip untuk Element HTML.</p>
+        <p>Sayangnya, itu tidak berfungsi pada perangkat seluler.</p>
+
+        <h1>Contoh Gaya attribute</h1>
+        <div class="sampul">
+            <p>&lt;p style="font-size: 40px; color: gold"&gt;</p>
+            <p>Saya adalah paragraf dengan ukuran 40 piksel dan dengan warna emas.</p>
+            <p>&lt;/p&gt;</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="font-size: 40px; color: gold;">Saya adalah paragraf dengan ukuran 40 piksel dengan warna emas.
+            </p>
+        </div>
+
+        <p>Pada contoh yang diberikan di atas kita telah membuat sebuah paragraf menggunakan element.</p>
+        <p>&lt;p&gt; Kami juga mengguanakn attribut style untuk mengubah font-size dan color.</p>
+
+        <h1>Attribut id dan class Contoh:</h1>
+        <div class="sampul">
+            <pre>
+                &lt;div class="name"&gt;
+                    &lt;!-- Kontent ada disini --&gt;
+                &lt;/div&gt;
+
+                &lt;div id="name"&gt;
+                    &lt;!-- Konten ada disini --&gt;
+                &lt;/div&gt;</pre>
+        </div>
+
+        <p>Attribut id dan class memberikan referensi ke element didalamnya sebuah dokumen HTML.</p>
+        <p>Beberapa element dapat memiliki nilai/ nama kelas yang sama.</p>
+        <p>Nilai id harus unik untuk setiap element.</p>
+        <p>Ini membantu kami memilih element dalam style sheet dan script.</p>
+
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="#" class="pag active">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

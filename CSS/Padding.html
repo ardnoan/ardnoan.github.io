@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Padding adalah membuat ruang didalam element</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            p {
+                color: fuchsia;
+            }
+            .container div {
+                padding-top: 30px;
+                padding-right: 50px;
+                padding-bottom: 70px;
+                padding-left: 90px;
+                background: lightgrey;
+                border: 1px solid red;
+            }
+            .padding {
+                padding: 10px 20px 30px 40px;
+                background: teal;
+                border: 1px solid red;
+            }
+            .padding1 {
+                width: 200px;
+                padding: 10px;
+                /* The actual rendered width of the element is now 220px */
+                background: green;
+                height: 100px
+            }
+            .padding2 {
+                width: 200px;
+                padding: 10px;
+                box-sizing: border-box;
+                /* The actual rendered width of the element is now 220px */
+                background: gold;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Padding</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div>
+                I have a top padding of 30px<br>
+                I have a right padding of 50px<br>
+                I have a bottom padding of 70px<br>
+                I have a left padding of 90px
+            </div><br><br>
+            <div class="pading">Halo Bang</div>
+            <p class="padding1">
+                <p>The actual rendered with of the elemnt is now 220px</p>
+                <p>Because <b>220px</b> (element's content area width) + <b>10px</b>(left padding) + <b>10px</b> (right padding) = <b>22px</b></p>
+            </p>
+            <p class="padding2">
+                <p>The actual rendered height of the element is still 200px.</p>
+                <p>Because of the <b>box-sizing: border-box</b> CSS declaration the padding no longer increases the actual height of the element it decreases the content space/area inside.</p>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive 1</title>
+        <style type="text/css">
+            @media only screen and (orientation: portrait) {
+                body {
+                    background: pink;
+                    color: navy;
+                }
+            }
+            @media only screen and (orientation: landscape) {
+                body {
+                    background: navy;
+                    color: white;
+                }
+            }
+            .img {
+                width: 100%;
+                height: auto;
+            }
+            /*
+                menggunakan properti width baik-baik saja tetapi adalam membuat gambar responsif properti
+                max-width lebih baik. Karena width. deklarasi css 100% dapat memperbesar gambar, itu terjadi ketika 
+                wadah lebih besar atau lebih dari gambar.
+
+                disisi lain, dekalarasi css max-width 100% tidak mengizinkan gambar menjjadi lebih besar dari ukuran
+                aslinya tetapi masih memungkinkannya mengecil saat dibutuhkan (terjadi ketika gmbar lebih kecil dar wadahnya)
+            */
+            .img1 {
+                max-width: 100%;
+            }
+            .video {
+                width: 100%;
+                height: auto;
+            }
+            .video1 {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            When your device is in portrait mode the backround color is black and when in landscape the background color
+            turms green.
+        </p>
+        <img class="img" src="kobeni/kobeni1.jpg"/>
+        <br><br>
+        <img class="img1" src="kobeni/kobeni.jpg"/>
+        <br><br>
+        <video class="video" src="kobeni/v-kobeni.mp4" controls>
+            This text will be displayed if your browser does not support embedding videos
+        </video>
+        <br><br>
+        <video class="video1" src="kobeni/v-kobeni.mp4" controls>
+            The text will be displayed if your browser does not support embedding videos
+        </video>
+    </body>
+</html>

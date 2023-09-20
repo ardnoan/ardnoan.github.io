@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 2 switch </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript switch Statement </h1>
+            <p id="demo"></p>
+            <script>
+                var fruit = "mango";
+                
+                if(fruit == "apple") {
+                    document.getElementById("demo").innerHTML = "The color is red";
+                }
+                if(fruit == "strawberry") {
+                    document.getElementById("demo").innerHTML = "The color is pink";
+                }
+                if(fruit == "mango") {
+                    document.getElementById("demo").innerHTML = "The color is yellow";
+                }
+            </script>
+            <p id="demo1"></p>
+            <script>
+                var fruit = "mango";
+
+                switch(fruit) {
+                    case "apple":
+                        document.getElementById("demo1").innerHTML = "The color is red";
+                        break;
+                    case "strawberry":
+                        document.getElementById("demo1").innerHTML = "The color is pink";
+                        break;
+                    case "mango":
+                        document.getElementById("demo1").innerHTML = "The color is yellow";
+                        break;
+                }
+            </script>
+
+            <h2> The switch Statement </h2>
+            <p id="demo_1"></p>
+            <script>
+                var cidaun = "girang";
+
+                switch(cidaun) {
+                    case "kaum":
+                        document.getElementById("demo_1").innerHTML = "Berada di kaum";
+                        break;
+                    case "bobojong":
+                        document.getElementById("demo_1").innerHTML = "Berada di bobojong";
+                        break;
+                    case "girang":
+                        document.getElementById("demo_1").innerHTML = "Berada id girang";
+                }
+            </script>
+
+            <h2> The break Keyword </h2> 
+            <p id="demo_2"></p>
+            <script>
+                var fruit = "apple";
+
+                switch(fruit) {
+                    case "apple": //fruit is apple so the code below will now run
+                        document.getElementById("demo_2").innerHTML = "The color is red";
+                        //no break is given here
+                    case "strawberry": //this case and the following one will still run
+                        document.getElementById("demo_2").innerHTML = "The color is pink";
+                    case "mango":
+                        document.getElementById("demo_2").innerHTML = "The color is yellow";
+                }
+                //following statements will be delayed a bit
+            </script>
+            
+            <h2> The default Clause </h2>
+            <p id="demo_3"></p>
+            <script>
+                var fruit = "lettuce";
+
+                switch(fruit) {
+                    case "apple":
+                        document.getElementById("demo_3").innerHTML = "The color is red";
+                        break;
+                    case "strawberry":
+                        document.getElementById("demo_3").innerHTML = "The color is pink";
+                        break;
+                    case "mango":
+                        document.getElementById("demo_3").innerHTML = "The color is yellow";
+                        break;
+                    default:
+                        document.getElementById("demo_3").innerHTML = "That is not a fruit";
+                }
+            </script>
+
+            <h2> Illustrative Example </h2>
+            <label> Pilih buah-buahan 
+                <select id="fruits" onchange="checkPrice()">
+                    <option value="apple"> Apple </option>
+                    <option value="banana"> Banana </option>
+                    <option value="cherry"> Cherry </option>
+                    <option value="mango"> Mango </option>
+                    <option value="orange"> Orange </option>
+                    <option value="strawberry"> Strawberry </option>
+                </select>
+            </label>
+            <p id="price"></p>
+            <script>
+                function checkPrice() {
+                    var fruit = document.getElementById("fruits").value;
+                    switch(fruit) {
+                        case "apple":
+                            var amount = '$1.92'
+                            document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                            break;
+                        case "banana":
+                            var amount = '$2.32'
+                            document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                            break;
+                        case "mango":
+                            var amount = '$3.11'
+                            document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                            break;
+                        case "orange":
+                            var amount = '$2.87'
+                            document.getElementById("price").innerHTML = "The price of " + fruit + " is " + amount;
+                            break;
+                        default:
+                            document.getElementById("price").innerHTML = "Maaf ini bukan buah " + fruit + " is curretly not avaiable";
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

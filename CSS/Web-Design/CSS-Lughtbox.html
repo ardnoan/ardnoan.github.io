@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lightbox</title>
+        <style type="text/css">
+            .lightbox {
+                visibility: hidden; /* hiddes the lightbox */
+                display: table; /* helps us center the lightbox content */
+
+                /* make th elightbox occupy the entire page */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+            }
+            .lightbox:target {
+                visibility: visible;
+            }
+            .lightbox-content {
+                display: table-cell; 
+                vertical-align: middle; /* vertically center */
+                text-align: center; /* horizontally center */
+            }
+            .close {
+                /* position the CLOSE button the the top-right corner */
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                /* style the close button */
+                font-size: 14px;
+                font-weight: 300;
+                text-decoration: none;
+                color: white;
+            }
+            .img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* */
+            .lightbox1 {
+                display: table; /* helps us center the lightbox content */
+                opacity: 0; /* fully transparent (hidden) */
+                z-index: -1; /* put the lightbox layer below the body */
+                transition-duration: 1s; /* duration of the fade in effect */
+
+                /* make the lightbox occupy the entire page */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+            }
+            .lightbox1:target {
+                opacity: 1; /* fully opaque (visible) */
+                z-index: 1; /* horizontally center */
+            }
+            .lightbox-content1 {
+                display: table-cell;
+                vertical-align: middle; /* vertically center */
+                text-align: center /* horizontally center */
+            }
+            .close1 {
+                /* position the CLOSE button to the top right corner */
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                
+                /* style the close button */
+                font-size: 20px;
+                font-weight: 300;
+                text-decoration: none;
+                color: white;
+            }
+            /**/
+
+            .lightbox2 {
+                display: table; /* helps us center the lightbox-content */ 
+
+                /* make the lightbox occupy the entire page */
+                position: fixed;
+                top: -200%; /* position the lightbox above the top edge */
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+                transition-duration: 2s; /* set the duration of the slide down effect */
+            }
+            .lightbox2:target {
+                top: 0; /* cover the entire screen */
+            }
+            .lightbox-content2 {
+                display: table-cell;
+                vertical-align: middle; /* vertically center */
+                text-align: center; /* horizontal center */
+            }
+            .close2 {
+                /* position the CLOSE button to the top-right corner */
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                /* style the close button */
+                font-size: 14px;
+                font-weight: 300;
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#ex">Show example lightbox</a>
+        <div class="lightbox" id="ex">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="pp.jpg"/>
+            </div>
+        </div>
+        <br>
+        <a href="#am">Show example lightbox</a>
+        <div class="lightbox1" id="am">
+            <a href="#" class="close1">Close</a>
+            <div class="lightbox-content1">
+                <img src="pp.jpg"/>
+            </div>
+        </div>
+        <br>
+        <a href="#ple">Show example lightbox</a>
+        <div class="lightbox2" id="ple">
+            <a href="#" class="close2">Close</a>
+            <div class="lightbox-content2">
+                <img src="pp.jpg"/>
+            </div>
+        </div>
+    </body>
+</html>

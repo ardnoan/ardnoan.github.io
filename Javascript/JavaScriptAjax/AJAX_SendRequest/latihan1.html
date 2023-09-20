@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AJAX Requst to a Server </title>
+        <link rel="stylesheet" href="../css.css">
+    </head>
+    <body>
+        <div class="div">
+            <h1> Sending Request to a Server </h1> 
+            <h2> Sending a GET Request </h2>
+            <button onclick="sendGetRequest()"> Send GET Request </button>
+            <p id="demo"></p>
+            <script>
+                var httpRequest = new XMLHttpRequest();
+
+                sendGetRequest = () => {
+                    httpRequest.onreadystatechange = writeContent;
+
+                    httpRequest.open("GET", "#");
+                    httpRequest.send();
+                }
+                writeContent = () => {
+                    if(httpRequest.readyState === 4) {
+                        if(httpRequest.status == 200) {
+                            document.getElementById("demo").innerHTML = httpRequest.responseText;
+                        } else {
+                            alert('There was a problem with the request');
+                        }
+                    }
+                }
+            </script>
+
+            <button onclick="sendGetRequest1()"> Send GET Request </button>
+            <p id="demo"></p>
+            <script>
+                var httpRequest = new XMLHttpRequest();
+
+                sendGetRequest1 = () => {
+                    httpRequest.onreadystatechange = writeContent;
+
+                    httpRequest.open("GET", "#?firstName=John&lastName=Doe");
+                    httpRequest.send();
+                }
+                writeContent = () => {
+                    if(httpRequest.readyState === 4) {
+                        if(httpRequest.status == 200) {
+                            document.getElementById("demo").innerHTML = httpRequest.responseText;
+                        } else {
+                            alert('There was a problem with the request');
+                        }
+                    }
+                }
+            </script>
+
+            <h2> Sending a POST Request </h2>
+            <button onclick="sendPostRequest()"> Send POST Request With Information </button>
+            <p id="demo"></p>
+            <script>
+                var httpRequest = new XMLHttpRequest();
+
+                sendPostRequest = () => {
+                    httpRequest.onreadystatechange = writeContent;
+
+                    httpRequest.open("POST", "#");
+                    httpRequest.setRequestHeader("Content-type", "application/x-www.form-urlencoded");
+                    httpRequest.send("firstName=John&lastName=ni");
+                }
+                writeContent = () => {
+                    if(httpRequest.readyState === 4) {
+                        if(httpRequest.status == 200) {
+                            document.getElementById("demo").innerHTML = httpRequest.responseText;
+                        } else {
+                            alert('There was a problem with the request');
+                        }
+                    }
+                }
+                
+            </script>
+        </div>
+    </body>
+</html>

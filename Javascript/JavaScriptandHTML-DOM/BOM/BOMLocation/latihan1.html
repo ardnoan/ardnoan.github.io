@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BOM Location </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> Javascript BOM location </h1>
+            <ul>
+                <li> href </li>
+                <li> protocol </li>
+                <li> hostname </li>
+                <li> pathname </li>
+            </ul>
+            <h2> The href Property </h2>
+            <p id="lokasi"></p>
+            <script>
+                var a = location.href;
+                document.getElementById("lokasi").innerHTML = a;
+            </script>
+            <h2> The protocol Property </h2>
+            <p id="protocol"></p>
+            <script>
+                var b = location.protocol;
+                document.getElementById("protocol").innerHTML = b;
+            </script>
+
+            <h2> The hostname Property </h2>
+            <p id="host"></p>
+            <script>
+                var c = location.hostname;
+                document.getElementById("host").innerHTML = c;
+            </script>
+
+            <h2> The pathname Property </h2>
+            <p id="path"></p>
+            <script>
+                var d = location.pathname;
+                document.getElementById("path").innerHTML = d;
+            </script>
+        </div>
+    </body>
+</html>

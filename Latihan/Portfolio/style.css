@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background: #969696;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+
+.container-utama {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .image img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid #777;
+    margin-bottom: -50px;
+}
+
+header .container-text {
+    text-align: center;
+}
+
+.container-text h1 {
+    background-image: linear-gradient(to right, white 10%, #ffa000 20%, #ffd400 30%, #78ff00 40%, #00ffc0 50%, #0069ff 60%, #6d03ff 70%, #ff00ba 80%, #ff6ee0 90%, #ff0 100%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: keren 3s linear infinite;
+    text-shadow: 2px -2px #333;
+}
+
+.container-text p {
+    margin-top: -35px;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.buricak {
+    margin-top: -35px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.buricak li {
+    list-style: none;
+    font-size: 1.2em;
+    color: transparent;
+    animation: slides 16s steps(4) infinite;
+    position: relative;
+    top: 0;
+}
+
+.buricak li span {
+    position: relative;
+    background-image: linear-gradient(to right, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buricak li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: #969696;
+    border-left: 2px solid #777;
+    animation: typing 2s steps(18) infinite;
+    animation-direction: alternate;
+}
+
+.container-text p span {
+    animation: lambaiTangan 2s linear infinite;
+    transform: rotate(45deg);
+    position: absolute;
+    animation-direction: alternate;
+}
+
+/* Navigation */
+.navigation {
+    position: fixed;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.navigation ul {
+    position: relative;
+    display: flex;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 85px;
+    font-size: 1.5em;
+    transition: .5s;
+    text-align: center;
+    color: #aaa;
+}
+
+.navigation ul li a:hover .icon {
+    color: #fff;
+}
+
+
+.navigation ul li.active a .icon {
+    color: #777;
+    transform: translateY(-8px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.6em;
+    color: #222327;
+    text-transform: uppercase;
+    transform: translateY(0px);
+    letter-spacing: .05em;
+    opacity: 0;
+    z-index: 100;
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(16px);
+}
+
+.indicator {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    width: 80%;
+    height: 16px;
+    background: #777;
+    border-radius: 10px;
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(80px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(80px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(80px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(80px * 4));
+}
+
+.container-utama .aboutme {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px 0 20px;
+    color: #2f2f2f;
+    text-align: justify;
+}
+
+.aboutme .image {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.aboutme .image img {
+    max-width: 250px;
+    border-radius: 50%;
+    border: 5px solid #777;
+}
+
+.aboutme .image-text {
+    margin: 10px;
+    line-height: 23px;
+}
+
+.image-text h2 {
+    padding-bottom: 10px;
+}
+
+.container-utama.homeactive .homeardi {
+    z-index: 9;
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+.container-utama header {
+    position: absolute;
+    opacity: 0;
+}
+
+
+.container-utama.aboutactive .aboutme {
+    opacity: 1;
+    z-index: 9;
+}
+
+.container-utama .aboutme {
+    position: absolute;
+    opacity: 0;
+}
+
+.container-utama.projectsactive .projects {
+    opacity: 1;
+    z-index: 9;
+}
+
+.container-utama.skillsactive .skills {
+    opacity: 1;
+    z-index: 9;
+}
+
+.container-utama.contactactive .contact {
+    z-index: 9;
+    opacity: 1;
+}
+
+
+/* Projects */
+div.projects {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.projects h2 {
+    padding: 0 0 20px 0;
+    margin-top: 25px;
+    color: #2f2f2f;
+    margin-bottom: -30px;
+    font-size: 2em;
+}
+
+.projects .container-projects {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.container-projects .container-image {
+    margin-top: -20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px #777;
+    background: #aaa;
+    color: #2f2f2f;
+    text-align: left;
+}
+
+.container-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-description {
+    padding: 20px;
+}
+
+.image-description h3 {
+    padding: 10px;
+    margin-top: -20px;
+    padding-left: 0;
+}
+
+.image-description p {
+    line-height: 23px;
+    word-spacing: 7px;
+    font-size: 15px;
+}
+
+
+/* Skills */
+.container-utama .skills {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    opacity: 0;
+}
+
+.skills h2 {
+    padding: 0 0 20px 0;
+    margin-top: 25px;
+    color: #2f2f2f;
+    font-size: 2em;
+}
+
+.container-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-skills .container-skills-image {
+    max-width: 100px;
+    border: 2px solid #777;
+    box-shadow: 3px 3px #777;
+    margin: 10px;
+    padding: 10px;
+    transition: .5s;
+}
+
+.container-skills .container-skills-image:hover {
+    border: 5px double #777;
+    box-shadow: 0 0 5px #777;
+    transition: .5s;
+}
+
+.container-skills .container-skills-image img {
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+
+
+/* Contact */
+div.contact {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    flex-direction: column;
+}
+
+.container-contact .container-contact-text p {
+    line-height: 23px;
+    word-spacing: 7px;
+    color: #2f2f2f;
+    padding: 0 0 10px 10px;
+}
+
+.container-contact-text h2,
+.contact h2 {
+    text-align: left;
+    padding: 20px 0 20px 10px;
+    font-size: 2em;
+    color: #2f2f2f;
+}
+
+.contact h2 {
+    margin-bottom: -20px;
+}
+
+.contact .container-contact .container-contact-text .medsos {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-contact-text .medsos {
+    margin: auto;
+}
+
+.medsos-text ul,
+.medsos-link ul {
+    text-align: left;
+    list-style: none;
+    font-weight: 100;
+}
+
+.medsos-link a {
+    text-decoration: none;
+    font-weight: 300;
+    border-bottom: 2px dotted #2f2f2f;
+    color: #000;
+}
+
+.medsos-text {
+    margin: 0 20px;
+}
+
+.contact form {
+    width: 100%;
+}
+
+.contact form .contact-input {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-input .col {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.contact .contact-input .col .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #222;
+    margin: 30px 0 20px;
+}
+
+.contact .contact-input .col .inputBox input,
+.contact .contact-input .col .inputBox textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding-left: 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.contact .contact-input .col .inputBox textarea {
+    padding-left: 0;
+}
+
+.contact .contact-input .col .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.contact .contact-input .col .inputBox input:focus+.text,
+.contact .contact-input .col .inputBox input:valid+.text,
+.contact .contact-input .col .inputBox textarea:focus+.text,
+.contact .contact-input .col .inputBox textarea:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+.contact .contact-input .col .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #777;
+    transition: .5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.contact .contact-input .col .inputBox .textarea .line {
+    left: 0;
+}
+
+.contact .contact-input .col .inputBox input:focus~.line,
+.contact .contact-input .col .inputBox input:valid~.line {
+    height: 100%;
+}
+
+.contact .contact-input .col .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.contact .contact-input .col .inputBox textarea:focus~.line,
+.contact .contact-input .col .inputBox textarea:valid~.line {
+    height: 100%;
+}
+
+.contact .contact-input .col input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    width: 100%;
+    cursor: pointer;
+    background: #777;
+    color: #222;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-top: -50px;
+}
+
+@keyframes lambaiTangan {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-70deg);
+    }
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -15px 0 15px;
+    }
+}
+
+@keyframes slides {
+    100% {
+        top: -360px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    header .container-text {
+        text-align: center;
+    }
+}
+
+@keyframes keren {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    header .image img {
+        margin-bottom: 0;
+    }
+
+    .navigation {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+
+    header {
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 25% 35%;
+    }
+
+    header .container-text {
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    header .image img {
+        max-width: 200px;
+    }
+
+    .container-utama .aboutme {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .aboutme .image-text {
+        padding-right: 50px;
+    }
+
+    /* Contact */
+    div.contact {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact h2 {
+        margin: 0 0 -20px 0;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    header .image {
+        justify-content: right;
+        margin-right: 20px;
+    }
+
+    .navigation {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        height: 30px;
+        top: 0;
+    }
+
+    .navigation ul li {
+        width: 50px;
+        height: 50px;
+        margin-top: -15px;
+    }
+
+    .navigation ul {
+        overflow: hidden;
+    }
+
+    .navigation .list.active .icon {
+        margin-top: -3px;
+    }
+
+    .navigation .list .icon {
+        margin-top: -11px;
+    }
+
+    header {
+        grid-template-columns: 25% 25%;
+    }
+
+    header .container-text {
+        margin: 0;
+    }
+
+    .container-utama .aboutme {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .container-utama .projects {
+        margin-top: 30px;
+    }
+
+    .projects .container-projects {
+        flex-direction: row;
+    }
+
+    .aboutme .image-text {
+        width: 50%;
+        padding-right: 50px;
+    }
+
+
+    /* Skills */
+    .skills h2 {
+        margin-top: 50px;
+    }
+
+    .container-skills {
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+    }
+
+
+    /* Contact */
+    .container-contact-form-input {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        place-items: centers;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .contact .container-contact {
+        margin-top: 20px;
+        text-align: center;
+        color: #2f2f2f;
+    }
+
+    .contact .contact-input {
+        width: 60%;
+    }
+
+    .container-contact h2 {
+        font-size: 2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}

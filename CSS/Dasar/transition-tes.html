@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Transition</title>
+        <style type="text/css">
+            .transition {
+                transition: margin-top 2s linear, width 1s ease-in, height 1s ease-out;
+            }
+            div {
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: white;
+                margin-top: 0px;
+            }
+            div:hover {
+                margin-top: 200px;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="transition">Transition</div>
+    </body>
+</html>

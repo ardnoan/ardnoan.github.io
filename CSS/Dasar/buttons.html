@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buttons</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            .container button {
+                font-family: sans-serif;
+            }
+            #button1 {
+                background-color: rgb(23, 52, 89);
+                color: #f8f9f9;
+            }
+            #button2 {
+                background-color: #903c56;
+                color: #f8f9f9;
+            }
+            #button3 {
+                background-color: #404242;
+                color: #f8f9f9;
+            }
+            #button4, #button7, #button11 {
+                background: red;
+                color: aqua;
+                border: none;
+            }
+            #button5, #button6, #button12 {
+                background-color: red;
+                color: aqua;
+                padding: 15px 30px;
+            }
+            #button8, #button9, #button10 {
+                outline: none;
+                background-color: red;
+                color: aqua;
+                padding: 15px 30px;
+                margin: 5px;
+                font-size: 20px;
+                border: none;
+            }
+            #button13, #button14, #button15 {
+                border: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                outline: none;
+                margin: 5px;
+                background: transparent;
+            }
+            #button13, #button15 {
+                color: darkcyan;
+                border: 4px solid darkcyan;
+            }
+            #button14 {
+                color: #903c56;
+                border: 4px solid #903c56;
+            }
+            #button16, #button17, #button18 {
+                border: none;
+                outline: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                border-radius: 10px;
+                color: navy;
+                background: gray;
+            }
+            #button19, #button20, #button21 {
+                border: none;
+                outline: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                margin: 10px;
+            }
+            #button19, #button21 {
+                background: navy;
+                color: white;
+                box-shadow: .10px .10px 5px 5px #000000;
+            }
+            #button20 {
+                background: transparent;
+                color: black;
+                border: 4px solid #903c56;
+                box-shadow: .5px .5px 1px 2px #000000;
+            }
+            #button22, #button23, #button24 {
+                border: none;
+                outline: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                margin: 10px;
+                -webkit-transition-duration: 0.5s;
+                transition-duration: 0.5;
+            }
+            #button22, #button24 {
+                background: transparent;
+                color: black;
+                border: 4px solid #903c56;
+                box-shadow: .5px .5px 1px 2px #000000;
+            }
+            #button22:hover, #button24:hover {
+                background: black;
+                color: white;
+                border: 4px solid blue;
+                box-shadow: .5px .5px 1px 2px white;
+                cursor: pointer;
+            }
+            #button23 {
+                background: green;
+                color: navy;
+                box-shadow: .5px .5px 1px 2px black;
+            }
+            #button23:hover {
+                background: navy;
+                color: green;
+                box-shadow: .5px .5px 1px 2px white;
+                cursor: pointer;
+            }
+            .disabled, .disabled2, .disabled3 {
+                outline: none; 
+                border: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                background-color: red;
+                color: navy;
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+            .button-group, .group1, .group2, .group3 {
+                border: none;
+                outline: none;
+                font-size: 18px;
+                padding: 10px 20px;
+                background: transparent;
+                color: black;
+                background: white;
+                border: 2px solid black;
+                -webkit-transition-duration: 0.5s;
+                transition-duration: 0.5s;
+                float: left;
+            }
+            .button-group:hover, .group1:hover, .group2:hover, .group3:hover {
+                color: white;
+                background: black;
+                border: 1px solid silver;
+            }
+            .button-group2, .group4, .group5, .group6 {
+                border: none;
+                outline: none;
+                font-size: 18px;
+                padding: 10px 20px;
+                background: transparent;
+                color: black;
+                background: white;
+                border: 2px solid black;
+                -webkit-transition-duration: 0.5s;
+                transition-duration: 0.5s;
+                display: block;
+            }
+            .button-group2:hover, .group4:hover, .group5:hover, .group6:hover {
+                color: white;
+                background: black;
+                border: 1px solid silver;
+            }
+            .container div {
+                background-color: transparent;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="../index.html#css">Dasar</a></li>
+                <li><a href="#">Buttons</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <button id="button1">Button</button>
+            <button id="button2">Button</button>
+            <button id="button3">Button</button><br><br>
+            <button id="button4">Button no border</button>
+            <button id="button11">Button</button>
+            <button id="button7">Button</button><br><br>
+            <button id="button5">Button with padding</button>
+            <button id="button12">Button</button>
+            <button id="button6">Button</button><br><br>
+            <button id="button8">Button with margin</button>
+            <button id="button10">Button</button>
+            <button id="button9">Button</button>
+            <div>Try clicking the button, you'll no longer see an outline</div><br><br>
+    
+            <button id="button13">Button transparent</button>
+            <button id="button14">Button</button>
+            <button id="button15">Button</button>
+            <br><br>
+            <button id="button16">Button with border radius</button>
+            <button id="button17">Button</button>
+            <button id="button18">button</button>
+            <br><br>
+            <button id="button19">Button with box-shadow</button>
+            <button id="button20">Button</button>
+            <button id="button21">Button</button>
+            <br><br>
+            <button id="button22">Button hover</button>
+            <button id="button23">Button</button>
+            <button id="button24">Button</button>
+            <br><br>
+            <button class="disabled">button disabled</button>
+            <button class="disabled2">Button</button>
+            <button class="disabled3">Button</button>
+            <br><br>
+            <div class="button-group">
+                <button class="group1">Button</button>
+                <button class="group2">Button</button>
+                <button class="group3">Button</button>
+                <h2> Horizontal </h2>
+            </div><br><br><br><br><br><br><br><br><br><br>
+            
+            <div class="button-group2">
+                <button class="group4">Button</button>
+                <button class="group5">Button</button>
+                <button class="group6">Button</button>
+                <h2> Vertikal </h2>
+            </div>
+        </div>
+    </body>
+</html>

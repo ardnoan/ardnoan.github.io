@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Width and Height / Lebar dan tinggi</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            .fit-content-width {
+                max-width: fit-content;
+                background: lightblue;
+                padding: 30px;
+                /*let's center so we can better see the effect */
+            }
+            .avaible-width {
+                max-width: avaible;
+                background: lightblue;
+                padding: 30px;
+            }
+            .min-content-width {
+                max-width: min-content;
+                background: lightblue;
+                padding: 30px;
+            }
+            .max-content-width {
+                max-width: max-content;
+                background: lightblue;
+                padding: 30px;
+            }
+            .auto-width {
+                max-width: auto;
+                background: lightblue;
+                padding: 30px;
+            }
+            .tujuhPuluhPersen-width {
+                max-width: 75%;
+                background: lightblue;
+                padding: 30px;
+            }
+            .limaEm-width {
+                max-width: 5em;
+                background: lightblue;
+                padding: 30px;
+            }
+            .duaRatusPixel-width {
+                max-width: 200px;
+                background: lightblue;
+                padding: 30px;
+            }
+            .fit-content-height {
+                height: fit-content;
+                background: lightblue;
+                padding: 30px;
+                /*let's center so we can better see the effect */
+            }
+            .avaible-height {
+                height: avaible;
+                background: lightblue;
+                padding: 30px;
+            }
+            .min-content-height {
+                height: min-content;
+                background: lightblue;
+                padding: 30px;
+            }
+            .max-content-height {
+                height: max-content;
+                background: lightblue;
+                padding: 30px;
+            }
+            .auto-height {
+                height: auto;
+                background: lightblue;
+                padding: 30px;
+            }
+            .tujuhPuluhPersen-height {
+                height: 75%;
+                background: lightblue;
+                padding: 30px;
+            }
+            .limaEm-height {
+                height: 5em;
+                background: lightblue;
+                padding: 30px;
+            }
+            .duaRatusPixel-height {
+                height: 200px;
+                background: lightblue;
+                padding: 30px;
+            }
+            h1 {
+                min-width: 400px;
+                background: lightblue;
+            }
+            h2 {
+                max-width: 250px;
+                background: lightgrey;
+            }
+            h5 {
+                min-height: 500px;
+                background: lightblue;
+            }
+            h4 {
+                max-height: 70px;
+                background: lightgreen;
+                /* let's hide overlapping content */
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Width and Height</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h3><b>Width</b></h3>
+            <div class="duaRatusPixel-width">Dua ratus pixel</div><br><br>
+            <div class="limaEm-width">Lima em</div><br><br>
+            <div class="tujuhPuluhPersen-width">Tujuh puluh persen</div><br><br>
+            <div class="auto-width">auto</div><br><br>
+            <div class="max-content-width">max content</div><br><br>
+            <div class="min-content-width">min content</div><br><br>
+            <div class="avaible-width">avaible</div><br><br>
+            <div class="fit-content-width">fit content</div><br><br>
+    
+            <h3><b>Height</b></h3>
+            <div class="duaRatusPixel-height">Dua ratus pixel</div><br><br>
+            <div class="limaEm-height">Lima em</div><br><br>
+            <div class="tujuhPuluhPersen-height">Tujuh puluh persen</div><br><br>
+            <div class="auto-height">Auto</div><br><br>
+            <div class="max-content-height">Max content</div><br><br>
+            <div class="min-content-height">Min content</div><br><br>
+            <div class="avaible-height">Avaible</div><br><br>
+            <div class="fit-content-height">Fit content</div><br><br>
+    
+            <h1>Hello bank</h1>
+            <p>
+                The width of the h1 element above can't be smaller than 500px.
+                Even if its content can't fill the entire content area's width.
+            </p><br><br>
+            <h2>Hello mank</h2>
+            <p>
+                The width of these element can't be
+                laerge than 250px.
+            </p><br><br>
+            <h4>wasap bank</h4>
+            <p>
+                The height of the h4 can't be smaller than 500px.
+                Even if its content can't fill the entire content area's height.
+            </p><br><br>
+            <h5>wasap mank</h5>
+            <p>
+                The height of the element above can't be bigger 250px
+                even if the content needs more space.
+            </p>
+            <p>
+                The overflow: hidden CSS declaration hides the overlapping content,
+                in this case it's text.
+            </p>
+        </div>
+    </body>
+</html>

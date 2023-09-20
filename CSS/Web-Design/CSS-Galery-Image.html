@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery Image</title>
+        <style type="text/css">
+            hr {
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            .con {
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                margin: 50px auto;
+            }
+            .image-container {
+                margin: 0 auto; /* center the image contaienr */
+                width: 200px;
+                height: auto;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30), 0 11px 8px rgba(0, 0, 0, 0.22); /* material box shadow */
+                margin-bottom: 20px;
+            }
+            .image-container1 {
+                margin: 0 auto; /* center the image contaienr */
+                width: 200px;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30), 0 11px 8px rgba(0, 0, 0, 0.22); /* material box shadow */
+                margin-bottom: 20px;
+                transition-duration: 0.5s;
+            }
+            .image-container1:hover {
+                width: 250px;
+                box-shadow: 0 18px 36px rgba(0, 0, 0, 0.33), 0 14px 11px rgba(0, 0, 0, 0.22);
+            }
+            img {
+                max-width: 100%;
+                height: auto; 
+            }
+            .image-description {
+                text-align: center;
+                padding: 0 15px 15px 15px;
+            }
+            
+
+            /* lightbox stylesheet */
+            .lightbox {
+                display: table; /* helps us center the lightbox-content */
+                transition-duration: 0.5s;
+
+                /* make th elightbox occupy the entire page */
+                position: fixed;
+                top: -1000%; /* hide the lightbox above the top edge */
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+            }
+            .lightbox:target {
+                top: 0; /* make the lightbox cover the entire page */
+            }
+            .lightbox-content {
+                display: table-cell;
+                vertical-align: middle; /* vertically center */
+                text-align: center; /* horizontal center */
+            }
+            .close {
+                /* position the CLOSE button to the top-right corner */
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                /* style the close button */
+                font-size: 20px;
+                font-weight: 300;
+                text-decoration: none;
+                color: white;
+            }
+            .lightbox img {
+                max-height: 100%;
+                max-width: 50%;
+                height: auto;
+            }
+
+            @media (min-width: 600px) {
+            }
+        </style>
+    </head>
+    <body>
+        <h2>CSS Image Galery</h2>
+        <div class="con">
+            <div class="image-container">
+                <img src="../kobeni/kobeni.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container">
+                <img src="../kobeni/kobeni1.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container">
+                <img src="../kobeni/kobeni2.jpg"/>
+                <p class="image-description">Lorem ipusm dolor sit amet.</p>
+            </div>
+            <div class="image-container">
+                <img src="../kobeni/kobeni3.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container">
+                <img src="../kobeni/kobeni4.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="con">
+            <div class="image-container1">
+                <img src="../kobeni/kobeni.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1">
+                <img src="../kobeni/kobeni1.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1">
+                <img src="../kobeni/kobeni2.jpg"/>
+                <p class="image-description">Lorem ipusm dolor sit amet.</p>
+            </div>
+            <div class="image-container1">
+                <img src="../kobeni/kobeni3.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1">
+                <img src="../kobeni/kobeni4.jpg"/>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <hr>
+        <h2 style="text-align: center">CSS Image Gallery</h2>
+        <div class="con">
+            <div class="image-container1" id="container">
+                <a href="#img"><img src="../kobeni/kobeni.jpg"/></a>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1" id="container1">
+                <a href="#img1"><img src="../kobeni/kobeni1.jpg"/></a>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1" id="container2">
+                <a href="#img2"><img src="../kobeni/kobeni2.jpg"></a>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1" id="container3">
+                <a href="#img3"><img src="../kobeni/kobeni3.jpg"></a>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-container1" id="container4">
+                <a href="#img4"><img src="../kobeni/kobeni4.jpg"></a>
+                <p class="image-description">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="lightbox" id="img">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="../kobeni/kobeni.jpg"/>
+            </div>
+        </div>
+        <div class="lightbox" id="img1">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="../kobeni/kobeni1.jpg"/>
+            </div>
+        </div>
+        <div class="lightbox" id="img2">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="../kobeni/kobeni2.jpg"/>
+            </div>
+        </div>
+        <div class="lightbox" id="img3">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="../kobeni/kobeni3.jpg"/>
+            </div>
+        </div>
+        <div class="lightbox" id="img4">
+            <a href="#" class="close">Close</a>
+            <div class="lightbox-content">
+                <img src="../kobeni/kobeni4.jpg"/>
+            </div>
+        </div>
+    </body>
+</html>

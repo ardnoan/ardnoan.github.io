@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> DOM HTML </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> Javascript DOM HTML </h1>
+            <h2> Getting Element's Content </h2>
+            <ul id="list">
+                <li> Mangoes </li>
+                <li> Bananas </li>
+                <li> Oranges </li>
+            </ul>
+            <button onclick="btn()"> Button </button>
+            <script>
+                var list = document.getElementById("list");
+                btn = () => alert(list.innerHTML);
+            </script>
+
+            <h2> Replacing Element's Content </h2>
+            <ul id="list1">
+                <li> Mangoes </li>
+                <li> Bananas </li>
+                <li> Strawberry </li>
+            </ul>
+            <button onclick="replaceContent()"> Replace Content </button>
+            <script>
+                var list1 = document.getElementById("list1");
+
+                replaceContent = () => list1.innerHTML = "<li> Mercuty </li>" + "<li> Venus </li>" + "<li> Earth </li>";
+            </script>
+
+            <h2> Creating Elements (Nodes) </h2>
+            <div id="demo"></div>
+            <script>
+                var element = document.createElement("p");
+                var textNode = document.createTextNode("Lorem ipsum dolor sit amet.");
+                element.appendChild(textNode);
+
+                document.getElementById("demo").appendChild(element);
+            </script>
+
+            <h2> Inserting to Elements </h2>
+            <ul id="list2">
+                <li> Mangoes </li>
+                <li> Bananas </li>
+                <li> Pisang </li>
+            </ul>
+            <button onclick="prependContent()"> Prepend Content </button>
+            <script>
+                var list2 = document.getElementById("list2");
+
+                prependContent = () => {
+                    var li = document.createElement("li");
+                    var text = document.createTextNode("Pisang is banana");;
+                    li.appendChild(text);
+
+                    list2.prepend(li);
+                };
+            </script>
+
+            <ul id="list3">
+                <li> Mangoes </li>
+                <li> Bananas </li>
+                <li> jeruk </li>
+            </ul>
+            <button onclick="appendContent()"> Append Content </button>
+            <script>
+                var list3 = document.getElementById("list3");
+
+                appendContent = () => {
+                    var li = document.createElement("li");
+                    var texNode = document.createTextNode("Strawberry");
+                    li.appendChild(textNode);
+
+                    list3.append(li);
+                };
+            </script>
+
+            <h2> Removing Elements </h2>
+            <ul id="list4">
+                <li> Mangoes </li>
+                <li> Bananas </li>
+                <li> Oranges </li>
+            </ul>
+            <button onclick="removeFirstChild()"> Remove First Child </button>
+            <script>
+                var list4 = document.getElementById("list4");
+                removeFirstChild = () => {
+                    // select the first child element of the list 
+                    var firstChild = list4.firstElementChild;
+
+                    // remove the first child
+                    firstChild.remove();
+                };
+            </script>
+
+            <h2> Working With Attributes </h2>
+            <h2> Getting Attribute Value </h2>
+
+            <a href="latihan1.html" id="demo_1"> Go to example.com </a>
+            <button onclick="btn1()"> Call </button>
+            <script>
+                var a = document.getElementById("demo_1");
+                var hrefValue = a.getAttribute("href");
+                btn1 = () => alert(hrefValue);
+            </script>
+
+            <h2> Setting or Changing Attribute Value </h2> 
+            <div><img id="demo2" alt="I don't have an src attribute."></div>
+            <button onclick="setSrcAttribute()"> Set src attribute of the image </button>
+            <script>
+                var img = document.getElementById("demo2");
+
+                setSrcAttribute = () => {
+                    img.setAttribute("src", "../../../kobeni.jpg")
+                }
+            </script>
+
+            <div><img src="../../../kobeni.jpg" id="demo1"></div>
+            <button onclick="changeSrcAttribute()"> Change src attribute of the image </button>
+            <script>
+                var img1 = document.getElementById("demo1");
+
+                changeSrcAttribute = () => {
+                    img1.setAttribute("src", "../../../kobeni1.jpg");
+                };
+            </script>
+        </div>
+    </body>
+</html>

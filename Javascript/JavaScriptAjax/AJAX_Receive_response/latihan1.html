@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> AJAX Receive REsponse </title>
+        <link rel="stylesheet" href="../css.css">
+    </head>
+    <body>
+        <div>
+            <h1> REceibing or Handling Response from server </h1>
+            <script>
+                httpRequest.onreadystatechange = writeContet;
+                // make a request her eafter defining a 
+                // function for onreadystatechange 
+                function writeContent() {
+                    // codes 
+                }
+            </script>
+
+            <h2> The readyState and status Properties </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Value </th>
+                        <th> State </th>
+                        <th> Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 0 </td>
+                        <td> UNSET </td>
+                        <td> Client has been created </td>
+                    </tr>
+                    <tr>
+                        <td> 1 </td>
+                        <td> OPENED </td>
+                        <td> open() has been called. </td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> HEADERS_RECEIVED </td>
+                        <td> send() has been called </td> 
+                    </tr>
+                    <tr>
+                        <td> 3 </td> 
+                        <td> LOADING </td>
+                        <td> Downloading. </td>
+                    </tr>
+                    <tr>
+                        <td> 4 </td>
+                        <td>  DONE </td>
+                        <td> Operation is complete. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Full Example </h2> 
+            <button onclick="sendGetRequest()"> Send GET Request </button>
+            <p id="demo"></p>
+            <script>
+                var  httpRequest = new XMLHttpRequest();
+
+                sendGetRequest = () => {
+                    httpRequest.open('GET', '#');
+                    httpRequest.send();
+                }
+                writeContent = () => {
+                    if(httpRequest.readyState === 4) {
+                        if(httpRequest.status == 200) {
+                            document.getElementById("demo").innerHTML = httpRequest.response;
+                        } else {
+                            alert('There was a problem with the request');
+                        }
+                    } else {
+                        // response not ready yet 
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

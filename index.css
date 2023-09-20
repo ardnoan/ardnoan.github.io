@@ -1,0 +1,554 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #F2F6FF;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header, footer {
+    padding: 15px;
+    color: white;
+}
+.main, .aside {
+    padding: 5px;
+}
+.main {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+}
+.main > p {
+    text-indent: 30px;
+    line-height: 23px;
+    word-spacing: 7px;
+    font-size: 15px;
+    padding: 5px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.main h1 {
+    background: linear-gradient(#00FFFE, white, #01FF0F);
+    max-width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 1px 0 black;
+    margin-top: 0;
+}
+.main h2 {
+    text-indent: 20px;
+}
+
+/* ASIDE */
+.aside {
+    box-sizing: border-box;
+}
+.aside > div {
+    background: lightskyblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+.aside > div > p {
+    text-align: center;
+    font-size: 105%;
+}
+.aside div div.relative {
+    position: relative;
+}
+.aside div div.relative p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 180%;
+    color: white;
+    text-shadow: 0 2px 2px black;
+}
+.aside div div.relative img {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 1px 3px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+.aside > div > img {
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+}
+.aside img {
+    max-width: 100%;
+    height: auto;
+}
+header {
+    background-image: url(no-copyright/keyboard.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+/* About me */
+/* 
+ABOUT ME */
+
+
+
+.aboutme {
+    box-sizing: border-box;
+}
+.aboutme div {
+    padding: 15px;
+}
+.about {
+    padding: 0px 40px;
+    box-sizing: border-box;
+    margin-bottom: -50px;
+}
+.title {
+    padding: 10px;
+}
+.title h1 {
+    padding-bottom: 3px;
+    font-size: 35px;
+}
+
+.about .title h4{
+    margin-top: -15px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 23px;
+    word-spacing: 7px;
+}
+
+.grid-about{
+    display: grid;
+}
+
+.grid-about .kotak {
+    background-color: rgb(147, 147, 147);
+    /* background-image: url("no-copyright/onodera.jpg"); */
+    background-size: cover;
+    width: 180px;
+    height: 290px;
+    border: 2px solid white;
+    margin: auto;
+}
+
+.kotak .img-about{
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+    overflow: hidden;
+    /* background: white; */
+    /* opacity: .5; */
+}
+.kotak .img-about img{
+    width: 100%;
+    border: 2px solid white;
+}
+
+.text-about{
+    line-height: 23px;
+    word-spacing: 7px;
+    margin-top: 20px;
+    padding: 25px;
+    font-family: 'ubuntu', sans-serif;
+}
+
+/* Contact form */
+.contactme {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+
+
+/* Menu */
+.menu {
+    margin-top: -5px;
+    padding: 10px;
+}
+.menu > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: lightskyblue;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.menu > ul > a {
+    text-decoration: none;
+    color: navy;
+}
+.menu > ul > a:hover {
+    color: white;
+}
+.menu > ul > a > li {
+    width: 100%;
+    font-size: 120%;
+    transition-duration: 1s;
+    padding: 10px;
+}
+.menu > ul > a > li:hover {
+    background-color: blue;
+}
+.menu > ul > a > li:hover:last-child() {
+    border-radius: 5px;
+}
+
+
+/*  Contact us */
+.form-container {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 7px;
+    /* background: #173459; */
+    color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+}
+.input-cnt2 {
+    display: flex; /* display the icon and the input in a line */
+    margin-bottom: 15px;
+}
+.input-cnt2:last-child {
+    margin-bottom: 0px;
+}
+.input-cnt2 > i {
+    min-width: 40px; /* set a minimum width for the icon */
+    padding: 10px; /* make sure the icon is centered vertically */
+    text-align: center; /* horizontally center the icon */
+    background: lightgrey;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #0076ff;
+}
+.input-cnt2:hover > i {
+    background: #0076ff;
+    color: white;
+}
+.input-cnt2 > .input12[type="text"], .input-cnt2 > textarea {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+}
+/* center textarea icon and increase size */
+.textarea-icons {
+    padding: 60px 10px !important; /* top and bottom paddings are set to 60px; */
+}
+/* style the submit button */
+.input-cnt2 > .input12[type="submit"] {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 105%;
+    padding: 8px;
+    color: #0076ff;
+    background: white;
+    transition-duration: .5s;
+}
+/* add a hover effect for the sumbit button */
+.input-cnt2 > .input12[type="submit"]:hover {
+    color: white;
+    background: #0076ff;
+}
+
+/* Contact us formm */
+.contact {
+    text-align: center;
+}
+.contact .bayangan-text li {
+    margin-bottom: 50px;
+    margin-left: -25px;
+}
+.contact ul {
+    box-sizing: border-box;
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: #202c2d;
+}
+.bayangan-f a {
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202c2d;
+    transition: 1s;
+    text-shadow: 
+        0 1px #808d93,
+        -1px 0 #cdd2d5,
+        -1px 2px #808d93,
+        -2px 1px #cdd2d5,
+        -2px 3px #808d93,
+        -3px 2px #cdd2d5,
+        -3px 4px #808d93,
+        -4px 3px #cdd2d5;
+}
+li:hover.bayangan-f a {
+    transition: 2s;
+    color: rgb(36, 36, 255);
+    /* text-shadow: 
+    0px 1px rgb(50, 50, 50),
+    -1px 0 rgb(40, 40, 40),
+    -1px 2px rgb(50, 50, 50),
+    -2px 1px rgb(40, 40, 40),
+    -2px 3px rgb(50, 50, 50),
+    -3px 2px rgb(40, 40, 40),
+    -3px 4px rgb(50, 50, 50),
+    -4px 3px rgb(40, 40, 40); */
+}
+.bayangan-w a {
+    box-sizing: border-box;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202c2d;
+    transition: 1s;
+    text-shadow: 
+        0 1px #808d93,
+        -1px 0 #cdd2d5,
+        -1px 2px #808d93,
+        -2px 1px #cdd2d5,
+        -2px 3px #808d93,
+        -3px 2px #cdd2d5,
+        -3px 4px #808d93,
+        -4px 3px #cdd2d5;
+}
+li:hover.bayangan-w a {
+    color: rgb(36, 255, 36);
+    transition: 2s;
+    animation-name: borderfw;
+    animation-duration: infinite;
+    /* text-shadow: 
+    0px 1px rgb(50, 50, 50),
+    -1px 0 rgb(40, 40, 40),
+    -1px 2px rgb(50, 50, 50),
+    -2px 1px rgb(40, 40, 40),
+    -2px 3px rgb(50, 50, 50),
+    -3px 2px rgb(40, 40, 40),
+    -3px 4px rgb(50, 50, 50),
+    -4px 3px rgb(40, 40, 40); */
+    /* margin-bottom: 210px; */
+}
+.bayangan-y a {
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202c2d;
+    transition: 2s;
+    text-shadow: 
+        0 1px #808d93,
+        -1px 0 #cdd2d5,
+        -1px 2px #808d93,
+        -2px 1px #cdd2d5,
+        -2px 3px #808d93,
+        -3px 2px #cdd2d5,
+        -3px 4px #808d93,
+        -4px 3px #cdd2d5;
+}
+li:hover.bayangan-y a {
+    color: rgb(255, 36, 36);
+    transition: 1s;
+}
+
+
+/* table */
+.main > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.main th {
+    border: 2px solid black;
+}
+.main tr td {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+
+/* table1 */
+.table1 thead th {
+    padding: 10px;
+    font-size: 20px;
+}
+.table1 > tbody > tr > td a {
+    text-decoration: none;
+    color: black;
+}
+.table1 > tbody > tr > td a:hover {
+    color: orange;
+}
+.table1 tr th, .table1 tr td {
+    border: none;
+    background: none;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* table 2 */
+.table2 {
+    border: 2px solid black;
+}
+.table2 td {
+    padding: 2px;
+}
+.table2 th {
+    background: blue;
+    color: white;
+    border-color: navy;
+}
+.table2 td a {
+    text-decoration: none;
+    color: black;
+}
+.table2 td a:hover {
+	color: blue;
+}
+
+/* table 3 (CSS) */
+.table3 {
+    border: 2px solid black;
+}
+.table3 th {
+    background:green;
+    color: #f9f8f8;
+}
+.table3 td {
+    text-align: center;
+}
+.table3 td a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.table3 td a:hover {
+    color: green;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/* Table Javascript */
+.tablejs {
+    text-align: center;
+}
+.tablejs thead th, .tablejs tbody td {
+    border: 3px solid rgb(255, 255, 255);
+    padding: 3px;
+}
+.tablejs thead th.bapack {
+    background-color: orange;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+.tablejs thead th {
+    background-color: yellow;
+}
+.tablejs tbody td a {
+    color: white;
+    text-decoration: none;
+}
+.tablejs tbody td a:hover {
+    color: black;
+}
+.tablejs tbody td {
+    background-color: rgb(219, 219, 209);
+}
+.tablejs tbody td:hover {
+    background-color: yellow;
+}
+
+
+/* Footer */
+footer {
+    background-image: url("no-copyright/keyboard.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(#F2F6FF, orange, lightskyblue, greenyellow); */
+    color: #00FFFE;
+    position: relative;
+    font-size: 80%;
+    opacity: 1;
+}
+.footer-logo {
+    width: 100%;
+    font-size: 2em;
+}
+.footer-copyright {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-top: 1px outset #00FFFE;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+/* the clearfix hack */
+footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+.footer-body p {
+    font-size: 1.1em;
+    line-height: 23px;
+    word-spacing: 7px;
+}
+.footer-body ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.footer-body li:last-child {
+    margin-bottom: 50px;
+}
+.footer-body li > a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 7px;
+}
+.footer-body li > a:hover {
+    color:#00FFFE;
+}
+
+
+
+

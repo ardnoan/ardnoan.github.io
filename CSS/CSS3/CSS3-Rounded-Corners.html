@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>rounded Corners</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .div {
+                border-radius: 10px;
+                width: 200px;
+                height: 100px;
+                padding: 10px;
+                color: white;
+                background: navy;
+                text-align: center;
+                margin: 20px;
+                float: left;
+            }
+            .div2 {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 30px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 1000px;
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                margin: 20px;
+                float: left;
+            }
+            .div3 {
+                /* all four corners */
+                border-radius: 20px;
+                border: 2px solid lightblue;
+                width: 100px;
+                height: 100px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                margin: 20px;
+                float: left;
+            }
+            .div4 {
+                /* top-left and bottom-right | top-right and bottom-left */
+                border-radius: 10px 100px;
+                border: 2px solid lightblue;
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                margin: 20px;
+                float: left;
+            }
+            .div5 {
+                /* top-left | top-right and bottom-left | bottom-right */
+                border-radius: 30px 100px 150px;
+                border: 2px solid lightblue;
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                margin: 20px;
+                float: left;
+            }
+            .div6 {
+                /* top-left | top-right | bottom-right | bottom-left */
+                border-radius: 50px 80px 100px 200px;
+                border: 3px solid lightblue;
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                margin: 20px;
+                float: left;
+            }
+            .div7 {
+                border-radius: 50px/60%;
+                border: 2px solid lightblue;
+                width: 200px;
+                height: 200px;
+                padding: 30px;
+                color: white;
+                background: navy;
+                float: left;
+            }
+            .img {
+                border-radius: 50%;
+                border: 2px solid navy;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+                margin: 20px;
+                float: left;
+                max-width: 200px;
+            }
+            .img1 {
+                border-radius: 100%;
+                border: 2px solid navy;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+                margin: 20px;
+                float: left;
+                max-width: 200px;
+            }
+            .cf:before, .cf:after {
+                content: " "; 
+                display: table;
+            }
+            .cf:after {
+                clear: both;
+            }
+            .cf {
+                *zoom: 1;
+            }
+
+            .container .kotakSilver {
+                width: 100px;
+                height: 100px;
+                border-radius: 30px;
+                border: 5px solid silver;
+                float: left;
+                margin: 5px;
+            }
+            .container .kotakBerem {
+                width: 100px;
+                height: 100px;
+                border: 5px solid red;
+                border-radius: 30px 0 30px 0;
+                float: left;
+                margin: 5px;
+            }
+            .container .buled {
+                width: 100px;
+                height: 100px;
+                border: 5px solid green;
+                border-radius: 50%;
+                float: left;
+                margin: 5px;
+            }
+            .container .buledSabelah {
+                width: 100px;
+                height: 50px;
+                border: 5px solid blue;
+                border-radius: 1000px 1000px 0 0;
+                float: left;
+                margin: 5px;
+            }
+            .container .buledSabelah1 {
+                width: 100px;
+                height: 50px;
+                border: 5px solid blue;
+                border-radius: 0 0 1000px 1000px;
+                float: left;
+                margin: 60px 5px 5px 5px;
+            }
+            .container .tunjuk {
+                width: 100px;
+                height: 100px;
+                border: 5px solid orange;
+                border-radius: 0 50% 50% 0;
+                float: left;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">CSS3</a></li>
+                <li><a href="#">Rounded Corners</a></li>
+            </ul>
+        </div>
+        <div class="container cf">
+            <div class="div">Lorem ipsum dolor sit amet</div>
+            <div class="div2">Lorem ipsum dolor sit amet</div>
+            <div class="div3">Lorem ipsum dolor sit amet</div>
+            
+            <div class="div4">Lorem ipsum dolor sit amet</div>
+            <div class="div5">Lorem ipsum dolor sit amet</div>
+            <div class="div6">Lorem ipsum dolor sit amet</div>
+            <div class="div7">Lorem ipsum dolor sit amet</div>
+            <img src="../../no-copyright/mengkoding.jpeg" class="img"/>
+            <img class="img1" src="../../no-copyright/mengcoding.jpeg"/>
+        </div>
+        <div class="container cf">
+            <div class="kotakSilver"></div>
+            <div class="kotakBerem"></div>
+            <div class="buled"></div>
+            <div class="buledSabelah"></div>
+            <div class="buledSabelah1"></div>
+            <div class="tunjuk"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Input HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Input HTML5</h1>
+        <p>Element &lt;input&gt; adalah element bentuk.</p>
+        <p>Dalam pelajaran kali ini kita tidak akan memasukan semua tipe input yang berbeda ke dalam element
+            &lt;form&gt; karena kita hanya akan menggunakan javascript untuk mendapatkannya.</p>
+        <p>Namun, dalam menggunakan Hypertext Pocessor (PHP), element masukan page handler/formhandler harus berada di
+            dalam element &lt;form&gt; dan attribut namanya adalah wajib.</p>
+        <p>Element &lt;input&gt; adalah element kosong dan sebaris.</p>
+        <p>Dengan Javascript kita dapat dengan mudah mendapatkan nilai dari tipe &lt;input&gt; berbeda yang ditentukan
+            oleh attribut type.</p>
+        <h1>Teks</h1>
+        <p>Kolom teks baris tunggal tempat jeda baris diabaikan</p>
+        <div class="sampul">
+            <p>&lt;input type="text" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="ambilNilai()"&gt; Ambil nilai &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript&gt;</p>
+            <p>function ambilNilai() {</p>
+            <p>alert(document.getElementById(demo).value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Kotak Centang</h1>
+        <p>Kotak centang yang menmungkinkan dirinya untk dicentak tidak dicentang. Nilai kotak centang bisa benar (jika
+            dicentang) atau salah (jika tidak dicentak) Di javascript disebut boolean.</p>
+        <div class="sampul">
+            <p>&lt;input type="checkbox" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').checked);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Color</h1>
+        <p>Pemilihan warna bawaan sederhana.ini mengembalikan kode warna hex.</p>
+        <div class="sampul">
+            <p>&lt;input type="color" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Tanggal</h1>
+        <p>Untuk memasukan tanggal (tahun, bulan,dan hari tanpa jam dan menit).</p>
+        <div class="sampul">
+            <p>&lt;input type="date" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Tanggal dan waktu</h1>
+        <p>Untuk memasukan tanggal dan waktu</p>
+        <div class="sampul">
+            <p>&lt;input type="datetime-local" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Email</h1>
+        <p>Untuk memasukanalamat email yang valid. Jika formulit dikirimkan dan email yang diberikan tidak valid,
+            pengguna akan diperingatkan.</p>
+        <div class="sampul">
+            <p>&lt;p&gt;akan gagal kalau tidak memasukan email yang salah!&lt;/p&gt;</p>
+            <p>&lt;form action="sample-page-handler.html"&gt;</p>
+            <p>&lt;input type="email" id="demo" name="email"&gt;</p>
+            <p>&lt;input type="Submit"</p>
+            <p>&lt;/form&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <!-- BAru tahap satu  -->
+        <h1>File</h1>
+        <p>Dapat menentukan atribut accept untuk hanya mengizinkan jenis file tertentu, misalnya. &lt;input type="file"
+            accept-".pdf"&gt;.</p>
+        <p>Attribut accept mungkin tidak berfungsi di berbagai perangkat.</p>
+        <div class="sampul">
+            <p>&lt;input type="file" id="demo" onchange="readFile();"&gt;</p>
+            <p>&lt;!-- Kamu harus memilih file gambar agar demo ini berfungsi --&gt;</p>
+            <p>&lt;img src="" alt="File yang dipilih akan tampil disini" id="result"&gt;</p>
+            <p>&lt;script type="text/javascript&gt;</p>
+            <p>function readFile() {</p>
+            <p>var reader = new FileReader();</p>
+            <p>var file = document.getElementById('demo').file[0];</p>
+            <p>reader.onload = function(e) {</p>
+            <p>document.getElementById('result').src = e.target.result;</p>
+            <p>}</p>
+            <p>reader.readAsDataURL(file);</p>
+            <p>}</p>
+        </div>
+        <h1>Hasil</h1>
+        <div class="sampul">
+            <input type="file" id="demo" onchange="readFile();">
+            <img src="" alt="file yang akan ditampilkan" id="result">
+            <script>
+                function readFile() {
+                    var reader = new FileReader();
+                    var file = document.getElementById('demo').files[0];
+
+                    reader.onload = function (e) {
+                        document.getElementById('result').src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            </script>
+        </div>
+        <h1>Hidden</h1>
+        <p>Kolom teks yang tidak ditampilakn dibrowser.</p>
+        <div class="sampul">
+            <p>&lt;input type="hidden" value="Lorem, ipsum dolor." id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Bulan</h1>
+        <p>Untuk memasukan bulan dan tahun.</p>
+        <div class="sampul">
+            <p>&lt;input type="month" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Nomor</h1>
+        <p>Bidang teks untuk memasukan angka dan beberapa karakter. Jika formulit dikirimkan dan nomor yang diberikan
+            tidak valid, pengguna akan diperingatkan.</p>
+        <div class="sampul">
+            <p>&lt;p&gt;Akan ada peringatan jika tidak memasukan yang benar.&lt;/p&gt;</p>
+            <p>&lt;form action="sample-page-handler.html"&gt;</p>
+            <p>&lt;input type="number" id="demo"&gt;</p>
+            <p>&lt;input type="submit"&gt;</p>
+            <p>&lt;/formt&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Password</h1>
+        <p>teks baris tunggal yang nilainya disamarkan.</p>
+        <div class="sampul">
+            <p>&lt;input type="password" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Radio</h1>
+        <p>Tombol radio, memungkinkan satu nilai dipilih dari beberapa pilihan.</p>
+        <div class="sampul">
+            <p>&lt;input type="radio" name="gender" value="Male" id="male"&gt;</p>
+            <p>&lt;label for="male"&gt; Male &lt;/label&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;input type="radio" name="gender" value="Female" id="female"&gt;</p>
+            <p>&lt;label for="female"&gt; Female &lt;/label&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;buton onclick="getValue()"&gt; Get Value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>var radios = document.getElementsByName('gender'):</p>
+            <p>var number_of_radios = radios.length;</p>
+            <p>for( var i = 0; i &lt; number_of_radios; i++) {</p>
+            <p>if(radios[i].checked) {</p>
+            <p>alert(radios[i].value);</p>
+            <p>}</p>
+            <p>}</p>
+            <p>}</p>
+        </div>
+        <h1>Hasil</h1>
+        <div class="sampul">
+            <input type="radio" name="gender" value="Male" id="male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" name="gender" value="Female" id="female">
+            <label for="female">Female</label>
+            <br>
+            <button onclick="ambilData();">Ambil data</button>
+            <script>
+                function ambilData() {
+                    var radios = document.getElementsByName('gender');
+                    var number_of_radios = radios.length;
+
+                    for (i = 0; i < number_of_radios; i++) {
+                        if (radios[i].checked) {
+                            alert(radios[i].value);
+                        }
+                    }
+                }
+            </script>
+        </div>
+        <!-- Tahap duaaa -->
+        <h1>Range</h1>
+        <p>Untuk memasukan agnka yang nilai pastinya tidak penting.</p>
+        <div class="sampul">
+            <p>&lt;input type="range" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Search</h1>
+        <p>Bidang teks satu baris untuk memasukan kueri penelusuran jeda baris diabaiakn.</p>
+        <div class="sampul">
+            <p>&lt;input type="search" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Telp</h1>
+        <p>Untuk memasukan nomor telephone</p>
+        <div class="sampul">
+            <p>&lt;input type="tel" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Waktu</h1>
+        <p>Untuk memasukan waktu</p>
+        <div class="sampul">
+            <p>&lt;input type="time" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>URL</h1>
+        <p>kolom teks baris tunggal untuk memasukan URL. Line-break diabaikan. Jika formulir dikirimkan dan URL yang
+            diberikan tidak balid, pengguna akan diperingatkan.</p>
+        <div class="sampul">
+            <p>&lt;p&gt;Akan ada peringatan jika memasukan formulir yang salah&lt;/p&gt;</p>
+            <p>&lt;form action="form-page-handler.html"&gt;</p>
+            <p>&lt;input type="url" id="demo"&gt;</p>
+            <p>&lt;input type="submit"&gt;</p>
+            <p>&lt;/form&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get Vale &lt;/button&gt;</p>
+            <p>&lt;script type="text/javascript"&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <h1>Minggu</h1>
+        <p>Untuk memasukan tanggal yang terdiri dari angka minggu-tahun dan angka minggu.</p>
+        <div class="sampul">
+            <p>&lt;input type="week" id="demo"&gt;</p>
+            <p>&lt;br&gt;</p>
+            <p>&lt;button onclick="getValue()"&gt; Get value &lt;/button&gt;</p>
+            <p>&lt;script&gt;</p>
+            <p>function getValue() {</p>
+            <p>alert(document.getElementById('demo').value);</p>
+            <p>}</p>
+            <p>&lt;/script&gt;</p>
+        </div>
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="#" class="pag active">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+</body>
+
+</html>

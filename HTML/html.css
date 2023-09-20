@@ -1,0 +1,255 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css reset sekarang css asli */
+.sampul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+body {
+    background: #EE6426;
+    font-family: arial;
+}
+b {
+    font-weight: bold;
+}
+/* bar */
+.bar {
+    padding: 15px;
+}
+.bar li {
+    display: inline-block;
+    text-align: center;
+}
+.bar li::before {
+    margin: 0 8px;
+    content: ": ";
+    color: white;
+}
+.bar li:first-child::before {
+    content: "/ ";
+    color: white;
+}
+.bar li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+}
+.bar li > a:hover {
+    color: black;
+}
+.bar li:last-child > a {
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+/* container */
+.container {
+    margin: auto;
+    padding: 12px;
+    max-width: 800px;
+    background: #fff;
+    border: 1px dotted black;
+    border-radius: 5px;
+}
+.container > h1 {
+    font-size: 180%;
+    padding: 8px;
+}
+.container p {
+    text-indent: 30px;
+    line-height: 23px;
+    word-spacing: 7px;
+    padding: 5px;
+    text-align: justify;
+    font-size: 94%;
+    padding: 8px;
+    /* text-transform: capitalize; */
+}
+
+/* contoh */
+.sampul {
+    max-width: 100%;
+    color: white;
+    background: #EE6426;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sampul dl dd {
+    margin-left: 25px;
+}
+
+.sampul h1 {
+    padding: 10px;
+}
+pre {
+    color: white;
+    margin: 0 50px 0 -50px;
+    padding: 5px;
+    line-height: 30px;
+}
+
+.sampul h1,
+.sampul h2,
+.sampul h3,
+.sampul h4,
+.sampul h4,
+.sampul h5,
+.sampul h6 {
+    padding: 10px;
+}
+.sampul h1 {
+    font-size: 140%;
+}
+.sampul h2 {
+    font-size: 130%;
+}
+.sampul h3 {
+    font-size: 120%;
+}
+.sampul h4 {
+    font-size: 110%;
+}
+.sampul h5 {
+    font-size: 100%;
+}
+.sampul h6 {
+    font-size: 90%;
+}
+
+.sampul p {
+    margin: 0;
+}
+.sampul i {
+    font-style: italic;
+}
+.sampul .b {
+    font-weight: bold;
+}
+/* .sampul u {
+    
+} */
+.sampul input {
+    max-width: 100%;
+    padding: 10px;
+    /* margin-left: -10px; */
+}
+.sampul blockquote {
+    padding: 30px;
+}
+.sampul cite {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.sampul img {
+    max-width: 100%;
+}
+
+
+
+ol {
+    list-style-type: hebrew;
+    margin-left: 40px;
+}
+ul {
+    margin-left: 40px;
+}
+ol li {
+    word-spacing: 5px;
+    text-align: justify;
+    padding: 0 20px 0 5px;
+    margin-bottom: 10px;
+    font-size: 90%;
+    line-height: 20px;
+}
+
+/* paginations */
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 20px auto;
+    border: 3px solid #EE6426;
+}
+.pagination a {
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+}
+.pagination a:hover {
+    background-color: #EE6426;
+    color: white;
+}
+.pagination .active {
+    background-color: #EE6426;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: border-box;
+    text-align: center;
+}
+table th, table td {
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 90%;
+    font-family: 'Times New Roman', Times, serif;
+}
+

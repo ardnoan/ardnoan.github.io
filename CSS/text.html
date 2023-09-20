@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TExtt</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+            p {
+                text-align: center;
+            }
+            .container div {
+                border: 1px solid lightgrey;
+                text-align: center;
+            }
+            h1 {
+                font-size: 100px;
+                text-align: center;
+            }
+            #p1 {
+                color: red;
+            }
+            #p2 {
+                color: rgb(23, 52,89);
+            }
+            #left {
+                text-align: left;
+            }
+            #center {
+                text-align: center;
+            }
+            #right {
+                text-align: right;
+            }
+            #justify {
+                text-align: justify;
+            }
+
+            #transform-none {
+                text-transform: none;
+            }
+            #transform-capitalize {
+                text-transform: capitalize;
+            }
+            #transform-uppercase {
+                text-transform: uppercase;
+            }
+            #transform-lowercase {
+                text-transform: lowercase;
+            }
+
+            #indent {
+                text-indent: 15px;
+            }
+            #indent2 {
+                text-indent: 25%;
+            }
+
+            #underline {
+                text-decoration: underline;
+            }
+            #overline {
+                text-decoration: overline;
+            }
+            #line-through {
+                text-decoration: line-through;
+            }
+            #underline-solid {
+                text-decoration: underline solid;
+            }
+            #underline-dotted {
+                text-decoration: underline dotted;
+            }
+            #overline-dotted {
+                text-decoration: overline dotted;
+            }
+            #overline-dashed {
+                text-decoration: overline dashed;
+            }
+            #overline-double {
+                text-decoration: overline double;
+            }
+            #line-through-wavy {
+                text-decoration: line-through wavy;
+            }
+            #underline-gold {
+                text-decoration: underline gold;
+            }
+            #overline-green {
+                text-decoration: overline green;
+            }
+            #line-through-blue {
+                text-decoration: line-through blue;
+            }
+
+            #shadow {
+                /* offset-x z | offset-y | blur-radius | color */
+                text-shadow: 2px 2px 3px red;
+            }
+            #shadow2 {
+                /* color | offset-y | blur-radius | blur-radius */
+                text-shadow: gold 1px 0 10px;
+            }
+            #shadow3 {
+                /* offset-x | offset-y | color */
+                text-shadow: fuchsia 2px 5px;
+            }
+            #shadow4 {
+                /* color | offset-x z | offset-y  */
+                text-shadow: 2px 2px rgb(128, 0, 255);
+            }
+            #shadow5 {
+                /* offset-x z | offset-y */
+                text-shadow: 1px 3px;
+            }
+
+            #letter-spacing {
+                letter-spacing: normal;
+            }
+            #-letter-spacing2 {
+                letter-spacing: 3px;
+            }
+            #word-spacing {
+                word-spacing: normal;
+            }
+            #word-spacing2 {
+                word-spacing: 4px;
+            }
+            #word-spacing3 {
+                word-spacing: 20%;
+            }
+            #line-height-normal {
+                line-height: normal;
+            }
+            #line-height-three {
+                line-height: 3px;
+            }
+            #line-height-35px {
+                line-height: 35px;
+            }
+            #line-height-200Persen {
+                line-height: 200%;
+            }
+            #line-height-10em {
+                line-height: 10em;
+            }
+            #white-space-normal {
+                white-space: normal;
+                background: lightgrey;
+                border: 1px solid green;
+                color: black;
+            }
+            #white-space-nowrap {
+                white-space: nowrap;
+                background: lightgrey;
+                border: 1px solid green;
+                color: black;
+            }
+            #white-space-pre {
+                white-space: pre;
+                background: lightgrey;
+                border: 1px solid green;
+                color: black;
+            }
+            #white-space-pre-wrap {
+                white-space: pre-wrap;
+                background: lightgrey;
+                border: 1px solid green;
+                color: black;
+            }
+            #white-space-pre-line {
+                white-space: pre-line;
+                background: lightgrey;
+                border: 1px solid green;
+                color: black;
+            }
+
+            #direction-ltr {
+                direction: ltr;
+            }
+            #direction-rtl {
+                direction: rtl;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Text</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p id="p1">My color is red!</p>
+            <p id="p2">My color is rgb (23, 52, 89)</p>
+            <p id="left">I am aligned left</p>
+            <p id="center">I am aligned center</p>
+            <p id="right">I am aligned right</p>
+            <p id="justify">
+                We are justified. We are justified. We are justified. We are justified.
+                We are justified. We are justified. We are justified. We are justified.
+                We are justified. We are justified. We are justified. We are justified.
+                We are justified. We are justified. We are justified. We are justified.
+                We are justified. We are justified. We are justified. We are justified.
+                We are justified. We are justified. We are justified. We are justified.
+            </p>
+            
+            <p id="transform-none">My case is not changed</p>
+            <p id="transform-capitalize">My case is capitalize</p>
+            <p id="transform-uppercase">This text, yes this text's case is uppercase</p>
+            <p id="transform-lowecase">This text, yes this text's case is lowercase</p>
+    
+            <p id="indent">I am an indented text an 15px</p>
+            <p id="indent2">I am an indented text an 25%</p>
+            
+    
+            <h1><b>Text decoration</b></h1>
+            <div>
+                <p id="underline">It is an underline</p>
+                <p id="overline">It is an overline</p>
+                <p id="line-through">It is an line-through</p>
+                <p id="underline-solid">It is an underline solid</p>
+                <p id="underline-dotted">It is an underline dotted</p>
+                <p id="overline-dotted">It is an overline dotted</p>
+                <p id="overline-dashed">It is an overline dashed</p>
+                <p id="overline-double">It is an overline double</p>
+                <p id="line-through-wavy">It is an line-through-wavy</p>
+                <p id="underline-gold">It is an underline gold</p>
+                <p id="overline-green">It is an overline green</p>
+                <p id="line-through-blue">It is an line-through-blue</p>
+            </div>
+    
+            <p id="shadow">We are texts and we have shadow</p>
+            <p id="shadow2">We are texts and we have shadow</p>
+            <p id="shadow3">We are texts and we have shadow</p>
+            <p id="shadow4">We are texts and we have shadow</p>
+            <p id="shadow5">We are texts and we have shadow</p>
+    
+            <p id="letter-spacing">I am a text and I am looking nice because i'm a text, a text and a text</p>
+            <p id="letter-spacing2">I am a text and I am looking nice because i'm a text, a text and a text</p>
+            <p id="word-spacing">I am a text and I am looking nice because i'm a text, a text and a text</p>
+            <p id="word-spacing2">I am a text and I am looking nice because i'm a text, a text and a text</p>
+            <p id="word-spacing3">I am a text and I am looking nice because i'm a text. a text and a text</p>
+            
+            <h2>line height normal</h2>
+            <p id="line-height-normal">
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+            </p>
+
+            <h2>line height 3</h2>
+            <p id="line-height-3">
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+            </p>
+
+            <h2>line height 35px</h2>
+            <p id="line-height-35px">
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+            </p>
+
+            <h2>Line height 200%</h2>
+            <p id="line-height-200Persen">
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+            </p>
+
+            <h2>line height 10em</h2>
+            <p id="line-height-10em">
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+                This is a dummy ext for the demonstration of the line-height profery.
+            </p>
+            <p id="white-space-normal">
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+            </p>
+            <p id="white-space-nowrap">
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+            </p>
+            <p id="white-space-pre">
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+            </p>
+            <p id="white-space-pre-wrap">
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+            </p>
+            <p id="white-space-pre-line">
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+                This is a dummy text.
+            </p>
+            <p id="direction-ltr">Ardi Nurohman</p>
+            <p id="direction-rtl">Ardi Nurohman</p>
+        </div>
+    </body>
+</html>

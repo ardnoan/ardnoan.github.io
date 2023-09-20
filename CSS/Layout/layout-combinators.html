@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Combinatorrss</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            span {
+                color: red;
+            }
+            li#three + li + li {
+                color: red;
+            }
+            a > b {
+                color: red;
+            }
+            li#four ~ li {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div>
+                <span>I am red</span>
+                <p>
+                    Hello World <span>I am also red</span>
+                </p>
+                <span>I am?</span>
+            </div>
+            <hr>
+            <a>
+                <b>I am red</b>
+                <p>
+                    Hello world <b>I am not red</b>
+                </p>
+                <b>I am?</b>
+            </a>
+            <hr>
+            <ul>
+                <li>One</li>
+                <li id="three">Two</li>
+                <li>Three</li>
+                <li>four</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>One</li>
+                <li id="four">Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+                <li>Six</li>
+            </ul>
+        </div>
+    </body>
+</html>

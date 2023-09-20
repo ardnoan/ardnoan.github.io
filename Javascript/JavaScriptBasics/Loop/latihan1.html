@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Loop </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Loop </h1>
+            <h2> javascript for loop </h2>
+            <p id="demo"></p>
+            <script>
+                var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+                var html = "";
+
+                html += "<p>" + fruits[0] + "</p>";
+                html += "<p>" + fruits[1] + "</p>";
+                html += "<p>" + fruits[2] + "</p>";
+                html += "<p>" + fruits[3] + "</p>";
+                html += "<p>" + fruits[4] + "</p>";
+
+                document.getElementById("demo").innerHTML = html;
+            </script>
+
+            <hr>
+            <p id="demo_1"></p>
+            <script>
+                var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+                var html = "";
+
+                for(var i = 0; i < fruits.length; i++) {
+                    html += "<p>" + fruits[i] + "</p>";
+                }
+                document.getElementById("demo_1").innerHTML = html;
+            </script>
+
+            <h2> What is a for loop? </h2> 
+            <p id="demo_2"></p>
+            <script>
+                for(var i = 0; i < 5; i++) {
+                    document.getElementById("demo_2").innerHTML += "Hello world <br>";
+                }
+            </script>
+
+            <p id="demo_3"></p>
+            <script>
+                var cities = ["Mumbai", "Abuja", "New York"];
+                var html = "";
+
+                for(var i = 0; i < cities.length; i++) {
+                    html += "<p>" + cities[i] + "</p>";
+                }
+                document.getElementById("demo_3").innerHTML = html;
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        .img2 { /* Circled Image */
+                border-radius: 50%;
+                max-width: 100%;
+            }
+            .img3 { /* Thumbnail Image */
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 5px;
+                width: 125px;
+                height: 25%;
+                float: center;
+            }
+            .img4 { /* Responsive image */
+                max-width: 100%;
+                height: auto;
+            }
+            .img5 { /* Centered Image */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                /* or margin: 0 auto */
+            }
+            .img6 { /* Transparent */
+                opacity: 0.4;
+            }
+            .img7 { /* Transparent */
+                opacity: 0.7;
+            }
+            .img8 { /* Transparent */
+                /* default */
+                opacity: 1.0;
+            }
+
+            /* lokasi */
+            .lokasi {
+                max-width: 100%;
+            }
+            .lokasi img {
+                max-width: 250px;
+            }
+            .img9, .img10, .img11, .img12, .img13 {
+                position: relative;
+                max-width: 250px;
+                height: auto;
+                opacity: 0.4;
+                float: left;
+                margin: 5px;
+                border: 1px solid black;
+            }
+            .span { /* left */
+                position: absolute;
+                top: 5px;
+                left: 8px;
+            }
+            .span2 { /* right 8*/
+                position: absolute;
+                top: 5px;
+                right: 8px;
+            }
+            .span3 { /* centered text */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 16px;
+            }
+            .span4 {
+                position: absolute;
+                bottom: 5px;
+                left: 8px;
+            }
+            .span5 {
+                position: absolute;
+                bottom: 5px;
+                right: 8px;
+            }
+            .card {
+                box-shadow: 0 15px 30px navy, 0 11px 8px blue;
+                width: 250px;
+                box-sizing: border-box;
+                transition-duration: 1s;
+            }
+            .card > .img14 {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0px;
+            }
+            .card > .p {
+                font-family: sans-serif;
+                padding: 0px 10px 10px 10px;
+                text-align: center;
+            }
+            .card:hover {
+                box-shadow: 0 18px 36px navy, 0 14px 11px blue;
+                width: 300px;
+            }
+
+            /* Filter IMG */
+            .effect {
+                max-width: 100%;
+                margin: 50px auto;
+            }
+            .blur {
+                filter: blur(4px);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .brightness {
+                filter: brightness(0.5);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .contras {
+                filter: contrast(180%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .drop-shadow {
+                filter: drop-shadow(12px 12px 16px navy);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .grayscale {
+                filter: grayscale(45%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .hue-rotate {
+                filter: hue-rotate(90deg);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .invert {
+                filter: invert(75%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .opacity {
+                filter: opacity(40%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .saturate {
+                filter: saturate(30%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+            .sepia {
+                filter: sepia(60%);
+                max-width: 150px;
+                height: auto;
+                float: left;
+            }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#css">CSS</a></li>
+            <li><a href="../index.html#css">Dasar</a></li>
+            <li><a href="#">Images</a></li>
+        </ul>
+    </div>
+    <div class="container cf">
+        <div class="lokasi cf">
+            <div class="img9">
+                <img src="pp.jpg"/>
+                <span class="span">Top left</span>
+            </div>
+    
+            <div class="img10">
+                <img src="pp.jpg"/>
+                <span class="span2">Top right</span>
+            </div>
+    
+            <div class="img11">
+                <img src="pp.jpg"/>
+                <span class="span3">Centered text</span>
+            </div>
+            
+            <div class="img12">
+                <img src="pp.jpg"/>
+                <span class="span4">Bottom left</span>
+            </div>
+            
+            <div class="img13">
+                <img src="pp.jpg"/>
+                <span class="span5">Bottom right</span>
+            </div>
+    
+            <div class="img13">
+                <img src="pp.jpg"/>
+                <span class="span">Left text</span>
+                <span class="span2">Right text</span>
+                <span class="span3">Centered text</span>
+                <span class="span4">Bottom left</span>
+                <span class="span5">Bottom right</span>
+            </div>
+        </div>
+    
+        <div class="effect cf">
+            <img class="blur" src="pp.jpg"/>
+            <img class="brightness" src="pp.jpg"/>
+            <img class="contras" src="pp.jpg"/>
+            <img class="drop-shadow" src="pp.jpg"/>
+            <img class="grayscale" src="pp.jpg"/>
+            <img class="hue-rotate" src="pp.jpg"/>
+            <img class="invert" src="pp.jpg"/>
+            <img class="opacity" src="pp.jpg"/>
+            <img class="saturate" src="pp.jpg"/>
+            <img class="sepia" src="pp.jpg"/>
+        </div>
+
+        
+        <div class="card cf">
+            <img class="img14" src="pp.jpg"/>
+            <p class="p">
+                Description of the image foes here. Try clicking and holding me to see the hover effect
+            </p>
+        </div>
+    </div>
+</body>
+</html>

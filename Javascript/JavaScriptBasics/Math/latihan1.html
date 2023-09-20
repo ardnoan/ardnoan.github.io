@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Math </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 14px;
+            }
+            th {
+                border-bottom: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Math Object </h1>
+            <h2> Javasecript ceil() Method </h2>
+            <p id="demo"></p>
+            <script>
+                var num1 = Math.ceil(.90);
+                var num2 = Math.ceil(1.70);
+                var num3 = Math.ceil(21.60);
+                document.getElementById("demo").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+
+            <h2> The florr() Method </h2>
+            <p id="demo_1"></p>
+            <script>
+                var num1 = Math.floor(1.10);
+                var num2 = Math.floor(3.21);
+                var num3 = Math.floor(21.30);
+                document.getElementById("demo_1").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+
+            <h2> The round() Method </h2>
+            <p id="demo_2"></p>
+            <script>
+                var num1 = Math.round(1.10);
+                var num2 = Math.round(1.70);
+                var num3 = Math.round(21.50);
+                var num4 = Math.round(-7.34);
+                document.getElementById("demo_2").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> The sqrt() Method </h2>
+            <p id="demo_3"></p>
+            <script>
+                var num1 = Math.sqrt(4);
+                var num2 = Math.sqrt(100);
+                var num3 = Math.sqrt(3.21);
+                var num4 = Math.sqrt(-9);
+                document.getElementById("demo_3").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> The cbrt() Method </h2>
+            <p id="demo_4"></p>
+            <script>
+                var num1 = Math.cbrt(8);
+                var num2 = Math.cbrt(100);
+                var num3 = Math.cbrt(3.21);
+                var num4 = Math.cbrt(-27);
+                document.getElementById("demo_4").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> The abs() Method </h2>
+            <p id="demo_5"></p>
+            <script>
+                var num1 = Math.abs(5);
+                var num2 = Math.abs(-5);
+                var num3 = Math.abs(3.21);
+                var num4 = Math.abs(-3.21);
+                document.getElementById("demo_5").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> The max() Method </h2>
+            <p id="demo_6"></p>
+            <script>
+                var num1 = Math.max(1, 2, 3);
+                var num2 = Math.max(-1, -2, -3);
+                document.getElementById("demo_6").innerHTML = num1 + "<br>" + num2;
+            </script>
+
+            <h2> The min() Method </h2> 
+            <p id="demo_7"></p>
+            <script>
+                var num1 = Math.min(1, 2, 3);
+                var num2 = Math.min(-1, -2, -3);
+                document.getElementById("demo_7").innerHTML = num1 + "<br>" + num2;
+            </script>
+            
+            <h2> The pow() Method </h2>
+            <p id="demo_8"></p>
+            <script>
+                var num1 = Math.pow(2, 3);
+                document.getElementById("demo_8").innerHTML = num1;
+            </script>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Property </th>
+                        <th> Description </th>
+                        <th> Approximate Value </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Math.E </td>
+                        <td> Merupakan dasar dari logaritma natural </td>
+                        <td> 2.718 </td>
+                    </tr>
+                    <tr>
+                        <td> Mat.LN10 </td>
+                        <td> Merupakan logaritma natural dari 10 </td>
+                        <td> 2.303 </td>
+                    </tr>
+                    <tr>
+                        <td> Math.LN2 </td>
+                        <td> Merupakan logaritma narutal dari 2 </td> 
+                        <td> 0.693 </td>
+                    </tr>
+                    <tr>
+                        <td> Math.LOG10E </td>
+                        <td>  Merupakan logaritma dari 10 dari e </td>
+                        <td> 0.434 </td>
+                    </tr>
+                    <tr>
+                        <td> Math.LOG2E </td>
+                        <td> Mewakili basis 2 logaritma dari e </td> 
+                        <td> 1.443 </td>
+                    </tr>
+                    <tr>
+                        <td> Math.PI </td>
+                        <td> Menyatakan perbandingan keliling lingkaran dengan diameternya </td>
+                        <td> 3.14159 </td>
+                    </tr> 
+                    <tr>
+                        <td> Math.SQRT1_2 </td> 
+                        <td> Mewakili akar kuadrat dari 1/2 </td>
+                        <td> 0.707 </td>
+                    </tr>
+                    <tr>
+                        <td> Math.SQRT2 </td>
+                        <td> Mewakili persegi akar dari 2 </td> 
+                        <td> 1.414 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

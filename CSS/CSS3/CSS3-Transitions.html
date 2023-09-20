@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transition</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            br {
+                margin: 30px;
+            }
+            .div1:hover {
+                width: 200px;
+                border: 3px solid lightblue;
+            }
+            .div2:hover {
+                height: 300px;
+            }
+            .div3:hover {
+                width: 200px;
+                height: 200px;
+                background: #173459;
+            }
+            .div5:hover {
+                height: 300px;
+            }
+            .div6:hover {
+                margin-top: 200px;
+            }
+            .div7:hover {
+                margin-top: 200px;
+                width: 200px;
+                height: 200px;
+            }
+            .with-transition {
+                width: 100px;
+                height: 100px;
+                background: black;
+                transition-property: width;
+                transition-duration: 2s;
+                transition-delay: .5s;
+                border: 3px solid lightblue;
+            }
+            .without-transition {
+                width: 100px;
+                height: 100px;
+                background: black;
+                border: 3px solid lightblue;
+            }
+            .transition1 {
+                width: 100px;
+                height: 100px;
+                background: #903c56;
+                transition-property: height;
+                transition-duration: 2s;
+            }
+            .transition2 {
+                width: 100px;
+                height: 100px;
+                background: #903c56;
+                transition-property: width, height, background;
+                transition-duration: 2s;
+            }
+
+            .judul {
+                border: 1px solid black;
+                max-width: 400px;
+                margin: auto;
+            }
+            .kotak4 {
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: black;
+                transition: 1s;
+                box-sizing: border-box;
+            }
+            .judul:hover .kotak4 {
+                transform: rotate(720deg);
+                color: white;
+                margin-left: 300px;
+                text-align: center;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+
+            .ease {
+                transition: 1s ease;
+            }
+            .linear {
+                transition-timing-function: linear;
+            }
+            .transition5 {
+                transition-timing-function: ease-in;
+            }
+            .transition6 {
+                transition-timing-function: ease-out;
+            }
+            .transition7 {
+                transition-timing-function: ease-in-out;
+            }
+            .transition8 {
+                width: 100px;
+                height: 100px;
+                background: #903c56;
+                transition-property: height;
+                transition-duration: 2s;
+                transition-delay: 1s;
+            }
+            .transition9 {
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: white;
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+            /* property | duration */
+            .transition9-1 {
+                transition: margin-top 2s;
+            }
+            /* property | duration | timing-function */
+            .transition9-2 {
+                transition: margin-top 2s ease-in-out;
+            }
+            /* property | duration | delay */
+            .transition9-3 {
+                transition: margin-top 2s .5s;
+            }
+            /* property | duration | delay | timing function */
+            .transition9-4 {
+                transition: margin-top 2s .5s ease-in-out;
+            }
+            
+            .transition10 {
+                width: 100px;
+                height: 100px;
+                background: black;
+                color: white;
+            }
+            .transition10-1 {
+                transition: margin-top 2s linear, width 1s ease-in, height 1s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>Tap the elements to see how it works</p>
+            <p>Without CSS <b>transition</b> properties:</p>
+            <div class="div1 without-transition">tt</div>
+            <p>With CSS <b>transition</b> property:</p>
+            <div class="div1 with-transition"></div>
+            <br>
+            <div class="div2 transition1"></div>
+            <br>
+            <div class="div3 transition2">tt </div>
+            <br>
+            
+            <div class="judul">
+                <div class="kotak4 ease">transition-timing-function: ease</div>
+                <div class="kotak4 transition4">transition-timing-function: linear</div>
+                <div class="kotak4 transition5">Transition-timing-function: ease-in</div>
+                <div class="kotak4 transition6">Transition-timing-function: ease-out</div>
+                <div class="kotak4 transition7">Transition-timing-function: ease-in-out</div>
+            </div>
+            <hr>
+
+            <p>Tap the element to see how it works.</p>
+            <div class="div5 transition8"></div>
+            <p>As you may notice, the transition started to take effect one second after you clicked it.</p>
+            <hr>
+            <br>
+            <div class="div6 transition9 transition9-1">Transition 1</div>
+            <div class="div6 transition9 transition9-2">Transition 2</div>
+            <div class="div6 transition9 transition9-3">Transition 3</div>
+            <div class="div6 transition9 transition9-4">Transition 4</div>
+            <hr>
+            <div class="transition10-1 div7 transition10"></div>
+        </div>
+</html>

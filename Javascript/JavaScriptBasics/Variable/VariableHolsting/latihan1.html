@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Variable Hoisting </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > thead, tbody {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Variable Hoisting </h1>
+            <p id="demo"></p>
+            <script>
+                fruit = "mango";
+                document.getElementById("demo").innerHTML = fruit;
+                var fruit;
+            </script>
+            <p id="demo_1"></p>
+            <script>
+                var fruit1;
+                fruit1 = "Banana";
+                document.getElementById("demo_1").innerHTML = fruit1;
+            </script>
+
+            <h2> Variable Initializations are NOT Hoisted </h2>
+            <p id="demo_2"></p>
+            <script>
+                var fruit; // declares fruit
+                fruit2 = "strawberry"; // initializes fruits
+                document.getElementById("demo_2").innerHTML = fruit2;
+            </script>
+
+            <p id="demo_3"></p>
+            <script>
+                var fruit3; // declares fruit
+                document.getElementById("demo_3").innerHTML = fruit3;
+                fruit3 = "orange"; // initializes fruit
+            </script>
+        </div>
+    </body>
+</html>

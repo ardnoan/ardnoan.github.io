@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Float and clear</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+            .div1 {
+                float: left;
+                width: 30%;
+                border: 1px dashed red;
+                margin: 5px;
+            }
+            .div2 {
+                width: 100%;
+                height: 200px;
+                border: 1px dashed black;
+            }
+            .div3 {
+                float: left;
+                width: 30%;
+                border: 1px dashed red;
+            }
+            .div4 {
+                clear: left;
+                width: 100%;
+                height: 200px;
+                border: 1px dashed black;
+            }
+            .clearfix::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .container::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .box {
+                width: 33.33%;
+                padding-top: 70px;
+                padding-bottom: 70px;
+                text-align: center;
+                float: left;
+                border-right: 1px solid black;
+                background: lightgreen;
+            }
+            .container {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .container > div {
+                padding-top: 70px;
+                padding-bottom: 70px;
+                text-align: center;
+                float: left;
+                border-right: 1px solid black;
+                background: lightgreen;
+            }
+            .box2 {
+                width: 25%;
+            }
+            .box3 {
+                width: 75%;
+            }
+            .container2 {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .container2 > div {
+                height: 550px;
+                padding: 15px;
+                float: left;
+                border-right: 1px solid black;
+                background: lightgrey;
+            }
+            .box4 {
+                width: 25%;
+            }
+            .box5 {
+                width: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div>
+                <img style="float: none; width: 100px; height: 100px;" src="pp.jpg">
+                Lorem ipsum dolor sit amet, consectetur adipscing elit. Suspendisse laculis, arcu a bibendum
+                fermentum, quam nunc accumsan nisi, eu portitor lectus lecus eget lectus. Nulia congue euismod 
+                nesque, quis tempus est maximus nec. Proin egestas justo solicitudin sapien sollictudin, nec 
+                congue eros lobortis. Curabitur ultricies laoreet ex quis ullamcorper. Suspendiesse potenti. Donec
+                facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursus tristiques. Nullam non dui velit. 
+                Nullam sit amet lacus quis nibh vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volupat at.
+            </div><br><br>
+            <div>
+                <img style="float: left; width: 100px; height: 100px;" src="pp.jpg">
+                Lorem ipsum dolor sit amet, consectetur adipscing elit. Suspendisse laculis, arcu a bibendum
+                fermentum, quam nunc accumsan nisi, eu portitor lectus lecus eget lectus. Nulia congue euismod 
+                nesque, quis tempus est maximus nec. Proin egestas justo solicitudin sapien sollictudin, nec 
+                congue eros lobortis. Curabitur ultricies laoreet ex quis ullamcorper. Suspendiesse potenti. Donec
+                facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursus tristiques. Nullam non dui velit. 
+                Nullam sit amet lacus quis nibh vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volupat at.
+            </div><br><br>
+            <div>
+                <img style="float: right; width: 100px; height: 100px;" src="pp.jpg">
+                Lorem ipsum dolor sit amet, consectetur adipscing elit. Suspendisse laculis, arcu a bibendum
+                fermentum, quam nunc accumsan nisi, eu portitor lectus lecus eget lectus. Nulia congue euismod 
+                nesque, quis tempus est maximus nec. Proin egestas justo solicitudin sapien sollictudin, nec 
+                congue eros lobortis. Curabitur ultricies laoreet ex quis ullamcorper. Suspendiesse potenti. Donec
+                facilisis lacinia ullamcorper. Aenean ac erat vitae arcu cursus tristiques. Nullam non dui velit. 
+                Nullam sit amet lacus quis nibh vestibulum maximus. Suspendisse interdum leo felis, ac aliquam diam volupat at.
+            </div>
+    
+            <h3>Without Clear</h3>
+            <div class="div1">This is a floating div. Lorem ipsum dolor sit amet.</div>
+            <div class="div2">Lorem ipsum dolor sit amet. heelo World! Lorem ipsum dolor sit amet. Hello world</div>
+            <br>
+    
+            <h3>With Clear</h3>
+            <div class="div3">This is a floating div. Lorem ipsum dolor sit amet.</div>
+            <div class="div4">Lorem ipsum dolor sit amet. Hello World! Lorem ipsum dolor sit amet. Hello World!</div>
+            <br>
+    
+            <h3>Without Clearfix</h3>
+            <div style="border: 3px dotted red">
+                <img style="width: 100px; height: 100px; float: right;" src="pp.jpg"/>
+                Lorem ipsum dolor sit amet, consectetur adipscing elit
+            </div>
+            <br><br><br><br><br><br><br><br>
+            <h3>With Clearfix</h3>
+            <div style="border: 3px dotted red" class="clearfix">
+                <img style="width: 100px; height: 100px; float: right;" src="pp.jpg"/>
+                Lorem ipsum dolor sit amet, consectetur adipscing elit
+            </div>
+            <br><br>
+    
+            <div class="container">
+                <div class="box">Lorem ipsum.</div>
+                <div class="box">Lorem ipsum.</div>
+                <div class="box">Lorem ipsum.</div>
+            </div>
+            <br>
+            <p>
+                This is a three-column layour of grid boxes where all boxes are equal in size.
+            </p>
+    
+            <div class="container">
+                <div class="box2">25%</div>
+                <div class="box3">75%</div>
+            </div>
+            <p>
+                this is a two-column layour of grix boxes where the first box 25%
+                wide and the second is 75%
+            </p>
+            <div class="container2">
+                <div class="box4">25%</div>
+                <div class="box5">
+                    Even though this box/column has more content than the first one they are still equal in size
+                    because of the fixed height set.
+                    Lorem ipsum dolor sit amet, consectetur adipscing elit. Duis interdum dignissim nisi posuere 
+                    efficitur. Suspendisse sit amet lorem scelerisque, pellentiesque maruis at, blandit arcu, 
+                    Suspendisse lectus erat, hendrerit at neque a, posuere convallis lacus. Vivamus facilisis sed nisi nec
+                    lobortis. Ut purus sapien, tincidunt a leo sit amet, sagittis laoreet erat. Integer sed sapien ut
+                    enim placerat ultrices ut quis nibh. Morbi malesuada orci a purus interdum malesuada. Vivamus id 
+                    rhoncus tellus. Phasellus sed velit enim. Prasent Interdum euismod ullamcorper.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

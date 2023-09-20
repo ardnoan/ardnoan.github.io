@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scala=1.0">
+        <style type="text/css">
+            .resize1 {
+                resize: horizontal;
+            }
+            .resize2 {
+                resize: vertical;
+            }
+            .resize3 {
+                resize: both;
+            }
+            .resize4 {
+                resize: none;
+            }
+            .div {
+                padding: 50px;
+                border: 1px solid black;
+            }
+            .div1 {
+                outline: 3px solid blue;
+                padding: 10px;
+                margin: 10px;
+            }
+            .div2 {
+                outline: 3px solid blue;
+                outline-offset: 10px;
+                margin: 10px;
+            }
+            .div3 {
+                outline: 3px solid blue;
+                outline-offset: 10px;
+                padding:10px;
+                margin: 10px;
+            }
+            .div4 {
+                outline: 3px solid blue;
+                outline-offset: 10px;
+                padding: 10px;
+                border: 1px solid black;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div resize1">Resize met horizontal</div>
+        <div class="div resize2">Resize met vertcally</div>
+        <div class="div resize3">Resize met both horizontally and vertically</div>
+        <br><br>
+        <p>
+            <b>Note!</b> this demo does not work in mobile devices but you can save it and view how it works on a PC
+        </p>
+        <textarea class="resize4">I am a not resize</textarea>
+        <textarea class="resize1">I am textarea</textarea>
+        <br><br>
+
+        <div class="div1">With padding</div><br>
+        <div class="div2">With outline-offset</div><br>
+        <div class="div3">With padding and outline-offset</div><br>
+        <div class="div4">Lorem ipsum dolor sit amet</div><br><br><br><br>
+    </body>
+</html>

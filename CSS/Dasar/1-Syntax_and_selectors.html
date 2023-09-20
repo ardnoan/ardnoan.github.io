@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Syntax and selectors</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            
+            /* .container > div {
+                background-color: rgb(255, 0, 119);
+                width: 200px;
+                height: 400px;
+                /* Ini adalah Syntax
+                yang diawali dan diakhiri oleh
+                kurung kurawal 
+            } */
+            .black {
+                /* ini adalah css class*/
+                color: black;
+                background: white;
+                background-color: black;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            #blue {
+                /* Ini adalah css ID */
+                color: blue;
+                background-color: gold;
+                width: 100px;
+                height: 50px;
+            }
+            p.red {
+                /* menargetkan css */
+                color: red;
+            }
+            p#gold {
+                width: 25%;
+                background-color: gold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Dasar</a></li>
+                <li><a href="#">Syntax and Selectors</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h1>CSS Syntax</h1>
+            <p>Aturan CSS terdiri dari selector dan declaration memblokir.</p>
+            <div class="sampul border b-full">
+                <div class="b-full">
+                    <p>div {</p>
+                    <p>background-color: black;</p>
+                    <p>width: 200px;</p>
+                    <p>height: 200px;</p>
+                    <p>}</p>
+                </div>
+            </div>
+            <p>Selector atau sekelompok selector menargetkan elements yang kita inginkan untuk style.</p>
+            <div class="sampul border b-div">
+                <p>div</p><span> {</span>
+                <p>background-color: black;</p>
+                <p>width: 200px;</p>
+                <p>height: 200px;</p>
+                <p>}</p>
+            </div>
+            <p>Declaration blocks dikelompokan dalam blok. Setiap blok deklarasi berisi deklarasi CSS yang dibungkam oleh kurung kurawal buka <b>{</b> dan kurung kurawal tutup <b>}</b></p>
+            <div class="sampul border b-kurawal">
+                <span>div </span><span>{
+                    <p>background-color: black;</p>
+                    <p>width: 200px;</p>
+                    <p>height: 200px;</p>
+                    }</span>
+            </div>
+            <p>Declaration atau declaration CSS terkandung di dalam blok deklarasi. Setiap deklarasi harus dipisahkan dengan titik koma; jika tidak, kode tidak akan berfungsi. Diperbolehkan untuk tidak menempatkan titik koma ti deklarasi terakhir.</p>
+            <div class="sampul border b-pfull">
+                <p>div {</p>
+                <p class="border">background-color: black;</p>
+                <p class="border">width: 200px;</p>
+                <p class="border">height: 200px;</p>
+                <p>}</p>
+            </div>
+            <p>Declaration CSS terdiri dari sepasang properti dan nilai yang dipisahkan oleh titik dua : .</p>
+            <div class="sampul border b-gede">
+                <p>
+                    <span>background-color </span><span>:</span><span> black</span>;
+                </p>
+            </div>
+            <p>border dengan warna merah itu namanya property, border berwarna biru namanya titik dua yang memisahkan dua entitas, dan yang terakhir yang berwarna hijau adalah value atau nilai.</p>
+            <ol>
+                <li><b>properti</b>: pengidentifikasi yang dapat dibaca manusia yang menunjukan fitur style mana yang akan diubah;</li>
+                <li><b>value</b>: itu diberikan ke properti yang menunnjukan bagaimana fitur style yang ditentukan harus diubah.</li>
+            </ol>
+            <p>Di CSS ada lebih dari 300 properti berbeda dan nilai berbeda dalam jumlah hampir tak terbatas. Tidak semua pasangan properti dannilai diperbolehkan. Setiap properti memiliki daftar nilai valid tertentu.</p>
+            <p>Properti maupun nilai peka huruf besar-kecil di CSS. hati-hati jika code tidak berjalan mungkin itu salah huruf besar dan kecilnya.</p>
+            <h1>CSS Selectors</h1>
+            <h1>Elements Selectors</h1>
+            <h1>Contoh:</h1>
+            <h1>Hasil:</h1>
+            <h1>Class Selectors</h1>
+            <h1>Contoh:</h1>
+            <h1>Hasil:</h1>
+            <h1>ID Selectors</h1>
+            <h1>Contoh:</h1>
+            <h1>Hasil:</h1>
+            <h1>Grouping Selectors</h1>
+            <h1>Contoh:</h1>
+            <h1>Hasil:</h1>
+            <h1>CSS Comments</h1>
+            <h1>Contoh:</h1>
+            <h1>Hasil:</h1>
+            <div></div>
+            <br>
+            <P class="red" id="gold"> Ardi Nurohman</P>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists HTML</title>
+    <style>
+        .sampul ul {
+            list-style-type: circle;
+        }
+
+        .sampul ul.koko {
+            list-style: none
+        }
+
+        .sampul ul.koko li::before {
+            content: "->";
+            color: gold;
+        }
+    </style>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Lists HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>List HTML</h1>
+        <p>Element dibawah mewakili list HTML yang dapat digunakan untuk mengelompokkan kumpulan item dengan atau
+            tanpa urutan.</p>
+        <h1>Element List HTML</h1>
+        <ol>
+            <li>&lt;ul&gt; mendefinisikan unored list dimana urutannya tidak berarti dan biasanya berpoin;</li>
+            <li>&lt;ol&gt; mendefinisikan list yang diurutkan dimana urutannya bermakna dan biasanya diberi nomor;</li>
+            <li>&lt;li&gt; element turunan dari element &lt;ul&gt; dan &lt;ol&gt; yang mendefinisikan item daftar/ list.
+            </li>
+        </ol>
+
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <pre>
+                &lt;!-- list tanpa urutan --&gt;
+                &lt;p&gt; buah &lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt; apel &lt;/li&gt;
+                    &lt;li&gt; jeruk &lt;/li&gt;
+                    &lt;li&gt; mangga &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;!-- list terurut --&gt;
+                &lt;ol&gt;
+                    &lt;li&gt; apel &lt;/li&gt;
+                    &lt;li&gt; jeruk &lt;/li&gt;
+                    &lt;li&gt; mangga &lt;/li&gt;
+                &lt;/ol&gt;</pre>
+        </div>
+
+        <h1>Outuput:</h1>
+        <div class="sampul">
+            <p> buah </p>
+            <ul>
+                <li> apel </li>
+                <li> jeruk </li>
+                <li> mangga</li>
+            </ul>
+            <p> buah </p>
+            <ol>
+                <li> apel </li>
+                <li> jeruk </li>
+                <li> mangga</li>
+            </ol>
+        </div>
+
+        <h1> list html bersarang </h1>
+        <p> Terkadang kita harus menyusun daftar untuk membuat data yang kita wakili lebih mudah dipahami.</p>
+        <p> Berikut adalah contoh list HTML bersarang.</p>
+        <div class="sampul">
+            <pre>
+                &lt;ul&gt;
+                    &lt;li&gt; data &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;!-- kami menempatkan list lain didalam element li --&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt; data &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                            &lt;li&gt; data lengkap &lt;/li&gt;
+                        &LT;/ol&gt;
+                    &lt;/li&gt;
+                &lt;ul&gt;</pre>
+        </div>
+
+        <h1> Output </h1>
+        <div class="sampul">
+            <ul>
+                <li> data </li>
+                <li>
+                    <ul>
+                        <li> data lengkap </li>
+                        <li> data lengkap </li>
+                        <li> data lengkap </li>
+                    </ul>
+                </li>
+                <li> data </li>
+                <li>
+                    <ol>
+                        <li> data lengkap </li>
+                        <li> data lengkap </li>
+                        <li> data lengkap </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <p> Tidak ada batasan kedalaman sarang dan pergantian element ul dan ol.</p>
+        <h1> Contoh jenis gaya list </h1>
+        <p> Untuk mengubah jenis gaya list, kita hanya perlu properti <b>list-style-type</b>.</p>
+        <p> ini adalah contohnya </p>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    #ul-circle {
+                        list-style-type: circle;
+                    }
+                    #ul-square {
+                        listy-style-type: square
+                    }
+                    #ul-upper-roman {
+                        listy-style-type: upper-roman;
+                    }
+                    #ul-lower-alpha {
+                        listy-style-type: lower-alpha;
+                    }
+                    #no-list-style-type {
+                        listy-style-type: none;
+                    }
+                &lt;/style&gt;
+                &lt;ul id="ul-circle"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul id="ul-square"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ol id="ul-upper-roman"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ol&gt;
+                &lt;ol id="ul-lower-alpha"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ol&gt;
+                &lt;ul id="no-list-style-type"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ol id="no-list-style-type"&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ol&gt;</pre>
+        </div>
+
+        <h1> Mengubah dan mewarnai list </h1>
+        <p> kami secara probadi dapat menata list html kami.</p>
+        <p> contoh </p>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    ul {
+                        list-style: none;
+                    }
+                    li:before{
+                        content: "-&gt;";
+                        color: gold;
+                    }
+                &lt;/style&gt;
+                &lt;ul&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                    &lt;li&gt; data disini &lt;/li&gt;
+                &lt;/ul&gt;</pre>
+        </div>
+
+        <h1> Output </h1>
+        <div class="sampul">
+            <ul class="koko">
+                <li> data disini </li>
+                <li> data disini </li>
+                <li> data disini </li>
+            </ul>
+        </div>
+
+
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="#" class="pag active">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text</title>
+        <style type="text/css">
+            .p1 {
+                text-overflow: clip;
+                width: 50%;
+                padding: 2px 5px;
+                background: lightgrey;
+
+                /* both are required */
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .p2 {
+                text-overflow: ellipsis;
+                width: 50%;
+                padding: 2px 5px;
+                background: lightgrey;
+
+                /* both are required */
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .p3 {
+                text-overflow: '$$$';
+                width: 50%;
+                padding: 2px 5px;
+                background: lightgrey;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .normal {
+                word-wrap: normal;
+            }
+            .break-all {
+                word-wrap: break-all;
+            }
+            .keep-break {
+                word-break: keep-all;
+            }
+            .break-word {
+                word-break: break-word;
+            }
+            .p4 {
+                width: 250px;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="p1">
+            Lorem ipsum dolor sit amet. Maecenas dictum metus in leo aliquam, nec pellentesque mauris vulputate.
+            Phasellus dui eros, efficitur et turpis a, lacinia sollicitudin lectus. In hac habitasse platea dictumst.
+            Sed dictum augue lectus, sit amet condimentum mauris maximus nec.
+        </p>
+        <hr>
+        <p class="p2">
+            Lorem ipsum dolor sit amet. Maecenas dictum metus in leo aliquam, nec pellentesque mauris vulputate.
+            Phasellus dui eros, efficitur et turpis a, lacinia sollicitudin lectus. In hac habitasse platea dictumst.
+            Sed dictum augue lectus, sit amet condimentum mauris maximus nec.
+        </p>
+        <hr>
+        <p class="p3">
+            Lorem ipsum dolor sit amet. Maecenas dictum metus in leo aliquam, nec pellentesque mauris vulputate.
+            Phasellus dui eros, efficitur et turpis a, lacinia sollicitudin lectus. In hac habitasse platea dictumst.
+            Sed dictum augue lectus, sit amet condimentum mauris maximus nec.
+        </p>
+        <p><b>Note</b> It is not supported is most browser!</p>
+        <hr>
+        
+        <h3>The Longest Word in a Major Dictinoary</h3>
+        <p class="p4">1.<code>Word-wrap: normal</code></p>
+        <p class="p4 normal">This is a long and
+            Honorficabilitudinitatibus califragilistricexpialidocious Taumatwakatanglihangakouauaoutamateaturipukapikimaunghornoukupokaiwhenuakitanatahu
+            YNKTSYNTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTS
+        </p>
+        <p class="p4">2.<code>Word-wrap: break-word</code></p>
+        <p class="p4 break-word">This is a long and
+            Honorficabilitudinitatibus califragilistricexpialidocious Taumatwakatanglihangakouauaoutamateaturipukapikimaunghornoukupokaiwhenuakitanatahu
+            YNKTSYNTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTS
+        </p>
+        <p class="p4">3.<code>Word-wrap: break-all</code></p>
+        <p class="p4 brak-all">This is a long and
+            Honorficabilitudinitatibus califragilistricexpialidocious Taumatwakatanglihangakouauaoutamateaturipukapikimaunghornoukupokaiwhenuakitanatahu
+            YNKTSYNTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTS
+        </p>
+        <p class="p4">4.<code>Word-wrap: keep-break</code></p>
+        <p class="p4 keep-break">This is a long and
+        Honorficabilitudinitatibus califragilistricexpialidocious Taumatwakatanglihangakouauaoutamateaturipukapikimaunghornoukupokaiwhenuakitanatahu
+        YNKTSYNTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTSYNKTS
+        </p>
+    </body>
+</html>

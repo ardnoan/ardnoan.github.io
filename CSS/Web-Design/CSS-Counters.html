@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counters</title>
+        <style type="text/css">
+            .body {
+                counter-reset: headings;
+            }
+            .h3:before {
+                counter-increment: headings;
+                content: "Section " counter(headings) ": ";
+            }
+            ol {
+                counter-reset: section;
+                list-style-type: none;
+            }
+            li:before {
+                counter-increment: section;
+                content: counters(section, ".") " ";
+            }
+        </style>
+    </head>
+    <body class="body">
+        <h3 class="h3">Introduction</h3>
+        <h3 class="h3">Methodology</h3>
+        <h3 class="h3">Results and Discussions</h3>
+        <h3 class="h3">Conclusions</h3>
+        <hr>
+        <ol>
+            <li>items</li>
+            <li>items</li>
+            <li>items
+                <ol>
+                    <li>items</li>
+                    <li>items</li>
+                    <li>items
+                        <ol>
+                            <li>items</li>
+                            <li>items</li>
+                        </ol>
+                    </li>
+                    <li>items</li>
+                </ol>
+            </li>
+            <li>items</li>
+            <li>items</li>
+        </ol>
+        <ol>
+            <li>item</li>
+            <li>item</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Function Invocation </title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Function Invocation </h1>
+            <h2> Example </h2>
+            <p id="demo"></p>
+            <script>
+                function addNumbers(x, y) {
+                    return x + y;
+                }
+                document.getElementById("demo").innerHTML = addNumbers(5, 3); //invokes the function 
+            </script>
+            <h2> Invoking Function with Default Parameters </h2>
+            <button onclick="say()"> Call without an Argument </button>
+            <script>
+                function say(message = "Welcome to the coding world!") {
+                    alert(message);
+                }
+            </script>
+
+            <h2> Invoking Function with Global Object </h2>
+            <p id="demo1"></p>
+            <script>
+                function addNumbers1(x, y) {
+                    return x * y;
+                }
+                document.getElementById("demo1").innerHTML = window.addNumbers1(5, 3); // invokes the function using window object 
+            </script>
+
+            <h2> Invoking Function In an Object </h2>
+            <p id="demo2"></p>
+            <script>
+                var fruit = {
+                    name: "Mangga",
+                    color: "Kuning",
+                    showInfo: function() {
+                        return "The " + this.name + " is " + this.color;
+                    }
+                }
+                document.getElementById("demo2").innerHTML = fruit.showInfo(); // invokes the function inside an object 
+            </script>
+        </div>
+    </body>
+</html>

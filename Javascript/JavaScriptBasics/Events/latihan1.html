@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Events </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Events </h1>
+            <button id="btn"> Button </button>
+            <script>
+                var btn = document.getElementById("btn");
+
+                //The block of codes below is called event handler
+                btn.onclick = function() {
+                    alert("Assalamualaikum Brother");
+                };
+            </script>
+            <h2> Inline Event Handlers </h2>
+            <button onclick='alert("Assalamualaikum my Brother")'> Button </button>
+            <h2> The addEventListener() Method </h2>
+            <button id="btn_1"> Button </button>
+            <script>
+                var btn = document.getElementById("btn_1");
+
+                btn.addEventListener("click", function() {
+                    alert("Assalamualaikum Sobat, ini adalah dialog box");
+                });
+            </script>
+            <h2> More Event Type</h2>
+            <h3> The change event </h3>
+            <label>
+                <select id="city" name="city">
+                    <option value="Belin"> Berlin </option>
+                    <option value="Tokyo"> Tokyo </option>
+                    <option value="Rio"> Rio </option>
+                    <option value="Mumbai"> Mumbai </option>
+                </select>
+            </label>
+            <p> yang dipilih: <span id="demo_1"></span></p>
+            <script>
+                var select = document.getElementById("city");
+                select.addEventListener("change", function() {
+                    var val = document.getElementById("city").value;
+                    document.getElementById("demo_1").innerHTML = val;
+                })
+            </script>
+            <h3> The Mouseover Event </h3>
+            <p id="demo_2"> When you put </p>you rmouse over me my value will change. </p>
+            <p> Since we are on a mobile device, this cannot be illustrated. </p>
+            <script>
+                var elem = document.getElementById("demo_2");
+                elem.addEventListener("mouseover", function() {
+                    elem.innerHTML = "Halo Brother";
+                })
+            </script>
+            <h3> The keypress Event </h3>
+            <textarea id="area"></textarea>
+            <p> The value is: <span id="demo_3"></span></p>
+            <script>
+                var area = document.getElementById("area");
+
+                area.addEventListener("keypress", function() {
+                    document.getElementById("demo_3").innerHTML = area.value;
+                });
+            </script>
+            <h3> The focus event </h3>
+            <textarea id="area_1">Type your message... </textarea>
+            <script>
+                var areaa = document.getElementById("area_1");
+
+                areaa.addEventListener("focus", function() {
+                    areaa.style.background = "yellow";
+                });
+            </script>
+            <h3> The Blur Event </h3>
+            <textarea id="area_2"> Type your message... </textarea>
+            <p> click to effect </p>
+            <script>
+                var area = document.getElementById("area_2");
+                
+                area.addEventListener("focus", function() {
+                    area.style.background = "blue";
+                });
+
+                area.addEventListener("blur", function() {
+                    area.style.background = "red";
+                });
+            </script>
+            <h3> The resize Event </h3>
+            <p> Window width: <span id="windowWidth"></span></p>
+            <p> Window height: <span id="windowHeight"></span></p>
+            <p> Rotate your device to see the effect. </p>
+            <p> When you try this on a desktop/laptop you can easily resize the browser window your mouse cursor. </p>
+            <script>
+                window.addEventListener("resize", function() {
+                    document.getElementById("windowWidth").innerHTML = window.innerWidth;
+                    document.getElementById("windowHeight").innerHTML = window.innerHeight;
+                })
+            </script>
+        </div>
+    </body>
+</html>

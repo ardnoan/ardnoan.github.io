@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Link di css</title>
+        <link rel="stylesheet" href="css.css">
+        <style>
+            .container > a {
+                outline: none;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+            .container > a:link {
+                color: pink;
+            }
+            .container > a:visited {
+                background: red;
+            }
+            .container > a:focus {
+                border: 3px solid blue;
+            }
+            .container > a:hover {
+                border: 5px;
+                border-style: solid;
+                border-color: red green blue yellow;
+                background: lightgrey;
+                color: black;
+            }
+            .container > a:active {
+                text-decoration: underline;
+                border: 1px solid lightgrey;
+                background: blue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#Article">Article</a></li>
+                <li><a href="../index.html#css">CSS</a></li>
+                <li><a href="#">Introduction CSS</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <a id="link" href="bb.html">bulak balik</a>
+            <p>Since we are on a mobile device it may be hard for us to  demonstrate thi swell. But you can try to hold the link and Boo release it to see the effects.</p>
+        </div>
+    </body>
+</html>

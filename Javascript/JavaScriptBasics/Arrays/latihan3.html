@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 3 Array sorting </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript array sorting </h1>
+            <h2> Method sort() </h2>
+            <p id="demo_1"></p>
+            <script>
+                var fruits = ["Bananas", "Apple", "Durian", "Cherries"];
+                fruits.sort();
+                document.getElementById("demo_1").innerHTML = fruits;
+            </script>
+            <h2> Sorting Numbers </h2>
+            <p id="demo_2_1"></p>
+            <script>
+                var numbers = [5, 3, 4, 1, 2];
+                numbers.sort(function(a, b) {
+                    return a - b;
+                });
+                document.getElementById("demo_2_1").innerHTML += numbers;
+            </script>
+            <p id="demo_2_2"></p>
+            <script>
+                var numbers = [5, 3, 4, 1, 2];
+                numbers.sort(compareFunction);
+                function compareFunction(a, b) {
+                    return a - b;
+                }
+                document.getElementById("demo_2_2").innerHTML += numbers;
+            </script>
+            <p id="demo_2_3"></p>
+            <script>
+                var numbers = [5, 3, 4, 1, 2];
+                numbers.sort(compareFunction);
+                function compareFunction(a, b) {
+                    return b - a;
+                }
+                document.getElementById("demo_2_3").innerHTML = numbers;
+            </script>
+            <h2> Get the Highest or Lowest Value </h2>
+            <p id="demo_3_1"></p>
+            <script>
+                var numbers = [5, 3, 4, 1, 2];
+                numbers.sort(function(a, b) {
+                    return b - a;
+                });
+                var highest = numbers[0];
+                document.getElementById("demo_3_1").innerHTML = highest;
+            </script>
+            <p id="demo_3_2"></p>
+            <script>
+                var numbers = [5, 3, 4, 1, 2];
+                numbers.sort(function(a, b) {
+                    return a - b;
+                });
+                var lowest = numbers[0];
+                document.getElementById("demo_3_2").innerHTML = lowest;
+            </script>
+            <h2> Sorting Array of Object </h2>
+            <p id="demo_4"></p>
+            <script>
+                var students = [
+                    {name: "John", age: 7},
+                    {name: "Monica", age: 5},
+                    {name: "Paul", age: 6}
+                ]
+                students.sort(function(a, b) {
+                    return a.age - b.age;
+                });
+
+                /* displaying data */
+                for(var i = 0; i < students.length; i++) {
+                    document.getElementById("demo_4").innerHTML += '<p>Name: ' + students[i].name + '<br>Age: ' + students[i].age + '</p>';
+                }
+            </script>
+            <h2> Reversing an Array </h2> 
+            <p id="demo_5"></p>
+            <script>
+                var fruits = ["apple", "Bananas", "Orange"];
+                fruits.reverse();
+                document.getElementById("demo_5").innerHTML = fruits;
+            </script>
+        </div>
+    </body>
+</html>

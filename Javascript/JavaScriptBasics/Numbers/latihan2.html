@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title> Latihan 2 Numbers Methods </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            table {
+                border-collapse: collapse;
+                width: 50%;
+                padding: 10px;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+                padding: 5px;
+                margin: 5px;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid black;
+            }
+            thead th:nth-child(1) {
+                width: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Metode Nomor Javascript </h1>
+            <h2> Metode Number.isInteger() Methods </h2>
+            <p id="demo_1"></p>
+            <script>
+                var num1 = Number.isInteger(21);
+                var num2 = Number.isInteger(3.12);
+                var num3 = Number.isInteger("hello");
+                document.getElementById("demo_1").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+
+            <h2> Metode isNaN() </h2>
+            <p id="demo_2"></p>
+            <script>
+                var num1 = isNaN(21);
+                var num2 = isNaN(3.21);
+                var num3 = isNaN("Hello World");
+                var num4 = isNaN("three");
+                var num5 = isNaN(12 / "three");
+                document.getElementById("demo_2").innerHTML =  num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4 + "<br>" + num5;
+            </script>
+
+            <h2> Metode parseInt() </h2>
+            <p id="demo_3"></p>
+            <script>
+                var num1 = parseInt("21");
+                var num2 = parseInt("3.21");
+                var num3 = parseInt("21 days");
+                var num4 = parseInt("3 months and 21 days");
+                var num5 = parseInt("months 3");
+                var num6 = parseInt("I Love You");
+                document.getElementById("demo_3").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4 + "<br>" + num5 + "<br>" + num6;
+            </script>
+            
+            <h2> Metode toFixed() </h2>
+            <p id="demo_4"></p>
+            <script>
+                var num1 = (21.123456).toFixed(1);
+                var num2 = (21.123456).toFixed(2);
+                var num3 = (21.123456).toFixed(3);
+                document.getElementById("demo_4").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+
+            <h2> Metode toExponential() </h2>
+            <p id="demo_5"></p>
+            <script>
+                var num1 = (55.1234).toExponential(1);
+                var num2 = (55.1234).toExponential(2);
+                var num3 = (55.1234).toExponential(3);
+                document.getElementById("demo_5").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+
+            <h2> Metode toString() </h2>
+            <p id="demo_6"></p>
+            <script>
+                var num1 = (21).toString();
+                var num2 = (3.21).toString();
+                var num3 = (2022).toString();
+                document.getElementById("demo_6").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+            </script>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Properti </th>
+                        <th> Keterangan </th>
+                        <th> Nilai konstan </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Number.min_value </td>
+                        <td> Terkecil positif bisa diwakilkan nomor dalam javascript </td>
+                        <td> 5e-324 </td>
+                    </tr>
+                    <tr>
+                        <td> Number.max_value </td>
+                        <td> Angkan terwakili positif terbesar dalam javascript </td>
+                        <td> 1.7976931348623157e+308 </td>
+                    </tr>
+                    <tr>
+                        <td> Number.NaN </td>
+                        <td> Nilai khusus "bukan a-Number" </td>
+                        <td> NaN </td>
+                    </tr>
+                    <tr>
+                        <td> Number.min_safe_integer </td>
+                        <td> Itu bilangan bulat aman minimun dalam javascript </td>
+                        <td> -9007199254740991 </td>
+                    </tr>
+                    <tr>
+                        <td> Number.max-safe_integer </td>
+                        <td> Itu bilangan bulat aman maxsimum dalam javascript </td>
+                        <td> 9007199254740991 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

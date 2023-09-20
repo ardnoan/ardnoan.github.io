@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attribute Selectors</title>
+        <link rel="stylesheet" href="../css.css">
+        <style type="text/css">
+            .a[title] {
+                color: red;
+            }
+            .a2[title="ardi"] {
+                color: red;
+            }
+            .a3[title~="ardi"] {
+                color: red;
+            }
+            .a4[href^="#"] {
+                color: fuchsia;
+            }
+            a[href$=".org"] {
+                color: red;
+            }
+            a[href*="exam"] {
+                color: red;
+            }
+            a[title="codeliber" i] {
+                color: red;
+            }
+
+            .div[lang|="en"] {
+                color: green;
+            }
+            .div2[lang|="zh"] {
+                color: green;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="bar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href=".././index.html#Article">Article</a></li>
+                <li><a href="../../index.html#css">CSS</a></li>
+                <li><a href="../../index.html#css">Layout</a></li>
+                <li><a href="#">Attribute Selectors</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>Go to <a class="a" href="#">Example.com</a></p>
+            <p>Go to <a class="a" href="#" title="menuju tak terbatas dan melampuinya!!">Example.com</a>(with title attribute)</p>
+            <hr>
+    
+            <p> Go to <a class="a2" href="#" title="css">Example.com</a></p>
+            <p> Go to <a class="a2" href="#" title="ardi">Example.com</a></p>
+            <hr>
+    
+            <p>Go to <a class="a3" href="#" title="ardi">Example.com</a>.</p>
+            <p>Go to <a class="a3" href="#" title="ardi css">Example.com</a>.</p>
+            <p>Go to <a class="a3" href="#" title="css ardi">Example.com</a>.</p>
+            <p>Go to <a class="a3" href="#" title="html ardi css">Example.com</a>.</p>
+            <p>Go to <a class="a3" href="#" title="ardis">Example.com</a>.</p>
+            <p>Go to <a class="a3" href="#" title="ardi-css">Example.com</a>.</p>
+            <hr>
+    
+            <div class="div" lang="en-US">Hello World</div>
+            <div class="div" lang="en-GB">Hello World</div>
+            <div class="div" lang="en-AU">Hello World</div>
+            <div class="div" lang="zh-CN">Hello World</div>
+            <div class="div" lang="zh-TW">Hello World</div>
+            <hr>
+    
+            <div class="div2" lang="en-US">Hello World</div>
+            <div class="div2" lang="en-GB">Hello World</div>
+            <div class="div2" lang="en-AU">Hello World</div>
+            <div class="div2" lang="zh-CN">Hello World</div>
+            <div class="div2" lang="zh-TW">Hello World</div>
+            <hr>
+    
+            <p>Go to <a href="#">Example.com</a></p>
+            <p>Go to <a href="#section1">Selection 1#</a></p>
+            <h2 id="section1" style="margin-top: 200px; margin-bottom: 200px; background: lightblue;">Section 1#</h2>
+            <hr>
+    
+            <p>Go to <a href="#">Example.com</a></p>
+            <p>Go to <a href="https://www.wikipedia.org">wikipedia.org</a></p>
+            <hr>
+    
+            <p>Go to <a href="https://www.example.com">Example.com</a></p>
+            <p>Go to <a href="https:www.wikipedia.org">Wikipedia.org</a></p>
+            <hr>
+    
+            <p>Go to <a href="#" title="CoDeLiBer">Example.com</a></p>
+            <p>Try to remove the "<b>i</b>" from the attribute selector to see the difference.</p>
+        </div>
+    </body>
+</html>

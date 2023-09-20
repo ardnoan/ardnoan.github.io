@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Arrays </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Arrays </h1>
+            <p id="demo"></p>
+            <script>
+                var fruits = ["apple", "Bananas", "Oranges"];
+                document.getElementById("demo").innerHTML = fruits;
+            </script>
+            <p id="demo_1"></p>
+            <script>
+                var person1 = "Sergio";
+                var person2 = "Andres";
+                var person3 = "Selena";
+                var person4 = "Anibal";
+                document.getElementById("demo_1").innerHTML = person1 + "<br>" + person2 + "<br>" + person3 + "<br>" + person4;
+            </script>
+
+            <h2> Membuat Arrays </h2>
+            <p id="demo_2_1"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                document.getElementById("demo_2_1").innerHTML = cities;
+            </script>
+            <p id="demo_2_2"></p>
+            <script>
+                var cities = ("Madrid", "Berlin", "Tokyo");
+                document.getElementById("demo_2_2").innerHTML = cities;
+            </script>
+
+            <h2> Akses Array </h2>
+            <p id="demo_3"></p>
+            <script>
+                var cities = ["cidaun", "sindangbarang", "naringgul"];
+                document.getElementById("demo_3").innerHTML = cities[0];
+            </script>
+
+            <h2> Tambahkan item ke array </h2>
+            <p id="demo_4_1"></p>
+            <script>
+                var cities = ["Madris", "Belin", "Tokyo"];
+                cities.push("Rio");
+                document.getElementById("demo_4_1").innerHTML = cities;
+            </script>
+            <p id="demo_4_2"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                cities.push("Rio", "Denver", "Moscow");
+                document.getElementById("demo_4_2").innerHTML = cities;
+            </script>
+            <p id="demo_4_3"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                cities.unshift("Rio");
+                document.getElementById("demo_4_3").innerHTML = cities;
+            </script>
+            <p id="demo_4_4"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                cities.unshift("Rio", "Denver", "Moscow");
+                document.getElementById("demo_4_4").innerHTML = cities;
+            </script>
+
+            <h2> Menghapus item dari array </h2>
+            <p id="demo_5_1"></p>
+            <script>
+                var cities = ["madrid", "Belin", "Tokyo"];
+                cities.pop();
+                document.getElementById("demo_5_1").innerHTML = cities;
+            </script>
+            <p id="demo_5_2"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                cities.shift();
+                document.getElementById("demo_5_2").innerHTML = cities;
+            </script>
+
+            <h2> Dapatkan Panjang Arrays </h2>
+            <p id="demo_6"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                document.getElementById("demo_6").innerHTML = cities.length;
+            </script>
+
+            <h2> Akes item terakhir dari array </h2>
+            <p id="demo_7"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                var lastItem = cities[cities.length - 1];
+                document.getElementById("demo_7").innerHTML = lastItem;
+            </script>
+
+            <h2> Menggulangi array </h2>
+            <p id="demo_8"></p>
+            <script>
+                var city = ["Madrid", "Berlin", "Tokyo", "Rio", "Denver"];
+                for(var i = 0; i < city.length; i++) {
+                    document.getElementById("demo_8").innerHTML += city[i] + "<br><br>";
+                }
+            </script>
+            
+            <h2> Array adalah objek </h2>
+            <p id="demo_9"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                var type = typeof cities; 
+                document.getElementById("demo_9").innerHTML = type;
+            </script>
+        </div>
+    </body>
+</html>

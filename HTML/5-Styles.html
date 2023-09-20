@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Styles HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Gaya HTML</h1>
+        <p>Gaya HTML digunakan untuk gaya element HTML itu juga berarti mengubah nilai default.</p>
+        <p>Misalnya, penataan gaya dapat mengubah nilai default warna teks sebagai hitam, warna latar belakang putih,
+            peratan teks sebagai kiri dan ukuran teks sebagai 12 piksel.</p>
+        <h1>Lembar Gaya Internal (gaya internal)</h1>
+        <p>Lembar gaya internal terdiri dari satu atau lebih kumpulan aturan Cascading Style Sheet (CSS).</p>
+        <p>Kumpulan aturan CSS terdiri dari pemilih dan blok deklarasi yang dikelilingi oleh kurung kurawal yang berisi
+            satu atau lebih deklarasi CSS yang dipisahkan oleh titik koma.</p>
+        <p>Setiap deklarasi menyertakan nama properti CSS dan nilain, dipisahkan oleh titik dua.</p>
+        <p>Semuanya diapit didalam element &lt;style&gt; dengan atribute type="text/css" yang disertakan didalam element
+            &lt;head&gt;.</p>
+        <h1>Sintaks Lembar Gaya Internal</h1>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    p {
+                        font-size: 14px;
+                    }
+                &lt;/style&gt;</pre>
+        </div>
+
+        <h1>Gaya Inline</h1>
+        <p>Gaya sebaris digunakan untuk menata element menggunakan attribut gaya dengan deklarasi CSS didalamnya yang
+            mirif dengan gaya internal.</p>
+        <h1>Sintaks Styling Inline</h1>
+        <div class="sampul">
+            <p>&lt;div style="property: value; property: value;"&gt;</p>
+        </div>
+
+        <h1>Contoh Warna Latar Belakang</h1>
+        <div class="sampul">
+            <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt; Coba Sendiri &lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body style="background-color: gold"&gt;
+                    &lt;!-- Isi Disini --&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;</pre>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="background-color: gold; height: 400px;"></p>
+        </div>
+
+        <h1>Contoh Warna teks</h1>
+        <div class="sampul">
+            <pre>
+                &lt;p style="color: blue"&gt; Warna saya biru &lt;/p&gt;
+                &lt;p style="color: red"&gt; Warna saya merah &lt;/p&gt;
+                &lt;p style="color: green"&gt; Warna saya hijau &lt;/p&gt;
+                &lt;p style="color: yellow"&gt; Warna saya kuning &lt;/p&gt;
+                &lt;p style="color: pink"&gt; Warna saya pink &lt;/p&gt;</pre>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="color: blue">Warna saya biru</p>
+            <p style="color: red">Warna saya merah</p>
+            <p style="color: green">Warna saya hijau</p>
+            <p style="color: yellow">Warna saya Kuning</p>
+            <p style="color: pink">Warna saya pink</p>
+        </div>
+
+        <h1>Contoh font-family teks:</h1>
+        <div class="sampul">
+            <p>&lt;h1 style="font-family: Times New Roman"&gt; saya Times new roman &lt;/h1&gt;</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="font-family: 'Times New Roman', Times, serif">saya Times new roman</p>
+        </div>
+
+        <h1>Contoh Ukuran Teks</h1>
+        <div class="sampul">
+            <p>&lt;p style="font-size: 25px;"&gt;Ukuran saya 25 piksel&gt;</p>
+            <p>&lt;p style="font-size: 50px;"&gt;Ukuran saya 50 piksel&gt;</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="font-size: 25px;">Ukuran saya 25 piksel</p>
+            <p style="font-size: 50px;">Ukuran saya 50 piksel</p>
+        </div>
+
+        <h1>Contoh perataan teks</h1>
+        <div class="sampul">
+            <p>&lt;p style="text-algin: left;"&gt; Saya rata kiri</p>
+            <p>&lt;p style="text-align: center;"&gt; Saya rata tengah</p>
+            <p>&lt;p style="text-algin: right;"&gt; Saya rata kanan</p>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <p style="text-align: left;">Saya rata kiri</p>
+            <p style="text-align: center;">Saya rata tengah</p>
+            <p style="text-align: right;">Saya rata kanan</p>
+        </div>
+
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="#" class="pag active">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+</body>
+
+</html>

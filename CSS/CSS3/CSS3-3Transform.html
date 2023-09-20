@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Transform</title>
+        <style type="text/css">
+            .div1 {
+                color: white;
+                background: black;
+                width: 150px;
+                height: 150px;
+                margin: 20px;
+            }
+            .div2 {
+                width: 100px;
+                height: 100px;
+                background: #173459;
+                color: #f8f9f9;
+                border: 5px solid navy;
+                transition-duration: 2s;
+                margin: 20px;
+                padding: 20px;
+            }
+            .rotate {
+                transform: rotateX(140deg);
+            }
+            .rotate1 {
+                transform: rotateY(140deg);
+            }
+            .rotate2 {
+                transform: rotateZ(90deg);
+            }
+            .rotate3:hover {
+                transform: rotateX(140deg);
+                border: 10px double lightblue;
+            }
+            .rotate4:hover {
+                transform: rotateY(140deg);
+                border: 10px double lightblue;
+            }
+            .rotate5:hover {
+                transform: rotateZ(90deg);
+                border: 10px solid lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">I am</div>
+        <div class="div1 rotate">I am rotate</div>
+        <div class="div1 rotate1">I am rotate</div>
+        <div class="div1 rotate2">I am rotate</div>
+        
+        <div class="div2 rotate3">I am a rotate</div>
+        <div class="div2 rotate4">I am a rotate</div>
+        <div class="div2 rotate5">I am a rotate</div>
+    </body>
+</html>

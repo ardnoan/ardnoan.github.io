@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan1 Bitwise Operator </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Bitwise Oeprators </h1>
+            <h2> Bitwise AND (&) Operator </h2>
+            <p id="demo_1"></p>
+            <script>
+                var num1 = 0 & 0;
+                var num2 = 0 & 1;
+                var num3 = 1 & 0;
+                var num4 = 1 & 1;
+
+                document.getElementById("demo_1").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> Bitwise OR (|) Operator </h2>
+            <p id="demo_2"></p>
+            <script>
+                var num1 = 0 | 0;
+                var num2 = 0 | 1;
+                var num3 = 1 | 0;
+                var num4 = 1 | 1;
+
+                document.getElementById("demo_2").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> Bitwise XOR (^) Operator </h2>
+            <p id="demo_3"></p>
+            <script>
+                var num1 = 0 ^ 0;
+                var num2 = 0 ^ 1;
+                var num3 = 1 ^ 0;
+                var num4 = 1 ^ 1;
+
+                document.getElementById("demo_3").innerHTML = num1 + "<br>" + num2 + "<br>" + num3 + "<br>" + num4;
+            </script>
+
+            <h2> Bitwise NOT (-) Operator </h2>
+            <p id="demo_4"></p>
+            <script>
+                var num1 = ~0;
+                var num2 = ~1;
+                var num3 = num1 + num2;
+                document.getElementById("demo_4").innerHTML = num3;
+            </script>
+        </div>
+    </body>
+</html>

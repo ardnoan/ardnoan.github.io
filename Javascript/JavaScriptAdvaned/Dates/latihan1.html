@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Dates </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript Dates </h1>
+            <h2> new Date() </h2> 
+            <p id="demo"></p>
+            <script>
+                var date = new Date();
+                document.getElementById("demo").innerHTML = date;
+            </script>
+
+            <h2> new Date(millisecond) </h2>
+            <p id="demo_1"></p>
+            <script>
+                var date1 = new Date(86400000);
+                document.getElementById("demo_1").innerHTML = date1;
+            </script>
+            
+            <h2> new DAte(dateString) </h2>
+            <p id="demo_2"></p>
+            <script>
+                var date2 = new Date("June 04, 2000");
+                document.getElementById("demo_2").innerHTML = date2;
+            </script>
+
+            <h2> new Date(year, monthIndex, ...) </h2> 
+            <p id="demo_3"></p>
+            <script>
+                var date5 = new Date(2000, 5, 4, 18, 30, 20, 0);
+                document.getElementById("demo_3").innerHTML = date5;
+            </script>
+            <p id="demo_3_1"></p>
+            <script>
+                var date5_1 = new Date(2000, 5, 4, 18, 30, 20);
+                document.getElementById("demo_3_1").innerHTML = date5_1;
+            </script>
+            <p id="demo_3_2"></p>
+            <script>
+                var date5_2 = new Date(2000, 5, 4, 18, 30);
+                document.getElementById("demo_3_2").innerHTML = date5_2;
+            </script>
+            <p id="demo_3_3"></p>
+            <script>
+                var date5_3 = new Date(2000, 5, 4, 18);
+                document.getElementById("demo_3_3").innerHTML = date5_3;
+            </script>
+            <p id="demo_3_4"></p>
+            <script>
+                var date5_4 = new Date(2000, 5, 4);
+                document.getElementById("demo_3_4").innerHTML = date5_4;
+            </script>
+            <p id="demo_3_5"></p>
+            <script>
+                var date5_5 = new Date(2000, 5);
+                document.getElementById("demo_3_5").innerHTML = date5_5;
+            </script>
+            <p id="demo_4"></p>
+            <script>
+                var date6 = new Date(86400000);
+                document.getElementById("demo_4").innerHTML = date6;
+            </script>
+        </div>
+    </body>
+</html>

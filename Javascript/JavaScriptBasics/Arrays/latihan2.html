@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 2 Metode Arrays </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Metode Arrays Javascript </h1>
+            <h2> Metode forEach() </h2>
+            <p id="demo_1"></p>
+            <script>
+                var cities = ["Madrid", "Berlian", "Tokyo"];
+                cities.forEach(function(val, i, arr) {
+                    document.getElementById("demo_1").innerHTML += i + ": " + val + "<br>";
+                });
+            </script>
+            <h2> Arrays ke String </h2>
+            <p id="demo_2_1"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                var str = cities.join();
+                document.getElementById("demo_2_1").innerHTML = str;
+            </script>
+            <p id="demo_2_2"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                var str = cities.join("-");
+                document.getElementById("demo_2_2").innerHTML = str;
+            </script>
+            <h2> String ke Array </h2>
+            <p id="demo_3_1"></p>
+            <script>
+                var string = "Lorem ipsum dolor sit amet.";
+                var arr = string.split(" ");
+                document.getElementById("demo_3_1").innerHTML = typeof arr + ": " + arr;
+            </script>
+            <p id="demo_3_2"></p>
+            <script>
+                var string = "Madrid-Berlin-Tokyo-Rio";
+                var arr = string.split("-");
+                document.getElementById("demo_3_2").innerHTML = typeof arr + ": " + arr;
+            </script>
+            <h2> Menggabungkan Array </h2>
+            <p id="demo_4_1"></p>
+            <script>
+                var fruit1 = ["Banana", "Apple", "Orange"];
+                var fruit2 = ["Grape", "Mango", "Strawberry"];
+                var arr = fruit1.concat(fruit2);
+                document.getElementById("demo_4_1").innerHTML = arr;
+            </script>
+            <p id="demo_4_2"></p>
+            <script>
+                var numbers1 = [1, 2, 3];
+                var numbers2 = [4, 5, 6];
+                var numbers3 = [7, 8, 9];
+                var arr = numbers1.concat(numbers2, numbers3);
+                document.getElementById("demo_4_2").innerHTML = arr;
+            </script>
+            <h2> Mencari Item </h2>
+            <p id="demo_5_1"></p>
+            <script>
+                var fruits = ["Mango", "Apple", "Orange", "Grape", "Mango"];
+                var i = fruits.indexOf("Mango");
+                document.getElementById("demo_5_1").innerHTML = i;
+            </script>
+            <p id="demo_5_2"></p>
+            <script>
+                var fruits = ["Mango", "Apple", "Orange", "Grape", "Mango"];
+                var i = fruits.lastIndexOf("Mango");
+                document.getElementById("i");
+            </script>
+            <p id="demo_5_3"></p>
+            <script>
+                var fruits = ["Mango", "Apple", "Orange", "Grape", "Mango"];
+                var firstIndex = fruits.indexOf("Straberry");
+                var lastIndex = fruits.indexOf("Strawberry");
+                document.getElementById("demo_5_3").innerHTML = firstIndex + "<br>" + lastIndex;
+            </script>
+            <p id="demo_5_4"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo"];
+                var x = cities.includes("Madrid");
+                var y = cities.includes("Manila");
+                document.getElementById("demo_5_4").innerHTML = x + "<br>" + y;
+            </script>
+            <h2> Mengiris Array </h2>
+            <p id="demo_6_1"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo", "Rio", "Denver"];
+                var arr = cities.slice(0, 2);
+                document.getElementById("demo_6_1").innerHTML = arr;
+            </script>
+            <p id="demo_6_2"></p>
+            <script>
+                var cities = ["Madrid", "Berlin", "Tokyo", "Rio", "Denver"];
+                var arr = cities.slice(1, 4);
+                document.getElementById("demo_6_2").innerHTML = arr;
+            </script>
+            <h2> Menyambungkan Array </h2>
+            <p id="demo_7"></p>
+            <script>
+                var months = ["January", "April", "May"];
+                months.splice(1, 0, "Febuary", "March");
+                document.getElementById("demo_7").innerHTML = months;
+            </script>
+            <h2> Menghapus item array </h2>
+            <p id="demo_8_1"></p>
+            <script>
+                var months = ["January", "Febuary", "March", "April", "May"];
+                months.splice(0, 1);
+                document.getElementById("demo_8_1").innerHTML = months;
+            </script>
+            <p id="demo_8_2"></p>
+            <script>
+                var months = ["January", "Febuary", "March", "April", "May"];
+                months.splice(2, 1);
+                document.getElementById("dmeo_8_2").innerHTML = months;
+            </script>
+            <p id="demo_8_3"></p>
+            <script>
+                var months = ["January", "Febuary", "March", "April", "May"];
+                months.splice(0, 2);
+                document.getElementById("demo_8_3").innerHTML= months;
+            </script>
+            <p id="demo_8_4"></p>
+            <script>
+                var months = ["January", "Febuary", "March", "April", "May"];
+                months.splice(0, 3);
+                document.getElementById("demo_8_4").innerHTML = months;
+            </script>
+            <h2> Mengganti Nilai item </h2>
+            <p id="demo_9"></p>
+            <script>
+                var months = ["January", "Febuary", "March", "April", "May"];
+                months[1] = "Desember";
+                document.getElementById("demo_9").innerHTML = months;
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initila-scale=1.0">
+        <title> BOM Cookies </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript BOM Cookies </h1>
+            <ul>
+                <li><b>Session management</b> -- logins, shopping carts, game scores, or anything else the server should remember </li>
+                <li><b>Personalization</b> -- user preferences, themes, and other settings </li>
+                <li><b>Tracking</b> -- recording and analyzing user behavior </li>
+            </ul>
+            <h2> Creating a Cookie </h2>
+            <script>
+                document.cookie = "firstName=Gani";
+                document.cookie = "firstName=Gani; lastName=GagahdanBerani";
+                document.cookie = "firstName=Gani;"; /* expires=Mon, 21 Apr 2025 12:00:00 UTC" */
+            </script>
+            <h2> Getting a Cookie Value </h2>
+            <p id="demo"></p>
+            <script>
+                // returns a string containing all cookies 
+                var cookies = document.cookie;
+                document.getElementById("demo").innerHTML = cookies;
+            </script>
+
+            <h2> Changing a Cookie Value </h2>
+            <script>
+                // To change a cookie's value, do the same way as you create it but with a different value. 
+                document.cookie = "firstName=Jane";
+            </script>
+            <h2> Deleting a Cookie </h2>
+            <script>
+                // To deleter a cookie, set the its name to an empty value and use max-age=0.
+                document.cookie = "firstName=; max-age=0";
+            </script>
+        </div>
+    </body>
+</html>

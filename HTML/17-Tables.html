@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Tables HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Tables HTML</h1>
+        <p>Table HTML mewakili data dalam bentuk table. itu terdiri dari kolom dan baris yang berisi data.</p>
+        <p>Element &lt;table&gt; mendefinisikan tabel HTML</p>
+        <h1>Element table HTML</h1>
+        <ol>
+            <li>&lt;thead&gt; Mendefinisikan header tabel;</li>
+            <li>&lt;tbody&gt; mendefinisikan isi tabel;</li>
+            <li>&lt;tfoot&gt; mendefinisikan footer tabel;</li>
+            <li>&lt;tr&gt; mendefinisikan baris tabel;</li>
+            <li>&lt;th&gt; mendefinisikan judul tabel;</li>
+            <li>&lt;td&gt; mendefinisikan data/sel tabel;</li>
+            <li>&lt;colgroup&gt; menentukan grup dari satu atau lebih kolom dalam tabel;</li>
+            <li>&lt;col&gt; menentukan properti kolom untuk setiap kolom dalam tabel colorgrup (element kosong);</li>
+            <li>&lt;caption&gt; mendefinisikan keterangan untuk tabel.</li>
+        </ol>
+
+        <h1>Attribut Tabel HTML</h1>
+        <ol>
+            <li>align mendefinisikan perataan tabel;</li>
+            <li>bgcolor menentukan warna latar belakang tabel;</li>
+            <li>border menentukan ukurang bingkai yang mengelilingi tabel;</li>
+            <li>cellpadding menentukan ruang antara konten sel dan batasnya;</li>
+            <li>cellspacing menentukan jarak antara dua sel;</li>
+            <li>frame menenetukan sisi mana dari bingkai yang mengelilinginya tabel harus ditampilkan;</li>
+            <li>rules menentukan dimana aturan harus muncul dalam dabel;</li>
+            <li>sunmary mendefinisikan teks alternatif yang merangkum isi Tabel;</li>
+            <li>width menentukan lebar tabel.</li>
+        </ol>
+
+        <p>Sebuah catatan! semua attribut tabel HTML yang disebutkan sudah tidak digunakan lagi, artinya attribut
+            tersebut mungkin tidak lagi berfungsi dalam waktu dekat.</p>
+        <p>Meskipun attribut sudah tidak digunakan lagi, kita masih bisa membuat efek yang mirip dengan menggunakan
+            gaya atau Cascading StyleSheet (CSS)</p>
+        <h1>Contoh Sederhana :</h1>
+        <div class="sampul">
+            <pre>
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt; first name &lt;/th&gt;
+                            &lt;th&gt; last name &lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt; Asep &lt;/td&gt;
+                            &lt;td&gt; Ahmad &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                    &lt;tfoot&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt; footer &lt;/td&gt;
+                            &lt;td&gt; footer &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tfoot&gt;
+                &lt;/table&gt;</pre>
+        </div>
+        <h1>Output</h1>
+        <div class="sampul">
+            <table>
+                <thead>
+                    <tr>
+                        <th> first name</th>
+                        <th> last name </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Asep </td>
+                        <td> Ahmad </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> footer </td>
+                        <td> footer </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <h1>Table colgroup, alginment, background-color, width dan border</h1>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <pre>
+                &lt;table style="
+                                backgrond-color: silver;
+                                width: 80%;"
+                                margin: 0 auto;
+                                border: 2px solid black;"&gt;
+                &lt;!-- margin 0 auto untuk meng rata tengah kan --&gt;
+                    &lt;colgroup&gt;
+                        &lt;col style="background-color: blue"&gt;
+                        &lt;col style="background-color: red"&gt;
+                        &lt;col style="background-color: green"&gt;
+                    &lt;/colgroup&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt; first name &lt;/th&gt;
+                            &lt;th&gt; last name &lt;/th&gt;
+                            &lt;th&gt; Nationality &lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt; Asep &lt;/td&gt;
+                            &lt;td&gt; Ahmad &lt;/td&gt;
+                            &lt;td&gt; Asura &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt; Maulana &lt;/td&gt;
+                            &lt;td&gt; Saepudin &lt;/td&gt;
+                            &lt;td&gt; Uzumaki &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;</pre>
+        </div>
+
+        <h1>Output</h1>
+        <div class="sampul">
+            <table style="background-color: silver; width: 80%; margin: auto; border: 2px solid black;">
+                <colgroup>
+                    <col style="background-color: blue;">
+                    <col style="background-color: red;">
+                    <col style="background-color: green;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>first name</th>
+                        <th>last name</th>
+                        <th>nationality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Asep</td>
+                        <td>Ahmad</td>
+                        <td>Asura</td>
+                    </tr>
+                    <tr>
+                        <td>Maulana</td>
+                        <td>Saepudin</td>
+                        <td>Uzumaki</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1>Perbatasa table, padding sel, dan penspasian sel</h1>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    table, td {
+                        border: 1px solid black;
+                        /* cell spacing */
+                        border-spacing: 5px;
+                    }
+                    td {
+                        /*cell padding */
+                        padding: 5px;
+                    }
+                &lt;/style&gt;
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;first name&lt;/th&gt;
+                            &lt;th&gt;last name&lt;/th&gt;
+                            &lt;th&gt;nationality&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;asep&lt;/td&gt;
+                            &lt;td&gt;ahmad&lt;/td&gt;
+                            &lt;td&gt;asura&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;maulana&lt;/td&gt;
+                            &lt;td&gt;saepudin&lt;/td&gt;
+                            &lt;td&gt;uzumaki&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;</pre>
+        </div>
+
+        <h1>Menciutkan perbatasan tabel HTML</h1>
+        <p>Untuk menciutkan batas tabel menjadi satu batas, kita harus menyetel properti gaya border-collapse "dari
+            tabel ke nilai" collapse "i.e" border-collapse: collapse".</p>
+        <h1>Contoh perbatasan dan colspan yang diciutkan tabel:</h1>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    table, th, td {
+                        border-collapse: collapse;
+                        border: 1px solid black;
+                    }
+                &lt;/style&gt;
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th colspan="3"&gt;henshin&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;first name&lt;/th&gt;
+                            &lt;th&gt;last name&lt;/th&gt;
+                            &lt;th&gt;nationality&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;asep&lt;/td&gt;
+                            &lt;td&gt;ahmad&lt;/td&gt;
+                            &lt;td&gt;asura&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;maulana&lt;/td&gt;
+                            &lt;td&gt;saepudin&lt;/td&gt;
+                            &lt;td&gt;uzumaki&lt;/td&gt;
+                        &lt;/tr&gt;    
+                    &lt;/tbody&gt;
+                &lt;/table&gt;</pre>
+        </div>
+        <h1>Perbatasan dan bentang baris yang diciutkan tabel</h1>
+        <h1>Contoh</h1>
+        <div class="sampul">
+            <pre>
+                &lt;style type="text/css"&gt;
+                    table, th, td {
+                        border-collapse: collapse;
+                        border: 1px solid black;
+                    }
+                &lt;/style&gt;
+                &lt;table&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;henshin&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;first name&lt;/th&gt;
+                            &lt;th&gt;last name&lt;/th&gt;
+                            &lt;th&gt;nationality&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;asep&lt;/td&gt;
+                            &lt;td&gt;ahmad&lt;/td&gt;
+                            &lt;td rowspan="2"&gt;asura&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;maulana&lt;/td&gt;
+                            &lt;td&gt;saepudin&lt;/td&gt;
+                            &lt;td&gt;uzumaki&lt;/td&gt;
+                        &lt;/tr&gt;    
+                    &lt;/tbody&gt;
+                &lt;/table&gt;</pre>
+        </div>
+
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="16-Images.html" class="pag">16</a>
+            <a href="#" class="pag active">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+</body>
+
+</html>

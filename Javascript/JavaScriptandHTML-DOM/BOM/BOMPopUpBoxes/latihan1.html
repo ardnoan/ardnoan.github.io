@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> BOM Pop-Up Boxes </title>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <div>
+            <h1> JavaScript BOM Pop-Up Boxes </h1>
+            <ul>
+                <li> Alert Pup-up boxes </li>
+                <li> Confirm Pup-up Box </li>
+                <li> Prompt Pup-up Box </li>
+            </ul>
+            <h2> Alert Pop-up Box </h2> 
+            <p> Langsung pop up </p>
+            <script>
+                alert("Hello world");
+            </script>
+            <h2> Confirm Pup-up Box </h2>
+            <button onclick="btn()"> Button </button>
+            <script>
+                btn = () => {
+                    if(confirm("Apakah kamu ingin Pup-up jendela?")) {
+                        alert("Oke Hatur nuhun");
+                    } else {
+                        alert("Berhasil dibatalkan")
+                    }
+                }
+            </script>
+            <h2> Propmt Pup-up Box </h2>
+            <button onclick="promptt()"> Button </button>
+            <script>
+                promptt = () => {
+                    var firstName = prompt("Silahkan masukan nama: ");
+
+                    if(firstName == "" || firstName == null) {
+                        alert("Gelud kuy! kunaon teu ngasupken ngaran");
+                    } else {
+                        alert("Hi " + firstName + ", Terimakasih telah memasukan data, kamu baik sekali");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

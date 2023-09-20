@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Date set methods </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid silver;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Date set methods </h1> 
+            <table>
+                <thead>
+                    <tr>
+                        <th> Method </th>
+                        <th> Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Date.setTime() </td>
+                        <td> Sets the date to the time represented by a number of milliseconds since January 1, 1970 </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setFullYear() </td>
+                        <td> Sets the year for a specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.seMonth() </td> 
+                        <td> Sets the month for a specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setDate() </td> 
+                        <td> Sets the day of the month for a specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setHours() </td> 
+                        <td> Sets the hours for a specifeid date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setMinutes() </td>
+                        <td> Sets the minutes for a specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setSeconds() </td> 
+                        <td> Sets the seconds for a specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.setMilliseconds() </td>
+                        <td> Sets the milliseconds for a specified date. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2> Date.setTime() Method </h2>
+            <p id="demo_1"></p>
+            <script>
+                var date1 = new Date("Mar 21, 2019");
+                var date2 = new Date();
+                date2.setTime(date1.getTime() + 86400000); //get milliseconds and add 1 day
+                document.getElementById("demo_1").innerHTML = date2;
+            </script>
+
+            <h2> Date.setFullYear() Method </h2>
+            <p id="demo_2"></p>
+            <script>
+                var date = new Date();
+                date.setFullYear("2000");
+                document.getElementById("demo_2").innerHTML = date;
+            </script>
+
+            <h2> Date.setMonth() Method </h2>
+            <p id="demo_3"></p>
+            <script>
+                var date = new Date();
+                date.setMonth(5); // sets month to june
+                document.getElementById("demo_3").innerHTML = date;
+            </script>
+
+            <h2> Date.setDate() Method </h2>
+            <p id="demo_4"></p>
+            <script>
+                var date = new Date();
+                date.setDate(4);
+                document.getElementById("demo_4").innerHTML = date;
+            </script>
+
+            <h2> Date.setHours() Method </h2>
+            <p id="demo_5"></p>
+            <script>
+                var date = new Date();
+                date.setHours(8);
+                document.getElementById("demo_5").innerHTML = date;
+            </script>
+
+            <h2> Date.setMinutes() Method </h2>
+            <p id="demo_6"></p>
+            <script>
+                var date = new Date();
+                date.setMinutes(30);
+                document.getElementById("demo_6").innerHTML = date;
+            </script>
+            
+            <h2> Date.setSeconds() method </h2>
+            <p id="demo_7"></p>
+            <script>
+                var date = new Date();
+                date.setSeconds(50);
+                document.getElementById("demo_7").innerHTML = date;
+            </script>
+
+            <h2> Date.setMilliseconds() Method </h2>
+            <p id="demo_8"></p>
+            <script>
+                var date = new Date();
+                date.setMilliseconds(450);
+                document.getElementById("demo_8").innerHTML = date.getMilliseconds(); // get Milliseconds 
+            </script>
+        </div>
+    </body>
+</html>

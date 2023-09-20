@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation</title>
+        <style type="text/css">
+            @keyframes running {
+                from {
+                    top: 0px;
+                }
+                to {
+                    top: 500px;
+                }
+            }
+
+            .running {
+                animation-name: running;
+                animation-duration: 3s;
+                animation-play-state: running;
+                background: #173459;
+            }
+            
+            .paused {
+                animation-name: paused;
+                animation-duration: 3s;
+                animation-play-state: paused;
+            }
+            
+            .div1 {
+                width: 150px;
+                height: 100px;
+                position: relative;
+                background: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1 running">My Animation is currently playing.</div>
+        <br>
+        <div class="div1 paused">My Animation is currently playing.</div>
+    </body>
+</html>

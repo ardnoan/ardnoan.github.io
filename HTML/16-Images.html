@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements HTML</title>
+    <link rel="stylesheet" href="html.css">
+</head>
+
+<body>
+    <div class="bar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#Article">Article</a></li>
+            <li><a href="../index.html#html">HTML</a></li>
+            <li><a href="#">Images HTML</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        <h1>Gambar HTML</h1>
+        <p>Gambar HTML memang diperlukan atau diperlukan untuk setiap situs web. Gambar membantu situs web menjadi lebih
+            menarik bagi pengunjung.</p>
+        <p>Bayangkan sebuah halamann web tanpa satu gambarpun apakah kamu masih akan menjelajahinya? tentu saja tidak
+            akan menjelajahinya kemungkinan akan langsung keluar dari web tersebut.
+        </p>
+        <p>Untuk meletakan gambar di situs web kami, kami hanya perlu menggunakan element &lt;img/&gt; dengan attribut
+            src untuk menentukan URL atau lokasi gambar.</p>
+        <p>&lt;img&gt; adalah element kosong dan sebaris.</p>
+        <h1>Attribute src</h1>
+        <p>Kami menggunakan attribut src untuk menentukan URL gambar atau jalur file.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;img src="gambar1.png"/&gt;</p>
+        </div>
+
+        <h1>Attribut alt</h1>
+        <p>Terkadang gambar mungkin tidak dimuat di browser pengguna karena koneksi internet yang lambat, server yang
+            lambat, gambar dihapus dari direktori atau nilai URL yang salah ditentukan dalam attribut src.</p>
+        <p>Attribut alt menyediakan teks alternatif untuk gambar yang tidak sampai kebuka atau ke load gambarnya.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;img src="gambar.png" alt="saya adalah alternatif"&gt;</p>
+        </div>
+
+        <p>Pada contoh diatas URL gambar yang diberikan tidak benar-benar ada. Oleh karena itu, teks alternatif
+            ditampilkan sebagai gantinya. Nilai biasanya dalam piksel.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;img src="contoh.png" width="350" height="400"/&gt;</p>
+        </div>
+
+        <p>Untuk mengikuti praktik terbaik, kita dapat menggunakan attribut style untuk mengubah ukuran gambar dengan
+            lebar dan tinggi dan nilainya juga bisa dalam piksel.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;img src="gambar.png" style="float: kanan"/&gt;</p>
+        </div>
+        <p>Seperti yang kamu lihat hasilnya sama dengan menggunakan attribut &lt;width&gt; dan &lt;height&gt; tetapi
+            keuntungan menggunakan attribut &lt;style&gt; adalah lebar dan tingginya tidak akan ditimpa oleh stylesheet.
+        </p>
+        <h1>Gambar Mengambang (kiri atau kanan)</h1>
+        <p>Kita dapat mengapungkan gambar ke sisi kiri atau kanan teks. Untuk mencapai itu kita perlu menggunakan
+            attribut style. </p>
+        <p>Dengan properti <b>float</b> CSS. Dan nilai kiri atau kanan. Berikut adalah pelajaran untuk HTML styling.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;p&gt;</p>
+            <p>&lt;img src="gambar.png" style="float: left;"/&gt;</p>
+            <p>&lt;/p&gt;</p>
+            <p>&lt;p&gt;</p>
+            <p>&lt;img src="gambar.pnh" style="float: right;"/&gt;</p>
+            <p>&lt;/p&gt;</p>
+        </div>
+        <h1>Gambar sebagai tautan</h1>
+        <p>Ada beberapa situasi dimana kita membutuhkan gambar untuk bertindak sebagai tautan.</p>
+        <p>Untuk melakukannya cukup lampirkan gambar dengan element &lt;a&gt; dengan attribut <b>href</b>-nya.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;a href="https://www.example.com"&gt;</p>
+            <p>&lt;img src="gambar.png"/&gt;</p>
+            <p>&lt;/a&gt;</p>
+        </div>
+        <p>Pada contoh yang diberikan diatas gambar yang digunakan ada di direktori/ folder yang sama dengan file HTML.
+        </p>
+        <h1>Gambar di folder lain</h1>
+        <p>Biasanya kami menyimpan semua gambar kami dalam sub-folder untuk menjaga direktori kami tetap bersih dan
+            tertata dengan baik.</p>
+        <p>Untuk menentukan gambar dari folder, lihat contoh dibawah ini :</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;!-- didalam folder di direktori root --&gt;</p>
+            <p>&lt;img src="/foto/gambar.png"/&gt;</p>
+            <p>&lt;!-- dari folder yang sama tempat file HTML berada</p>
+            <p>&lt;img src="gambar.png"</p>
+            <p>&lt;!-- Dalam folder --&gt;</p>
+            <p>&lt;img src="foto/gambar.png"/&gt;</p>
+        </div>
+        <p>Nilai dari attribut src disebut file path, berikut adalah pelajaran untuk itu.</p>
+        <h1>Gambar Dari server eksternal</h1>
+        <p>Terkadang kita perlu memasukan gambar dari situs web lain seperti facebook, google, atau imgur ke situs web
+            kita.</p>
+        <p>Inilah cara melakukannya.</p>
+        <h1>Contoh :</h1>
+        <div class="sampul">
+            <p>&lt;img src="http://www.example.com/images.png"/&gt;</p>
+        </div>
+        <p>tip</p>
+        <ol>
+            <li>Kamu dapat menggunakan semua jenis gambar yang kamu inginkan. misalnya jika nda menginginkan gambar
+                animasi maka gunakan .gif</li>
+            <li>Jangan menaruh banyak gambar dihalaman web. Halaman kamu mungkin memuat teralu lambat dan pengunjung
+                kamu mungkin meninggalkan situs dan tidak pernah kembali lagi.</li>
+        </ol>
+        <h1>HTML dan Gambar dipenyimpanan ponsel kamu</h1>
+        <p>Jika kamu menyimpan kode contoh di atas dimana saja di penyimpanan ponsel kamu, gambar tidak akan
+            ditampilkan.
+        </p>
+        <p>Menagapa? karena gambar hanya disimpan didirektori aplikasi ini dan bukan di penyimpanan ponsel kamu.</p>
+        <p>Ikuti langkah-langkah ini untuk menyisipkan gambar dengan benar ke halaman web kamu saat kamu berada di
+            penyimpanan ponsel.</p>
+        <ol>
+            <li>Buka file manajer apa saja;</li>
+            <li>Buat contoh folder;</li>
+            <li>Tempel gambar apapun ke folder itu. ingat dnama file gambar;</li>
+            <li>simpan sebagai index.html ke folder yang tealh kamu buat. untuk menyimpan itu.</li>
+        </ol>
+        <div class="pagination">
+            <a href="0-introduction.html" class="pag">0</a>
+            <a href="1-Editors.html" class="pag">1</a>
+            <a href="2-Elements.html" class="pag">2</a>
+            <a href="3-Attributes.html" class="pag">3</a>
+            <a href="4-Comments.html" class="pag">4</a>
+            <a href="5-Styles.html" class="pag">5</a>
+            <a href="6-Colors.html" class="pag">6</a>
+            <a href="7-Centered.html" class="pag">7</a>
+            <a href="8-Headings.html" class="pag">8</a>
+            <a href="9-Paragraps.html" class="pag">9</a>
+            <a href="10-Links.html" class="pag">10</a>
+            <a href="11-LinesBreak.html" class="pag">11</a>
+            <a href="12-HorizontalRule.html" class="pag">12</a>
+            <a href="13-TektFormatting.html" class="pag">13</a>
+            <a href="14-BlockLevelandInlineElement.html" class="pag">14</a>
+            <a href="15-Sections.html" class="pag">15</a>
+            <a href="#" class="pag active">16</a>
+            <a href="17-Tables.html" class="pag">17</a>
+            <a href="18-Lists.html" class="pag">18</a>
+            <a href="19-DescriptionLists.html" class="pag">19</a>
+            <a href="20-JavaScript.html" class="pag">20</a>
+            <a href="21-Forms.html" class="pag">21</a>
+            <a href="22-FormsLabel.html" class="pag">22</a>
+            <a href="23-Textarea.html" class="pag">23</a>
+            <a href="24-DropwdownList.html" class="pag">24</a>
+            <a href="25-Buttons.html" class="pag">25</a>
+            <a href="26-ContentEditable.html" class="pag">26</a>
+            <a href="27-Meta.html" class="pag">27</a>
+            <a href="28-Blockquote.html" class="pag">28</a>
+            <a href="29-nbsp.html" class="pag">29</a>
+            <a href="30-Subscript.html" class="pag">30</a>
+            <a href="31-Supscript.html" class="pag">31</a>
+            <a href="32-PreElement.html" class="pag">32</a>
+            <a href="33-Figures.html" class="pag">33</a>
+            <a href="34-Entities.html" class="pag">34</a>
+            <a href="35-Audio.html" class="pag">35</a>
+            <a href="36-Videos.html" class="pag">36</a>
+            <a href="37-Iframe.html" class="pag">37</a>
+            <a href="38-YoutubeVideos.html" class="pag">38</a>
+            <a href="39-JalurBerkas.html" class="pag">39</a>
+            <a href="40-BasicHTML5.html" class="pag">40</a>
+            <a href="41-Input.html" class="pag">41</a>
+            <a href="42-Forms.html" class="pag">42</a>
+        </div>
+    </div>
+</body>
+
+</html>

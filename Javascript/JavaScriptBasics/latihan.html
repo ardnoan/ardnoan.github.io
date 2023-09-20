@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JavaScript Basics</title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            h2 {
+                text-align: center;
+                font-weight: bold;
+                font-size: 200%;
+                margin: 0 0 0 10px;
+                padding: 5px;
+            }
+            article {
+                background: aqua;
+                border: 2px solid blue;
+                text-align: justify;
+                font-size: 14px;
+                font-family: 'Times New Roman', Times, serif;
+                border-radius: 25px 0 25px 0;
+                color: black;
+                padding: 10px;
+                margin: 20px 10px 20px 10px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            thead, tbody {
+                text-align: center;
+            }
+            table, th, td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .container {
+                width: 200px;
+                display: block;
+                border: 1px solid navy;
+            }
+            .container > .div {
+                height: 100%;
+                line-height: 200px;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+            .container > #btn {
+                width: 100%;
+                font-family: sans-serif;
+                border: none;
+                padding: 15px 30px;
+                font-size: 20px;
+                outline: none;
+                margin: 4px;
+            }
+            #btn {
+                background-color: rgba(23, 52, 89);
+                color: #f8f9f9;
+                box-shadow: 0 5px 5px 0 #000000;
+            }
+            #demo2 {
+                width: 200px;
+                background: yellow;
+                text-align: center;
+                font-size: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                border: 2px solid navy;
+            }
+            .btn {
+                width: 20px;
+                padding: 5px;
+                background: navy;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h3> Change Color </h3>
+            <p>
+                Dengan mengclick akan mengubah warna dan bisa mengembalikannya seperti semula 
+            </p>
+            <div class="container">
+                <div class="div" onclick="changeColor(this)" style="background-color: red;"> Ubah Warna </div>
+                <script src="JS-Overview.js"></script>
+            </div>
+            <hr>
+            <br>
+            <h2> Apa itu JavaScript? </h2>
+            <div>Javascript adalah bahasa pemogrman atau scripting yang memungkinkan implementasi fitur pada halaman web</div>
+            <h3> Melihat Kembali </h3>
+            <div> 
+                Untuk lebih memahami Javascript, kita dapat melihat kembali apa yang kita sudah tahu.
+                Kita tahu bahwa elemen Hypertext Markup Language (HTML) adalah block bangunan halaman web.
+                Dan, Cascading style Sheet (CSS) digunakan untuk mendesain element HTML.
+                JavaScript disisi lain adalah apa yang mengimplementasikan fitur halaman web.
+            </div><br>
+            <button id="btn"> Memunculkan sebuah dialog </button>
+            <script src="JS-Introduction.js"></script>
+            <br><br>
+
+            <div>
+                dalam contoh HTML digunakan untuk membuat tombol. Kemudian, CSS digunakan untuk mendesainnya. Terakhir
+                Javascript digunakan untuk menambahkan fungsi sederhana yang menampilkan kotak dialog saat tombol di click.
+            </div>
+            <h3> Apa yang bisa dilakukan JavaScript? </h3>
+            <div> Javascript dapat mengubah kontent element HTML </div>
+            <p id="demo"> Halo bang </p>
+            <button type="button" onclick="myFunc()"> Mengubah Kata </button>
+            <script src="JS-Introduction.js"></script>
+            <br><br>
+
+            <div> Javascript dapat mengubah nilai attribut </div>
+            <img src="kobeni/kobeni.jpg" id="image"/>
+            <button type="button" onclick="myFunc1()"> Ubah Gambar </button>
+            <script src="JS-Introduction.js"></script>
+            <br><br>
+
+            <div> Javascript dapat mengubah gaya element HTML </div>
+            <p id="demo1" style="color: gold"> Halo bang </p>
+            <button type="button" onclick="myFunc2()"> Ubah </button>
+            <script src="JS-Introduction.js"></script>
+            <br><br>
+
+            <div> Contoh lain </div>
+            <div id="demo2"> Halo bang </div>
+            <button type="button" onclick="show()"> Lihat </button>
+            <button type="button" onclick="hide()"> Sembunyikan </button>
+            <script src="JS-Introduction.js"></script>
+            <hr><br><br>
+
+            <h2> Writing Code </h2>
+            <div> 
+                Kode Javascript harus ditulis didalam element script 
+                Tapi dimana kita harus meletakan element script?
+            </div>
+            <h3> Javacript Internal </h3>
+            <div> Element &lt;script&gt; dapat ditempatkan di &lt;head&gt; di &lt;body&gt; atau keduanya </div>
+            <h3> Apa bedanya? </h3>
+            <div>
+                ketika &lt;script&gt; berada didalam &lt;head&gt; itu dimuat terlebih dahulu sebelum isi halaman.
+                sedangkan kalau berada didalam &lt;body&gt; itu dimuat setelah kontent halaman (element HTML) dimuat.
+                <br>
+                Dalam contoh ini, ketika tombol diklik, konten &lt;p&gt; perubahan element. namun, ini tidak akan berhasil
+                karena event listener dimuat terlebih danulu sebelum element HTML. untuk saat ini, dapat mengabaikan cara 
+                bekerja pendengar acara. Fokus saja pada penempatan naskah.
+            </div><br>
+            <p> This would not work becasue the event listener loaded first before the HTML element.</p>
+            <div id="demo3"> Halo Bang </div>
+            <button id="btn1"> Ubah </button>
+            <p>
+                Disarankan untuk meletakan tag &lt;script&gt; di body saat menggunakan javascript internal.
+            </p>
+            <hr><br><br>
+
+            <h2> Javascript Displaying Output </h2>
+            <div>
+                Menampilkan atau menghasilkan output dalam javascript sangat penting terutama ketika belajar bahasa pemograman 
+                Misalnya, jika ingin meliat apakah pernyataan javascript atau block kode benar, dapat menampilakan data untuk
+                periksa.<br>
+                Dalam javascript ada 4 cara menampilkan output.
+            </div>
+            <h3> Menggunakan Console </h3>
+            <div> Denga menggunakan fungsi console.log() kita dapat menulis ke console pengembangan browser. </div>
+            <script src="JS-DisplayingOutput.js"></script>
+            <div> Namun, keluaran console.log() tidak dapat diliha diperangakt seluler karena console
+                pengembangan hanya tersedia di browser desktop seperti Chrome dan firefox.
+            </div><br>
+            <h3> Menggunakan </h3>
+            <div> Dengan menggunakan fungsi aler(), kita dapat menampilkan data pada dialog kotak.</div>
+            <div> x = 5, y = 5. x + y = </div>
+            <button type="button" onclick="myFunc()"> Show dialog box </button>
+            <script src="JS-DisplayingOutput.js"></script>
+            <br><br>
+
+            <p id="demo4"></p>
+            <button type="button" onclick="myFunc3()"> Write </button>
+            <script src="JS-DisplayingOutput.js"></script>
+            <br><br>
+
+            <div> dapat menulis teks ke baris berikutnya jika terlalu panjang </div>
+            <p id="demo5"></p>
+            <button onclick="myFunc3_()"> Button </button>
+            <script src="JS-DisplayingOutput.js"></script>
+            <br><br>
+
+            <h3> Writing to browser </h3>
+            <div>
+                Dengan menggunakan document.write(), kita dapat menulis ke isi dokumen. Ini hanya boleh dignakan untuk
+                pengujian karena akan menghapus semua HTML yang ada dihalaman saat ini.
+            </div>
+            <p id="demo6"></p>
+            <buttont type="button" onclick="myFunc4()" class="btn"> Jangan dipencet dulu yak </buttont>
+            <script src="JS-DisplayingOutput.js"></script>
+            <hr><br>
+
+            <h2> Statements </h2>
+            <div>
+                Program javascript terdiri dari pernyataan pernyataan yang sesuai sintakan. Pernyataan javasscript
+                tunggal dapat menjangkau satu atau beberapa baris. Pernyataan javascript harus diakhiri atau
+                dipisahkan dengan titik koma ( ; )
+            </div><br>
+            <div>
+                dibawah ini adalah contoh pernyataan satu baris. Pernyataan ini menulis teks "halo bang" ke elemen 
+                paragraf dengan id element
+            </div>
+            <p id="elem"> First Paragraph element </p>
+            <button onclick="stat()"> Button </button>
+            <script src="JS-Statements.js"></script>
+                <br><br>
+            <div> dibawah ini adalah program yang terdiri dari dua pernyataan baris tunggal. dapat memiliki pernyataan 
+                sebanyak yang dibutuhkan saat menulis program.
+            </div>
+            <p id="firstElem"> First Paragraph Element </p>
+            <button onclick="stat_()"> Button </button>
+            <script src="JS-Statements.js"></script>
+                <br><br>
+            <p id="secondElem"> Second Paragraph element </p>
+            <button onclick="stat_1()"> Button </button>
+            <script src="JS-Statements.js"></script>
+                <br><br>
+
+            <div> 
+                dibawah ini adalah program yang berisi satu pernyataan yang mencakup baris.
+            </div>
+            <p id="elem1"> first paragraph element </p>
+            <button onclick="stat_1_()"> Button </button>
+            <script src="JS-Statements.js"></script><br>
+
+            <h3> Mengelempokkan pernyataan javascript </h3>
+            <div> Pernyataan javascript dapat dikelompokkan didalam tanda kurung kurawal {...} 
+                Ini disebut blok kode. blok kode digunakan untuk membuat pernyataan dieksekusi bersama-sama.
+                mereka biasanya digunakan dalam fungsi.
+            </div>
+            <p id="demo7"> I am a paragraph element. </p>
+            <button type="button" onclick="myFunc5()"> Ubah </button>
+            <script src="JS-Statements.js"></script><br>
+            <h3> Kata kunci javascript </h3>
+            <div>
+                Pernyataan javascript biasanya dimulai dengan kata kunci. setiap kata kunci dalam javascript memiliki arti
+                khusus tersendiri. Misalnya, untuk mendeklarasikan varibale, kita harus menggunakan kata kunci var.
+            </div>
+            <p id="demo8"> I am a paragraph element. </p>
+            <button type="button" onclick="myFunc6()"> Ubah </button>
+            <script src="JS-Statements.js"></script>
+            <hr><br><br>
+
+            <h2> Javascript Syntax </h2>
+            <div>
+                Javacript mengikuti seperangkat aturan yang disebut sintaks. Sintaks javascript harus di ikuti untuk 
+                membuat dengan benar program yang dibangun.
+            </div>
+            <h3> Deklarasi Variable </h3>
+            <div>
+                Dalam matematika, kita menggunakan variable untuk mengimpan nilai, ini bekerja dengan cara yang sama dalam 
+                javascript, nilai dapat diberikan ke varibale, untuk mendeklarasikan variabel, guanakan kata kunci var untuk
+                membuatnya, lalu tanda sama dengan = untuk menetapkan nilai.
+            </div>
+            <button type="button" onclick="ni()"> ubah </button>
+            <script src="JS-Syntax.js"></script><br>
+            <div>
+                angka dalam contoh diatas disebut pengidentifikasi. Pengidentifikasi javascript digunakan untuk memberi nama variable
+                Javascript peka terhadap huruf besar atau kecil.
+            </div>
+            <h3> Javascript sangat sensitif terhadap huruf besar dan kecil </h3>
+            <p id="a"></p>
+            <button type="button" onclick="nilai()"> Ada </button>
+            <script src="JS-Syntax.js"></script>
+            <hr><br>
+
+            <h2> Komentar javascript </h2>
+            <div>
+                Komentar javascript digunakan untuk membuat pemograman lebih mudah membaca dan memahami. komentar tidak dieksekusi
+                oleh browser. komentar dapat digunakan untuk menambahkan catatan, saran , dan petunjuk ke kode javascript.
+                ada dua jenis komentar dalam javascript yaitu single-line dan multi-line.
+            </div>
+            <h3> Komentar satu baris </h3>
+            <div>
+                Untuk membuat komentar satu baris, tambahkan dua garis miring ke awal baris. ini membuat semua teks yang mengikutinya
+                menjadi komentar.
+            </div>
+            <div>
+                Cara lain adalah dengan menggunakan /* */ komentar berada diantara tanda bintang.
+            </div>
+            <h3> Multi-line Comments </h3>
+            <div> Untuk membuat komentar multi-line gunakan sintaks ini /* enter */ </div>
+            <h3> Menonaktifkan kode menggunakan komentar </h3>
+            <div>
+                dapat menonaktifkan kode untuk mencegahnya berjalan menggunakan komentar. ini berguna untuk tujua pengujian, pada
+                contoh dibawah ini, hanya produk yang akan ditulis karena penulisan penjumlahan ke elemen tidak akan dieksekusi.
+            </div>
+            <script src="JS-Comments.js"></script>
+            <hr>
+
+            <h2> Varibales Javascript </h2>
+            <div>
+                Dalam pemograman atau bahkan dalam aljabar, menggunakan untuk menyimpan nilai dalam javascript, varibale digunakan
+                untuk menyimpan data. Data yang disimpan bisa berupa teks, angka atau lainnya.
+            </div>
+            <button type="button" onclick="ngaran()"> Nama </button>
+            <script src="JS-Variables.js"></script><br>
+            <div> Seperti yang diharapkan <br>
+                teks "Ardi" disimpan/ ditetapkan ke FirstName<br>
+                teks "Nurohman" disimpan/ ditetapkan ke LastName<br>
+                angka 16 disimpan/ ditetapkan untuk usia.
+            </div>
+            <h3> Mendeklarasikan Variable </h3>
+            <div>
+                Pernyataan var membuat atau mendeklarasikan variable. contoh dibawah ini, 
+                variable x dideklarasikan dan dinisialisasi ke nilai 21.
+            </div>
+            <button type="button" onclick="angka()"> Muncul </button>
+            <div>
+                juga dapat mendeklarasikan atau membuat variable terlebih dahulu lalu menetapkan nilai 
+                (inisialisasi) nanti.
+            </div>
+            <button type="button" onclick="angka1()"> Muncul </button>
+            <div> Jika tidak menetapkan nilai ke variable nilainya akan menjadi tidak terdefinisi </div>
+            <h3> Mendeklarasikan beberapa variable dalam satu pernyataan </h3>
+            <div> Hal ini dimungkinkan untuk mendeklarasikan beberapa variable sekalipun, menggunaakna satu pernyataan
+                cukup pisahkan variable dengan koma ( , ).
+            </div>
+            <button type="button" onclick="angka2()"> Muncul </button><br>
+            
+            <h3> Tanda setara </h3>
+            <div>
+                Seperti yang mungkin perhatikan mengggunakan tanda sama dengan untuk menetapkan nilai atau data ke variable
+                tanda sama denga ( = ) disebut operatior penugasan
+            </div>
+            <h3> Data yang disimpan/ ditugaskan </h3>
+            <div>
+                Data yang disimpan bisa berupa teks, angka, dll. ini disebut tipe data.
+            </div>
+            <h3> Penamaan variable </h3>
+            <div>
+                Variable javascript harus didentifikasi dengan nama yang unik. nama-nama unik ini disebut pengidnetifikasi.
+                pengidentifikasi bisa sesingkat huruf sperti a,b,y atau z. mereka juga bisa deskriptif seperti firstName atau LastName
+            </div>
+            <h3> Aturan untuk penamaan variable </h3>
+            <ul>
+                <li> Nama harus dimulai dengan huruf, garis bawah, atau tanda dolar </li>
+                <li> Nam tidak boleh diawali dengan angka </li>
+                <li> Nama sensitif terhadap huruf besar atau huruf kecil </li>
+                <li> nama hanya boleh berisi huruf, angka, garis bawah, dan tanda dolar </li>
+                <li> kata kunci yang dicadangka javascript ( seperti var, function, if else, dll) tidak dapat digunakan sebagai nama variable</li>
+            </ul>
+            <hr>
+
+            <h2> Tipe data Javascript </h2>
+            <p>
+                Dalam javascript atau dalam bahasa pemogramana apa pun, konsep jenis data adalah penting.
+
+                <h3> Apa itu tipe data? </h3>
+                Tipe data adalah berbagai jenis data yang dapat disimpan atau digunakan dalam pemograman javascript
+
+                <h4> Tipe data string </h4>
+                tipe data string adalah urutan karakter yang digunakan untuk mewakili teks, string dapat ditulis menggukan 
+                tanda petik tunggal atau ganda.<br>
+                <p id="nm"></p>
+                <button onclick="namaa()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+
+                Haruskah menggunakan tanda kutip tunggal atau ganda? Bisa menggunakan mana yang suka, tetapi jika string berisi
+                tanda kutip tunggal, gunakan tanda kutip ganda atau jika mengandung tanda kutip ganda gunakan tanda kutip tunggal<br>
+                <p id="nm1"></p>
+                <button onclick="namaa1()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Tipe data nomor / angka </h4>
+                Tipe data bilangan adalah bilangan bulat atau bilangan floating point (angka dengan desimal).
+                <p id="no"></p>
+                <button onclick="nomorr()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+
+                Contoh penjumlahan dua bilangan 
+                <p id="no1"></p>
+                <button onclick="nomorr_()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Menggabungkan string dan angka </h4>
+                Menggabungkan string dan angka mengembalikan string, menggabungkan angka dan angka menghasilkan angka, 
+                menggabungkan string dan angka mengembalikan string.
+                <p id="nonm"></p>
+                <button onclick="nomornama()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+                Karena javascript mengevaluasi dari kiri ke kanan, urutan yang berbeda menghasilkan hasil yang berbeda.
+                <p id="nonm1"></p>
+                <button onclick="nomornama_()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Type data boolean </h4>
+                Tipe data boolean adalah tipe data logis yang hanya dapat memiliki nilai benar atau salah.
+                <p id="boo"></p>
+                <button onclick="funn()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+                Boolean terutama digunakan untuk pengujian bersyarat. bukan seperti yang diatas. boolean adalah keluaran dari operatior
+                perbandingan, operator perbandingan == menguji apakah dua nilai sama atau sama, jika ya, itu mengembalikan benar
+                jika tidak salah
+                <p id="boo1"></p>
+                <button onclick="funn_()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Tipe data yang tidak ditentukan </h4>
+                ika variable tidak memiliki nilia yang ditetapkan, nilainya tidka terdefinisi. contoh variable judul dideklarasikan 
+                tetapi tidak ditugaskan untuk nilai apapun. oleh karena itu nilainya tidak terdefinisi.
+                <p id="un"></p>
+                <button onclick="undifined()"> Button </button> 
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+                Jika suatu variable tidak dideklarasikan ia juga mengembalika undefined
+
+                <h4> Tipe data null </h4>
+                Tipe dala null adalah tipe data khusus yang menunjukan nilai null artinya bukan strin gkosong "" atau 0.
+                itu tidak benar apa-apa.
+                <p id="nu"></p>
+                <button type="button" onclick="btnnu()"> Muncul </button>
+                <script src="JS-TypeData.js"></script><br><br>
+                Kita dapat mengosongkan variable dengan menyetel null.
+                <p id="buah1"></p>
+                <button type="button" onclick="btnnu1()"> Muncul </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Tipe data objek </h4>
+                Tipe data objek adalah kumpulan data terkait , objek berisi properti yang ditulis dalam kunci. pasangan nilai,
+                setiap pasangan dipisakan dengan koma ( , ), objek ditulis didalam kurung kurawal {}.
+                <p id="demo9"></p>
+                <button onclick="detailsBuah()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                    <br><br>
+                memiliki 4 properti warna, ukuran, jumlah, dan rasa.
+                <h4> Array di javascript </h4>
+                Array javascript adalah kumpulan nilai, setiap nilai ipisahkan dengan koma ( , )
+                ditulis dengan tanda kurung siku []. tipe data array adalah objek.
+                <p id="arr"></p>
+                <button onclick="array()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                variable buah berisi 3 nilai : string: apel, jeruk, pisang.
+
+                <h4> Javascript dinamis </h4>
+                javascript adalah bahasa yang dinamis, variable tidak secara langsung terkait dengan satu tipe data,
+                tidak seperti dalam bahasa lainnya, variable apapun dalam javascript dapat dipindahkan ke nilai semua jenis.
+                <button type="button" onclick="dinamis()"> Muncul </button>
+                <script src="JS-TypeData.js"></script>
+
+                <h4> Data primitif / data typeoff </h4>
+                Data primitf adalah data yang bukan objek dan tidak memiliki metode. ada 4 tipe data primitif dasar.
+                <ul>
+                    <li> Rangkaian </li>
+                    <li> Nomor </li>
+                    <li> Boolean </li>
+                    <li> tidak terdefinisi </li>
+                </ul>
+                Semua tipe data primitf ini dapat dikembalikan oleh operator tipe. Sama seperti pada contoh sebelumnya.
+
+                <h4> Data kompleks </h4> 
+                Ada dua tipe data yang kompleks, keduanya dapat dikembalikan oleh operator tipe.
+                <ul>
+                    <li> objek </li>
+                    <li> fungsi </li>
+                </ul>
+                <p id="off"></p>
+                <button onclick="kompleks()"> Button </button>
+                <script src="JS-TypeData.js"></script>
+                Seperti yang di perhatikan, operator typeof mengembalikan "objek" ketika operan adalah objek, larik, atau nol.
+                dan mengembalikan "fungsi", ketika operan adalah fungsi.
+                <hr>
+
+                <h2> Operator Javascript </h2>
+                Operator javascript digunakan untuk melakukan tidanakn tertentu, mereka dapat digunakan untuk menetapkan nilai,
+                membandingkan nilai, menggabungkan nilai, melakukan operator aritmatika dan banyak lagi. Operator javascript adalah
+                simbol (atau kumpulan simbol) atau kata kunci ada. Ada beberapa jenis operator.
+
+                <h3> Operator penugasan </h3>
+                Operator penugasan digunakan untuk memberikan nilai ke variable ini menggunakan sama = simbol.
+                <button type="button" onclick="operator()"> Op penugasan </button>
+                <script src="JS-Operator.js"></script>
+                Operator penugasan penambahan, menambahkan nilai operator kanan ke nilai variabel.<br>
+
+                Operator: a += b <br>
+                Equivalent: a = a + b<br>
+                contoh.
+                <button type="button" onclick="operatorP()"> Lainnya </button>
+                
+                <h3> Operator Aritmatika </h3>
+                Operator aritmatika digunakan untuk melakukan operasi aritmatika (seperti penambahan, pengurangan,
+                perkalian, dan pembagian) antar nilai. Berikut adalah simbol yang digunakan untuk operator aritmatika.
+                <ul>
+                    <li> Tambahan (+)</li>
+                    <li> Pengurangna (-)</li>
+                    <li> Prkalian (*)</li>
+                    <li> divisi (/)</li>
+                </ul>
+                Contoh tambahan
+                <button type="button" onclick="Opar()"> Operator Pertambahan </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                Contoh pengurangan
+                <button type="button" onclick="Opar1()"> Operator pengurangan </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                Contoh perkalian
+                <button type="button" onclick="Opar2()"> Operator Perkalian </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                Contoh Pembagian 
+                <button type="button" onclick="Opar3()"> Operator Pembagian </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                <h3> Operator String </h3>
+                Operator string digunakan untuk menggabungkan atau menambahkan string, Operator penambahan + dan 
+                operator penugasan penambahan += adalah operator string. Contoh operator penggunaan operator penjumlahan.
+                <p id="str"> </p>
+                <button type="button" onclick="Oping()"> Penjumlahan </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                Contoh penggunaan operator penugasan penjumlahan.
+                <p id="str1"> </p>
+                <button type="button" onclick="Oping1()"> lainnya </button>
+                <script src="JS-Operator.js"></script><br><br>
+
+                Dapat juga menggabungkan tiga atau lebih string.
+                <p id="str2"></p>
+                <button type="button" onclick="Oping2()"> lainnya </button>
+                <script src="JS-Operator.js"></script><br>
+
+                <h3> Operator Perbandingan </h3>
+                Operator perbandingan membandingkan operandnya dan mengembalikan boolean berdasarkan apakah perbandingan itu 
+                benar atau salah. Operator perbandingan kesetaraan digunakan untuk membandingkan dua angka.
+                <p id="per"></p>
+                <button type="button" onclick="Oper()"> Perbandingan </button>
+                <script src="JS-Operator.js"></script><br>
+
+                <h3> Operator Logika </h3>
+                Operator logika biasanya digunakan dengan nilai boolea. mereka digunakan untuk menentukan logika antara
+                operan-operannya
+
+                <h3> Operator bitwise </h3>
+                Operator bitwise memperlakukan operannya sebagai satu set 32 bit atau nol dan yang. ia melakukan operasinya
+                pada representasi biner. ini mengembalikan nilai numerik.
+                <hr>
+
+                <h2> Operator Aritmaitka Javascript </h2>
+                Operator aritmatika mengambil nilai numerik sebagai operan mereka dan mengembalikan nilai numerik tunggal.
+                Dalam javascriopt ada 8 operator aritmatika dasar.
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> Aritmetic Operator </th>
+                        </tr>
+                        <tr>
+                            <th> Operator </th>
+                            <th> Keterangan </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> + </td>
+                            <td> Tambahan </td>
+                        </tr>
+                        <tr>
+                            <td> - </td>
+                            <Td> Pengurangan </Td>
+                        </tr>
+                        <tr>
+                            <td> * </td>
+                            <td> Perkalian </td>
+                        </tr>
+                        <tr>
+                            <td> / </td>
+                            <td> Pembagian / divisi </td>
+                        </tr>
+                        <tr>
+                            <td> ** </td>
+                            <td> Pemangkatan / eksponen </td>
+                        </tr>
+                        <tr>
+                            <td> % </td>
+                            <td> Sisa bagi </td>
+                        </tr>
+                        <tr>
+                            <td> ++ </td>
+                            <td> Increment </td>
+                        </tr>
+                        <tr>
+                            <td> -- </td>
+                            <td> Decrement </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3> Operator Pertambahan (+) </h3>
+                Operator penambahan (+) mengembalikan jumlah numeriknya operan.
+                    <br>
+                <button type="button" onclick="tambah()"> Pertambahan </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                Contoh lain
+                    <br>
+                <button type="button" onclick="tambah1()"> Pertambahan </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+                Operator penambahan juga dapat digunakan untuk menggabungkan string bersama-sama.
+
+                <h3> Operator Pengurangan (-) </h3>
+                Operator pengurangan (-) mengembalikan selisih operan numeriknya.
+                    <br>
+                <button type="button" onclick="kurang()"> Pengurangan </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Perkalian (*) </h3> 
+                Operator perkalian (*) mengembalikan produk dari operan numeriknya.
+                    <br>
+                <button type="button" onclick="kali()"> Perkalian </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Divisi (/)</h3> 
+                Operator pembagian (/) mengembalika hasil bagi operan numeriknya.
+                    <br>
+                <button type="button" onclick="division()"> Pembagian </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Eksponen (**) </h3>
+                Operator Eksponensial (**) mengembalikan hasil peningkatan operan pertama ke pangkat operan kedua.
+                    <br>
+                <button type="button" onclick="pangkat()"> Eksponen </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Sisa bagi (%) </h3>
+                Operator sisa bagi (%) mengembalikan sisa yang tersisa ketika operan pertama dibagi dengan operan kedua.
+                    <br>
+                <button type="button" onclick="sisabagi()"> Sisa bagi </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Increment (++) </h3>
+                Operator increment (++) menambahkan 1 ke operannya dan mengembalikan nilainya.
+                    <br>
+                <button type="button" onclick="increment()"> Increment </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Operator Decrement (--) </h3>
+                Operator increment (--) menambahkan 1 ke operan dan mengembalikan nilainya.
+                    <br>
+                <button type="button" onclick="decrement()"> Decrement </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+
+                <h3> Urutan Operator </h3>
+                Urutan operator menggambarkan urutan operasi yang dilakukan dalam ekspresi aritmatika.
+                    <br>
+                <button type="button" onclick="squal()"> Urutan Operator </button>
+                <script src="JS-ArithmeticOperators.js"></script>
+                    <br><br>
+                
+                Seperti yang diperhatikan, hasil dari ekspresi di atas adalah 25, Karena perkalian dilakukan terlebih
+                dahulu sebelum penjumlahan.                     
+                Javascript mengikuti pola MDAS di matematika dimana perkalian dilakukan pertama, pembagian kedua,
+                penambahan ketiga, dan pengurangan keempat atau terakhir. Misalnya, bagaimana jika kita ingin penjumlahan
+                dilakukan terlebih dahulu pada contoh sebelumnya. Kita dapat menggunakan pengelompokk untuk melakukan itu,
+                ekspresi yang dikelompokan adalah dilakukan terlebih dahulu sebelum yang lain. Gunakan tanda kurung () untuk
+                mengelompokan ekspresi.
+                <button type="button" onclick="squal1()"> Urutan Operator 1</button>
+                <script src="JS-ArithmeticOperators.js"></script>
+                <hr>
+
+                <h2> Operator Penugasan Javascript </h2>
+                Operator penugasan memberikan nilai ke operan kirinya berdasarkan nilai operan kananya. Dalam javascript
+                ada 7 operator peugasan dasar. 
+                <table>
+                    <tr>
+                        <th> Nama </th>
+                        <th> Operator </th>
+                        <th> Arti </th>
+                    </tr>
+                    <tr>
+                        <td> Penugasan </td>
+                        <td> x = y </td>
+                        <td> x = y </td>
+                    </tr>
+                    <tr>
+                        <td> Tugas Penambahan </td>
+                        <td> x += y </td>
+                        <td> x = x + y </td>
+                    </tr>
+                    <tr>
+                        <td> Tugas Pengurangan </td>
+                        <td> x -= y </td>
+                        <td> x = x - y </td>
+                    </tr>
+                    <tr>
+                        <td> Tugas Perkalian </td>
+                        <td> x *= y </td>
+                        <td> x = x * y </td>
+                    </tr>
+                    <tr> 
+                        <td> Tugas Divisi </td>
+                        <td> x /= y </td>
+                        <td> x = x / y </td>
+                    </tr>
+                    <tr> 
+                        <td> Sisa Tugas </td>
+                        <td> x %= y </td>
+                        <td> x = x % y </td>
+                    </tr>
+                </table>
+                <h3> Tugas  (=) </h3>
+                Operator penugasan sederhana tau operator penugasan memberikan nilai ke variable.
+                    <br>
+                <button type="button" onclick="penugasan()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Tugas penambahan (+=) </h3>
+                Operator penugasan penambahan menambahkan nilai operan kiri dan kanan kemudian menetapkan jumlah ke operan kiri.
+                    <br>
+                <button type="button" onclick="penugasan_1()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script><br><br>
+
+                Itu juga dapat digunakan untuk menggabungkan atau menambahkan string bersama.
+                    <br>
+                <button type="button" onclick="penugasan_2()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Tugas Pengurangan (-=) </h3>
+                Operator penugasan pengurangan mengurangi nilai operan kanan dari operan kiri dan kemudian menetapkan
+                perbedaanya ke variable.
+                    <br>
+                <button type="button" onclick="penugasan1()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Tugas perkalian (*=) </h3>
+                Operator penugasan penambahan mengalikan nilai operan kiri dan kanan kemudian menetapkan produk ke variable.
+                    <br>
+                <button type="button" onclick="penguasan2()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Pembagian Tugas (/=) </h3>
+                Operator penugasan pengurangan membagi nilai operan kiri dengan operan kanan dan kemudian memberikan hasil bagi 
+                ke variable.
+                    <br>
+                <button type="button" onclick="penugasan3()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Sisa Tugas (%=) </h3>
+                Operator penugasan sisa membagi variable dengan nilai operan kanan dan memberikan sisanya ke varibale.
+                    <br>
+                <button type="button" onclick="penugasan4()"> Penugasan </button>
+
+                <h3> Tugas Eksponen (**=) </h3>
+                Operator penugasan eksponensial menaikan nilai operan kiri ke pangkat operan kanan dan
+                memberikan nilai ke varibale.
+                <button type="button" onclick="penugasan5()"> Penugasan </button>
+                <script src="JS-AssignmentOperator.js"></script>
+
+                <h3> Operator penugasan tingkat lanjut </h3> 
+                Berikut adalh operator penugasan lainnya.
+                <table>
+                    <tr>
+                        <th> Name </th>
+                        <th> Operator </th>
+                        <th> Meaning </th>
+                    </tr>
+                    <tr>
+                        <td> Left shift assignment </td>
+                        <td> x &lt;&lt;= </td>
+                        <td> x = x &lt;&lt; y </td>
+                    </tr>
+                    <tr>
+                        <td> Right shift assignment </td>
+                        <td> x &gt;&gt;= y </td>
+                        <td> x = x &gt;&gt; y </td>
+                    </tr>
+                    <tr>
+                        <td> Unsigned right shift assignment </td>
+                        <td> x &lt;&lt;&lt; y </td> 
+                        <td> x = x &lt;&lt;&lt; y </td>
+                    </tr>
+                    <tr>
+                        <td> Bitwise AND Assignment </td>
+                        <td> x &= y </td> 
+                        <td> x = x & y</td>
+                    </tr>
+                    <tr>
+                        <td> bitwise XOR assignment </td>
+                        <td> x ^= y </td>
+                        <td> x = x ^ y </td>
+                    </tr>
+                    <tr>
+                        <td> bitwise OR assignment </td>
+                        <td> x |= y </td>
+                        <td> x = x | y </td>
+                    </tr>
+                </table>
+                <hr>
+
+                <h2> Comparison Operators </h2>
+                Operator perbandingan membandingkan operannya dan mengembalikan a boolean berdasarkan apakah perbandingan
+                itu benar atau salah. Ini digunakan untuk membandingkan string, angkan, boolean (logic), atau nilai objek.
+                Dalam javascript ada 8 operator perbandingan.
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Nama </th>
+                            <th> Operator </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Operator kesetaraan </td>
+                            <td> == </td>
+                        </tr>
+                        <tr>
+                            <td> Operator ketidaksetaraan </td>
+                            <td> != </td>
+                        </tr>
+                        <tr>
+                            <td> Operator identitas </td>
+                            <td> === </td>
+                        </tr>
+                        <tr>
+                            <td> Operator non-identitas </td>
+                            <td> ==!</td>
+                        </tr>
+                        <tr>
+                            <td> lebih besar dari operator </td>
+                            <td> > </td>
+                        </tr>
+                        <tr>
+                            <td> Lebih besar dari atau sama denga operator</td>
+                            <td> >= </td>
+                        </tr>
+                        <tr>
+                            <td> Kurang dari operator </td>
+                            <td> &lt; </td>
+                        </tr>
+                        <tr>
+                            <td> Operator kurang dari atau sama dengan </td>
+                            <td> &lt;= </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3> Operator Kesetaraan (==) </h3>
+                Operator kesetaraan, mengembalikan nilai true jika operan-operannya sama, jika tidak salah.
+                <p id="muncul"></p>
+                    <br>
+                <button type="button" onclick="comparison()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Operator Pertidaksamaan (!=) </h3>
+                Operator ketidaksamaan (!=) mengembalikan nilai true jika operannya tidak sama, jika salah.
+                <p id="muncul1"></p>
+                    <br>
+                <button type="button" onclick="comparison1()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Operator Identitas (===) </h3>
+                Operator identitas juga dikenal sebagai operator kesetaraan ketat, mengembalikan nilai
+                true jika operan-operannya sama dan bertipe dan beripe sama. contoh dibawah ini mengembalikan
+                nilai true karena kedua operan sama dan bertipe sama.
+                <p id="muncul2"></p>
+                    <br>
+                <button type="button" onclick="comparison2()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                Contoh dibawah mengembalikan false karena kedua operan sama tetapi tidak bertipe sama.
+                <p id="muncul2_1"></p>
+                    <br>
+                <button type="button" onclick="comparison2_1()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Operator non-identitas (!==) </h3>
+                Operator non-identitas juga dikenal sebagai operator ketidaksamaan ketat, mengembalikan nilai
+                true jika operannya tidak bertipe sama dan atau tidak sama. Contoh dibawah ini mengembalikan
+                nilai true karena kedua operan sama dan tidak bertope sama.
+                <p id="muncul3"></p>
+                    <br>
+                <button type="button" onclick="comparison3()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                contoh dibawah ini mengembalikan false karena kedua operan sama dan bertipe sama.
+                <p id="muncul3_1"></p>
+                <button type="button" onclick="comparison3_1()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Lebih besar dari Operator (>) </h3>
+                Operator lebih besar dari (>) mengembalikan nilai true jika operan kiri lebih besar 
+                dari operan kanan.
+                <p id="muncul4"></p>
+                    <br>
+                <button type="button" onclick="comparison4()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Operator lebih besar atau sama (>=) </h3>
+                Operator lebih besar dari atau sama dengan mengembalikan nilai true jika operan kiri
+                lebih besar dari atau sama dengan operan kanan.
+                <p id="muncul5"></p>
+                    <br>
+                <button type="button" onclick="comparison5()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Kurang dari Operator (&lt;)</h3>
+                Operator kurang dari mengembalikan nilai true jika operan kiri lebih kecil dari operan kanan.
+                <p id="muncul6"></p>
+                    <br>
+                <button type="button" onclick="comparison6()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                <h3> Operator kurang dari atau sama dengan (&lt;=) </h3>
+                Operator kurang dari atau sama dengan mengembalikan nilai true jika operan kiri kurang dari
+                atau sama dengan operan kanan.
+                <p id="muncul7"></p>
+                    <br>
+                <button type="button" onclick="comparison7()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+
+                Seperti yang mungkin perhatikan, hanya menunjukan boolean yang dikembalikan dari operator
+                perbandingan. dan belum memanfaatkannya.
+
+                <h3> Bagaiman itu bisa digunakan </h3>
+                Operator perbandingan sebagian besar digunakan dalam kondisional pernyataan.
+                Pernyataan kondisional yang paling dasar adalah pernyataan if.
+                    <br>
+                <button type="button" onclick="comparison8()"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+                    <br>
+
+                Seperti yang diperhatikan. Contoh diatas tercetak "helo world" karena kondisi
+                (yaitu 5 === 5) adalah benar.
+                    <br>
+                <button type="button" onclick="comparison8_1"> Comparison </button>
+                <script src="JS-ComparisonOperator.js"></script>
+                <hr>
+
+                <h2> Logical Operators </h2>
+                Operator logika biasanya digunakan dengan boolean ketika mereka digunakan dengan nilai boolean (logic). Mereka mengembalikan 
+                nilai boolean. dalam javascript ada 3 operator.
+                <table>
+                    <tr>
+                        <th> Nama </th>
+                        <th> Operator </th>
+                        <th> Penggunaan </th>
+                    </tr>
+                    <tr>
+                        <td> Logika AND </td>
+                        <td> && </td>
+                        <td> expression1 && expression2 </td>
+                    </tr>
+                    <tr>
+                        <td> Logika OR </td>
+                        <td> || </td>
+                        <td> expression1 || expression2 </td>
+                    </tr>
+                    <tr>
+                        <td> Logika NOT </td>
+                        <td> ! </td>
+                        <td> !expression1 </td>
+                    </tr>
+                </table>
+                
+                <h3> Logika AND (&&) </h3>
+                Operator logika AND mengembalikan nilai true jika kedua operan (yang
+                merupakan ekspresi) benar.
+                <p id="logic"></p>
+                    <br>
+                <button type="button" onclick="and()"> Button </button>
+                <script src="JS-LogicalOperator.js"></script>
+
+                <h3> Logika OR (||) </h3>
+                Operator logika OR mengembalikan nilai true jika salah satu operan bernilai
+                true.
+                <p id="logic1"></p>
+                    <br>
+                <button type="button" onclick="or()"> Button </button>
+                <script src="JS-LogicalOperator.js"></script>
+
+                <h3> Logika NOT (!) </h3>
+                Logika not mengembalikan nilai true jika operan tidak benar.
+                <p id="logic2"></p>
+                    <br>
+                <button type="button" onclick="not()"> Button </button>
+                <script src="JS-LogicalOperator.js"></script>
+
+                <h3> Menggunakan Operator Logika dengan pernyataan bersyarat </h3>
+                Operator logika biasanya digunakan dengan pernyataan kondisional. Contoh 
+                dibawah ini, menunjukan car amenggunakan operator logika dalam pernyataan if.
+                    <br>
+                <button type="button" onclick="syarat()"> Button </button>
+                <script src="JS-LogicalOperator.js"></script>
+
+                <h3> Operator Javascript bersyarat (Ternary) </h3>
+                Operator kondisional atau ternary adalah satu satunya operator yang mengambil 
+                tiga operan 
+
+                <div> condition ? value1 : value2 </div>
+
+                Jika kondisinya benra, operator mengembalikan nilai1, jika tidak, mengembalikan
+                nilai2. ini biasanya digunakan dengan variable.
+                <p id="logic3"></p>
+                    <br>
+                <button type="button" onclick="ternary()"> Button </button>
+                <script src="JS-LogicalOperator.js"></script>
+
+                Karena testScore lebih dari 75, maka nilai "lulus" ditetapkan ke variable
+                jika textScore kurang dari 75, nilai "gagal" akan ditetapkan sebagai gantinya.
+                <hr>
+                
+                <h2> Function </h2>
+                Fungsi adalah salah satu blok bangunan fundamental dari javascript, fungsi
+                adalah metode javascript, ini adalah satu set pernyataan yang melakukan tugas atau
+                menghasilkan nilai, itu dieksekusi ketika dipanggil (dipanggil) oleh sesuatu.
+
+                <h3> Definisi fungsi </h3>
+                Fungsi javascript didefinisikan atau dideklarasikan menggunakan kata kunci fungsi,
+                diikuti oleh :
+                <ul>
+                    <li> Nama fungsi </li>
+                    <li> 
+                        daftar parameter (opsional) yang diapit tanda kurung () beberapa 
+                        parameter dipisahkan dengan koma (,)
+                    </li>
+                    <li> 
+                        Blok kode atau pernyataan yang diapit oleh huruf keriting kurung 
+                        kurawal {}
+                    </li>
+                </ul>
+                Berikut singtaksnya
+                <div>
+                    function funtionName(parameter1, parameter2, parameter3) {
+                            <br>
+                        //codes or statements to be executed.
+                    }
+                </div>
+                Parameter bertindak sebagai varibale placeholder didalam fungsi, saat fungsi
+                dipanggil, variabel ditugaskan ke argumen. (nilai) yang disediakan saat fungsi dipanggil.
+                <p id="function"></p>
+                <button onclick="writeText()"> Button </button>
+                <script src="JS-Function.js"></script>
+                    <br><br>
+
+                Pada contoh dibawah ini, tugas fungsi adalah menjumlahkan dua angka lalu mecetak jumlah
+                tersebut.
+                <p id="function1"></p>
+                <button onclick="addNumbers()"> Button </button>
+                <script src="JS-Function.js"></script>
+
+                <h3> Memanggil Fungsi </h3> 
+                fungsi hanya akan dieksekusi ketika dipanggil atau dipanggil, sebuah
+                fungsi dapat dipanggil didalam program javascript, seperti pada contoh
+                sebelumnya.
+                <p id="function2">maaf lag</p>
+                    <br>
+                <button onclick="addNumbers1(2, 5)"> Add </button>
+                <script src="JS-Function.js"></script>
+
+                Sebelum kita melanjutkan, harap diingatkan bahwa fungsi tidak membutuhkan
+                parameter. pada contoh dibawah, satu-satunya tugas fungsi adalh menampilkan
+                dialog kotak.
+                <button onclick="showDialog()"> Show dialog box </button>
+                <script src="JS-Function.js"></script>
+
+                <h3> Pernyataan Kembali </h3> 
+                Pernyataan kembali digunakan dalam suatu fungsi untuk menghentikan eksekusinya dan untuk
+                mengembalikan nilai ke pemanggil fungsi. Misalnya, fungsi addNumbers() dibawah ini
+                mengembalikan jumlah argumennya ke pemanggil fungsi. Kemudian, pemanggil fungsi mencetak
+                nilai yang dikembalikan ke element.
+                <p id="function3"></p>
+                <button onclick="addNumbers2_()"> Add </button>
+                <script src="JS-Function.js"></script>
+                    <br><br>
+
+                Contoh lain :
+                <p id="function5"></p>
+                <button onclick="addNumbers2_1_()"> Add </button>
+                <script src="JS-Function.js"></script>
+                    <br><br>
+
+                Contoh dibawah ini mengembalikan nilai yang dikembalikan ke variable, variabel
+                tersebut kemudian digunakan dalam sebuah pernyataan 
+                <p id="namaaing"></p>
+                <button onclick="getFullName_()">Button </button> 
+                <script src="JS-Function.js"></script>
+
+                <h3> Lingkup Fungsi </h3>
+                variabel yang dideklarasikan didalam suatu fungsi disebut varibel lokal, 
+                variabel lokal hanya dapat digunakan didalam fungsi yang dideklarasikan.
+                Jika variabel lokal digunakan diluat, tipe data nilainya adalah tidak terdefinisi.
+                Perhatikan bahwa tidak ada yang akan dicetak pada element paragraf dengan id demo1,
+                karena variabel nama tidak dapat digunakan diluat fungsi.
+                <p id="function6"> I am the paragraph with "function" id</p>
+                <p id="function6_1"> I am the paragraph with "function6_1" id
+                    nilai saya tidak berubah karena variabel fullName tidak ditentukan ketika digunakan
+                    di luat lingkup fungsi.
+                </p>
+                <button onclick="getAge(16)"> Call Function </button>
+                <script src="JS-Function.js"></script>
+
+
+                <h3> Variabel global </h3>
+                Variabel global dapat digunakan oleh fungsi apa pun, variabel global adalah variabel
+                yang dideklarasikan di luar suatu fungsi, misalnya, variabel buah dibawah ini dideklarasikan
+                diluat fungsi. oleh karena itu dapat digunakan oleh fungsi apapun.
+                <p id="apel"> </p>
+                <button type="button" onclick="apelsaya()"> Call Function </button>
+                <script src="JS-Function.js"></script>
+                    <br>
+                
+                
+                <h3> Mengapa Menggunakan fungsi? </h3>
+                Fungsi dalam javascript sama seperti alat dalam kehidupan nyata, mereka membuat pengkodean.
+                lebih mudah, alih-alih menulis blok kode berulang-ulan gkita bisa saja menggunakan kembali 
+                kode yang sama berkali-kali. fungsi dibawah ini mengubah kilometer menjadi mil.
+                <p id="function8"></p>
+                <button type="button" onclick="Miles()"> Mile </button>
+                <script src="JS-Function.js"></script>
+                
+                <h2> Object </h2>
+                Objek adalah kumpulan data dan atau fungsionalitas terkait, Sebagian besar waktu, membuat objek dimulai dengan
+                mendefinisika varible.
+
+                Seperi yang dilihat, sintaks suatu objek cukup sederhana, objek berisi properti, setiap properti memiliki nama
+                (nis, nama lengkap, usia) dan nilai (mis. "ardi Nurohman", 16). propertidipisahkan dengan koma (,) pasangan Nama
+                dan nilai dipisahkan oleh titik dua (:),
+
+                <h3> Metode dalam Objek </h3>
+                Sebuah objek juga dapat berisi fungsi (metode) 
+
+                <h3> Mengakses Properti Objek </h3>
+                Ada dua cara untuk mengakses anggota objek (properti dan metode).
+
+                <h3> Notasi titik </h3>
+                Notasi titik menggunakan titik (.) untuk mengakses anggota objek, pertama tulis varibel, lalu nama properti atau metode.
+                <p id="objeck"></p>
+                <script src="JS-Object.js"></script>
+
+                <h3> Notasi kurung </h3>
+                Kita juga dapat menggunakan tanda kurung siku untuk mengakses anggota objek
+                <p id="objeck1"></p>
+                <button onclick="propil()"> Button </button>
+                <script src="JS-Object.js"></script>
+                    <br><br>
+                Seperti yang mungkin diperhatikan, tanda kurung berisi nama-nama properti.
+
+                <h3> Kata Kunci ini </h3>
+                Mungkin telah diperhatikan kata kunci this, disalah satu contoh ini mungkin terlihat aneh, tapi jangan khawatir, ini
+                mudah. kata kunci this mengacu pada objek saat ini
+                <button onclick="person4.showDetails()"> Show Details </button>
+                <script src="JS-Object.js"></script>
+                    <br><br>
+                Dalam hal ini, ini setara dengan objek orang.
+                <h3> Sebuah Obyek dalam obyek </h3>
+                Ya, dimungkinkan untuk meletakan objek didalam objek
+                <button onclick="mango()"> Mango </button>
+                <script src="JS-Object.js"></script>
+                    <br><br>
+                Seperti yang mungkin, anda perhatikan, kami mengakses properti warna menggunakan buah-buahan mango color.
+                <hr>
+
+                <h2> Javascript strings </h2>
+                dalam javascript string adalah potongan teks. string adalah kumpulan karakter yang diapit tanda kutip.
+
+                <h3> membuta string </h3>
+                string dapat diapit oleh tanda kutip ganda("")
+                    <br>
+                <button onclick="strings()"> Button </button>
+                <script src="JS-String.js"></script>
+                    <br><br>
+
+                String juga dapat diapit oleh tanda kutip tunggal ('')
+                    <br>
+                <button onclick="strings_()"> Button </button>
+                <script src="JS-Strings.js"></script>
+                    <br><br>
+
+                <h3> Kutipan tunggal atau ganda </h3> 
+                Gunakan tanda kutip tunggal jika anda berisi tanda kutip ganda, gunakan tanda kutip ganda jika string anda berisi kutip tunggal.
+                <p id="kata"></p>
+                <button onclick="strings1()"> button </button>
+                <script src="JS-Strings.js"></script>
+                    <br><br>
+                Jka anda melakukanny seperti contoh dibawah ini, kode anda akan menghasilkan kesalahan karena akan membingungkan browser.
+
+                <h3> Menggambunngkan string </h3>
+                Untuk menggabungkan atau menambahkan string, gunakan operator tambahan (+)
+                <p id="kata1"></p>
+                <button onclick="strings2()"> Button </button>
+                <script src="JS-Strings.js"></script>
+                    <br><br>
+                Kita juga dapat menggabungkan string menggunakan operator penugasan (+=)
+                <p id="kata1_"></p>
+                <button onclick="strings2_()"> Button </button>
+                <script src="JS-Strings.js"></script>
+                    <br><br>
+
+                Anda dapat menambahkan string sebanyak yang anda ingin gunakan.
+                <p id="kata1_1"></p>
+                <button onclick="strings2_1()"> Button </button>
+                <script src="JS-Strings.js"></script>
+
+                <h3> Contoh kontekstual penggabungan </h3>
+                Dalam contoh ini, kita akan membuat program yang menyapa pengguna dengan menggabungkan string. Juga kita akan menggunakan window
+                prompt() untuk menanyakan nama pengguna.
+                    <br>
+                <button onclick="greetings()"> Button </button>
+                <script src="JS-Strings.js"></script>
+                    <br><br>
+
+                Nilai yang dimasukan pada prompt ditetapkan ke variabel namapengguna dan kemudian kami menerapkan penggabungkan untuk membentuk 
+                salam singkat.
+
+                <h3> String buruk </h3>
+                String yang buruk adalah string yang tidak dikelilingi oleh tanda kutip
+                    <br><br>
+                <div> 
+                    var badString1 = I am a text;
+                </div>
+                    <br><br>
+
+                Anda harus mengindari ini, karena akan menghasilkan kesalahan.
+
+                <h3> Karakter yang melarikan diri </h3>
+                Melarikan diri dari karakter sangat penting dalam menangani string, ini membantu kami memastikan bahwa string kami dikenali sebagai
+                potongan teks, bukan sebagai bagian dari kode. Untuk menghindari karakter gunakan garis miring tebalik (\) tepat sebelum karakter.
+                <p id="kata2"></p>
+                <button onclick="strings3()"> Button </button>
+                <script src="JS-Strings.js"></script>
+
+                <h2> Metode String Javascript </h2>
+                sekarang setelah kita mengetahui dasar-dasar string, mari kita naik dan mencoba beberapa operasi berguna yang 
+                dapat kita lakukan dengannya. 
+
+                <h3> String sebagai objek </h3>
+                Hampir sama yang ada dijavascript adalah objek, saat anda membuat string, variabel anda menjadi instance objek string. 
+                Akibarnya banyak properti dan metode yang tersedia untuk itu.
+                
+                <h3> Mendapatkan panjang string </h3>
+                Untuk mendapatkan panjang atau jumlah karakter dalam sebuah string, gunakan properti length.
+                <p id="met"></p>
+                <buton onclick="methods()"> Button </buton>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Contoh diatas akan mencetak 9 karena string 'study' panjangnya 9 karakter. Properti panjang berguna, misalnya anda dapat 
+                menggunakan untuk menghitung berapa banyak karakter yang telah dimasukan pengguna disalah satu bidang text anda.
+
+                <h3> Mengambil karakter </h3>
+                Kita dapat mengambil karakter dari string menggunakan notasi kurung siku, cukup letakan tanda kurung siku {} setelah Nama
+                variabel dan tulis angka didalamnya.
+                <p id="met_"></p>
+                <button onclick="methods_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                
+                Anda mungkin mengira bahwa [3] akan mengembalikan karakter ketika "u" dari string "study". tetapi sebaiknya
+                ia mengembalikan karakter keempat yaitu "d", itu karena javascript dihitung bukan dari 0 bukan dari 1. Jadi
+                0 mewakili karakter pertama 1 mewakili karakter kedua dan seterusnya. Kita juga dapat menggunakan bilangan negatif.
+                <p id="met_1"></p>
+                <button onclick="methods_1()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Perhatikan bahwa -1 mengembalikan karakter terakhir yaitu "y" itu karena jika anda menggunakan angka negatif, itu dihitung
+                dari karakter terakhir dari string.
+
+                <h3> Menemukan substring dalam string </h3>
+                Terkadang berguna untuk memeriksa apakah ada string yang lebih kecil (substring) dalam sebuah string. ini dapat
+                dilakukan dengan menggunakan metode index() {}. Ini mengembalikan indeks kemunculan pertama substring dalam sebuah string.
+                <p id="met_2"></p>
+                <button onclick="methods_2()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Metode lastIndex(){} mengembalikan indeks kemunculan terakhir substring dalam sebuah string.
+                <p id="met_2_"> </p>
+                <button onclick="methods_2_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Baik metode indexOf(){} dan lastIndexOf(){} mengembalikan -1 jika tidak ada kejadian yang ditentukan.
+                <p id="met_3"></p>
+                <button onclick="methods_3()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3>Metode pencarian </h3> 
+                metode search() bekera sama dengan indexOf() metode. Ini mengembalikan indeks kemunculan pertama text dalam sebuah
+                string.
+                <p id="met_4"></p>
+                <button onclick="methods_4()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Satu-satunya perbedaan metode indexOf dan search adalah bahwa metode indexOf tidak dapat menggunakan ekspresi reguler
+                sebagai parameter.
+
+                Metode pencarian peka terhadap huruf besar, untuk mencari teks secara tidak sensitif, gunakan ekspresi sederhana dengan
+                floating\i
+                <p id="met_5"></p>
+                <button onclick="methods_5()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+
+                jangan lupa penghitung dimulai dari 0, oleh karena itu 0 mewakili karakter pertama. Metode search mengembalikan
+                -1 jika teks tidak ditemukan di rangkain.
+                <p id="met_5_"></p>
+                <button onclick="methods_5_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    
+                <h3> Mengekstrak String </h3>
+                Kita dapat mengekstrak substring dari string menggunakan metode berikutnya
+                <ul>
+                    <li> Irisan (mulai, akhir) </li>
+                    <li> substring (awal, akhir) </li>
+                    <li> substri (awal, panjang) </li>
+                </ul>
+                <h3> Metode Irisan </h3>
+                metode slice mengekstrak bagian dari string dan mengembalikannya sebagian string baru. tu tidak mengubah string asli.
+                Dibutuhkan dua parameter numerik indes awal (posisi) indeks akhir.
+                <p id="met_6"></p>
+                <button onclick="methods_6()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+
+                    
+                Metode slice dapat mengambil nilai negatif, nilai negatif mulai dihitung dari akhir string 
+                <p id="met_6_"></p>
+                <button onclick="methods_6_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+
+                <h3> Metode substring </h3> 
+                Metode substring bekerja dengan cara yang sama seperti metode slice.
+                <p id="met_7"></p>
+                <button onclick="methods_7()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Satu-satunya perbedaan antara metode slice dan substring adalah bahwa metode substring tidak dapat mengambil
+                nilai negatif.
+
+                <h3> Metode substr </h3>
+                Metode substr mengekstrak bagian dari string, mulai dari indeks yang ditentukan dan diperpanjang untuk panjang 
+                tertentu sesudahnya. Dibutuhkan dua parameter numerik indeks awal, panjang jumlah karakter yang akan diekstrak.
+                <p id="met_7_"></p>
+                <button onclick="methods_7_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3> Menghilangkan nilai kedua </h3>
+                Jika anda menghilangkan nilai kedua dari slice, substring dan substr mereka akan mengembalikan sisa string.
+                <p id="met_7_1"></p>
+                <button onclick="methods_7_1()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3> Mengganti string didalam string </h3>
+                Metode replace menggantikan teks yang ditentukan didalam string dan mengembalikan string baru. Itu tidak mengubah string asli,
+                dibutuhkan dua prameter string untuk diganti, string pengganti.
+                <p id="met_8"></p>
+                <button onclick="methods_8()"> button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                Perhatikan bahwa hanya kemunculan pertama pertama 'study' yang diubah, untuk mengganti semua string cocok gunakan ekspresi dengan 
+                itu /g bendera.
+                <p id="met_8_"></p>
+                <button onclick="methods_8_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                Sekarang semua kemunculan 'study' digantikan oleh 'everyone'. Catatan! metode penggantian memiliki casing yang sensitif, 
+                untuk mengganti teks secara tidak sensitif, gunakan tanda /i dalam ekpresi reguler.
+                <p id="met_8_1"></p>
+                <button onclick="methods_8_1()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+
+                Seperti yang diperhatikan sekali lagi, itu hanya menggantikan kejadian pertama, untuk mengganti semua secara tidak sensitif,
+                gabungkan tanda /g dalama ekpresi reguler.
+                <p id="met_8_2"></p>
+                <button onclick="methods_8_2()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3> Memangkas Tali </h3> 
+                Pemangkasan berarti menghapus spasi eksta dari kedua ujung string.
+                    <br><br>
+                <button onclick="methods_9()"> button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3> mengubah ke huruf besar dan huruf kecil </h3>
+                Metode toUpperCase mengonversi string menjadi hruf besar itu hanya mengembalikan nilai yang dikonversi dan tidak mengubah string asli.
+                <p id="met_10"></p>
+                <button onclick="methods_10()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+                Metode toLowerCase() mengkonversi string menjadi huruf kecil, itu hanya mengembalikan nilai yang di konversi dan tidak mengubah string asli.
+                <p id="met_10_"></p>
+                <button onclick="methods_10_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+
+                <h3> Metode conact </h3>
+                Metode concat menambahkan argumen string ke fungsi yang memanggil string tanpa mengubah string asli. Dibutuhkan dua rgumen. teks yang akan
+                memisahkan string, string untuk ditambahkan 
+                <p id="met1"></p>
+                <button onclick="methods1()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+                    <br><br>
+
+                Dalam contoh diatas, string dipisahkan oleh spasi "". Anda juga dapat menggunakan karakter lain seperti koma (,)
+                <p id="met1_"></p>
+                <button onclick="methods1_()"> Button </button>
+                <script src="JS-StringsMethods.js"></script>
+            </p>
+        </article>
+    </body>
+</html>

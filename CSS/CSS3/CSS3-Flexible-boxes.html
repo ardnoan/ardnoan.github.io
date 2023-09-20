@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexible Boxes</title>
+        <style type="text/css">
+            br {
+                margin-bottom: 20px;
+            }
+            .container {
+                display: flex;
+                background: blue;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .container1 {
+                display: flex;
+                flex-direction: row;
+                background: blue;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            .container2 {
+                display: flex;
+                flex-direction: row-reverse;
+                background: blue;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+            .container3 {
+                display: flex;
+                flex-direction: column;
+                background: blue;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .container4 {
+                display: flex;
+                flex-direction: column-reverse;
+                background: blue;
+                padding: 10px;
+            }
+            .container5 {
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+            .container6 {
+                display: flex;
+                flex-flow: row-reverse wrap;
+                background: blue;
+                padding: 10px;
+            }
+            .container7 {
+                display: flex;
+                justify-content: flex-start;
+                background: blue;
+                padding: 5px;
+            }
+            .container8 {
+                display: flex;
+                justify-content: flex-end;
+                background: blue;
+                padding: 5px;
+            }
+            .container9 {
+                display: flex;
+                justify-content: center;
+                background: blue;
+                padding: 5px;
+            }
+            .container10 {
+                display: flex;
+                justify-content: space-between;
+                background: blue;
+                padding: 5px;
+            }
+            .container11 {
+                display: flex;
+                justify-content: space-around;
+                background: blue;
+                padding: 5px;
+            }
+            .container12 {
+                display: flex;
+                justify-content: space-evenly;
+                background: blue;
+                padding: 5px;
+            }
+            .container13 {
+                display: flex;
+                align-items: flex-start;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container14 {
+                display: flex;
+                align-items: flex-end;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container15 {
+                display: flex;
+                align-items: center;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container16 {
+                display: flex;
+                align-items: stretch;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container17 {
+                display: flex;
+                align-items: baseline;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container18 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: stretch;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container19 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container20 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-end;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container21 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container22 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+                background: blue;
+                padding: 5px;
+                height: 400px; 
+            }
+            .container23 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container24 {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-evenly;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container25 {
+                display: flex;
+                flex-direction: column;
+                background: blue;
+                padding: 10px;
+            }
+            .container26 {
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+            .container27 {
+                display: flex;
+                width: 500px;
+                background: blue;
+                padding: 10px;
+            }
+            .container28 {
+                display: flex;
+                background: blue;
+                padding: 10px;
+            }
+            .container29 {
+                display: flex;
+                align-items: center;
+                background: blue;
+                padding: 5px;
+                height: 400px;
+            }
+            .container > .div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container1 > div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container2 > div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container3 > div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container4 > div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container5 > div {
+                background: yellow;
+                width: 140px;
+                height: 140px;
+                margin: 5px;
+            }
+            .container6 > div {
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container7 > div {
+                background: yellow;
+                width: 130x;
+                height: 130px;
+                margin: 5px;
+            }
+            .container8 > div {
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container9 > div {
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container10 > div {
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container11 > div {
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container12 > div{
+                background: yellow;
+                width: 130px;
+                height: 130px;
+                margin: 5px;
+            }
+            .container13 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container14 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container15 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container16 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container17 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container18 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container19 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container20 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container21 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container22 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container23 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container24 > div {
+                background: yellow;
+                width: 100px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            .container25 > div {
+                background: yellow;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+            }
+            .container26 > div {
+                background: yellow;
+                height: 100px;
+                margin: 5px;
+            }
+            .container27 > div {
+                flex-basis: 130px;
+                height: 100px;
+                background: yellow;
+                margin: 5px;
+            }
+            .container28 > div {
+                background: yellow;
+                height: 100px;
+                margin: 5px;
+            }
+            .container29 > div {
+                background: yellow;
+                width: 130px;
+                line-height: 80px;
+                text-align: center;
+                margin: 5px;
+            }
+            #nowrap {
+                flex-wrap: nowrap;
+            }
+            #wrap {
+                flex-wrap: wrap;
+            }
+            #wrap-reverse {
+                flex-wrap: wrap-reverse;
+            }
+            #box {
+                flex: 1 100px;
+            }
+            #box1 {
+                flex: 1 100px;
+            }
+            #box2 {
+                flex: 1 100px;
+            }
+            #flex-item {
+                align-self: stretch;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Flex box</h3>
+            <div class="div">1</div>
+            <div class="div">2</div>
+            <div class="div">3</div>
+            <div class="div">4</div>
+            <div class="div">5</div>
+            <a href="" class="div">tess</a>
+            <div class="div">div</div>
+        </div>
+        <div class="container1">
+            <h3>flex-direction: row</h3>
+            <div class="div1">1</div>
+            <div class="div1">2</div>
+            <div class="div1">3</div>
+            <div class="div1">4</div>
+            <div class="div1">5</div>
+        </div>
+        <div class="container2">
+            <h3>flex-direction: row-reverse</h3>
+            <div class="div2">1</div>
+            <div class="div2">2</div>
+            <div class="div2">3</div>
+            <div class="div2">4</div>
+            <div class="div2">5</div>
+        </div>
+        <div class="container3">
+            <h3>flex-direction: column</h3>
+            <p color="white">
+                <b>Flex-direction</b> valid values: <br><br>
+                <ol>
+                    <li>
+                        <b>row</b>: the flew items run along from left to right in <code>ltr</code>; right to left in <code>rtl</code>
+                    </li>
+                    <li>
+                        <b>row-reverse</b>: the flex items run along from right to left in <code>ltr</code>; left to right <code>rtl</code>
+                    </li>
+                    <li>
+                        <b>column</b>: the flex items run along from top to bottom
+                    </li>
+                    <li>
+                        <b>column-reverse</b>: the flex items run along frobottom to top
+                    </li>
+                </ol>
+            </p>
+            <div class="div3">1</div>
+            <div class="div3">2</div>
+            <div class="div3">3</div>
+            <div class="div3">4</div>
+            <div class="div3">5</div>
+        </div>
+        <div class="container4">
+            <h3>flex-direction: column-reverse</h3>
+            <div class="div3">1</div>
+            <div class="div3">2</div>
+            <div class="div3">3</div>
+            <div class="div3">4</div>
+            <div class="div3">5</div>
+        </div>
+        <br>
+        <h3>Flex-wrap: nowrap</h3>
+        <p>default; the flex items are forced to render onto one line</p>
+        <div class="container5" id="nowrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <h3>flex-wrap: wrap</h3>
+        <p>the flex items break into multiple lines when necessary</p>
+        <div class="container5" id="wrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <h3>flex-wrap: wrap-reverse</h3>
+        <p>The flex items break into multiple lines when necessary but in reversed order</p>
+        <div class="container5" id="wrap-reverse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <br>
+        <div class="container6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <br>
+        <h3><b>Justify-content</b> valid values:</h3>
+        <ul>
+            <li><b>flex-start</b>: default; packs flex items from the start</li>
+            <li><b>flex-end</b>: packs flex items from the end</li>
+            <li><b>center</b>: packs flex items around the center</li>
+            <li><b>space-between</b>: distributes flex items evenly with the first item is on the start line and the last in the end line</li>
+            <li><b>space-around</b>: distributes flex iems evenly with equal space around them</li>
+            <li><b>space-evenly</b>: distributes flex items and makes spacing between any two items equal</li>
+        </ul>
+        <div class="container7">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <div class="container8">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <div class="container9">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <div class="container10">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <div class="container11">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <div class="container12">
+            <div style="width: 20%">1</div>
+            <div style="width: 30%">2</div>
+            <div style="width: 20%">3</div>
+        </div>
+        <br>
+        <h3><b>Align-items</b> valid values:</h3>
+        <ul>
+            <li><b>flex-start</b>: aligns flex items to the start of the cross axis</li>
+            <li><b>flex-end</b>: aligns flex items to the end of the cross axis</li>
+            <li><b>center</b>: aligns text items to the center (or middle) of the cross axis</li>
+            <li><b>strecth</b>: default; streatches flex items to fill the container</li>
+            <li><b>baseline</b>: aligns items such as their baseline are aligned</li>
+        </ul>
+        <p>To better demonstrate this, we have to increase the height of the flex container.</p>
+        <div class="container13">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div><br>
+        <div class="container14">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div><br>
+        <div class="container15">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div><br>
+        <div class="container16">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div><br>
+        <div class="container17">
+            <div style="font-size: 20px;">1</div>
+            <div style="font-size: 40px;">2</div>
+            <div style="font-size: 60px;">3</div>
+        </div>
+        <br>
+        <h3>align-content vakud values:</h3>
+        <ul>
+            <li><b>strecth</b>: flex items are stretched to take the remaining space</li>
+            <li><b>flex-start</b>: packs items to the start of the flex container's cross start</li>
+            <li><b>flex-end</b>: packs itmes to the start of the flex container's cross end </li>
+            <li><b>center</b>: packs items to the center toward the center of the alignment of the cross axis</li>
+            <li><b>space-between</b>
+                distributes flex items evenly within the alignment of the cross axis; the space between adjacent (any two)
+                items is wqual; the first line is at the start of the cross axis and he last is at the end
+            </li>
+            <li><b>space-around</b>: distributes flex items evenly within the alignment of the cross axis with equal space around each line.</li>
+        </ul>
+        <p>
+            Since the <b>align-content</b> property does not work when there is only one line of flex items,
+            we need to set the <b>flex-wrap: wrap</b> CSS declaration wrap the flex items onto multiple lines.
+        </p>
+        <div class="container18">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container19">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container20">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container21">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container22">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container23">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <div class="container24">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div><br>
+        <br>
+
+        <h3>flex items order</h3>
+        <div class="container25">
+            <div style="order: 3">1</div>
+            <div style="order: 4">2</div>
+            <div style="order: 2">3</div>
+            <div style="order: 1">4</div>
+        </div><br>
+        <br>
+
+        <h3>flex grow</h3>
+        <div class="container26">
+            <div style="flex-grow: 1">1</div>
+            <div style="flex-grow: 2">2</div>
+            <div style="flex-grow: 1">3</div>
+        </div><br>
+        <br>
+
+        <h3>flex-shrink</h3>
+        <div class="container27">
+            <div style="flex-shrink: 1">1</div>
+            <div style="flex-shrink: 1">2</div>
+            <div style="flex-shrink: 2">3</div>
+            <div style="flex-shrink: 2">4</div>
+            <div style="flex-shrink: 1">5</div>
+        </div><br>
+        <br>
+
+        <h3>box</h3>
+        <div class="container28">
+            <div id="box">1</div>
+            <div id="box1">2</div>
+            <div id="box2">3</div>
+        </div><br>
+        <br>
+
+        <h3>align-self</h3>
+        <p><b>align-content</b> valid values:</p>
+        <ul>
+            <li><b>flex-start</b>: aligns a flex tem to the start of the cross axis</li>
+            <li><b>flex-end</b>: aligns a flex item to the end of the cross axis</li>
+            <li><b>center</b>: aligns a flex item to the center (or middle) of the cross axis</li>
+            <li><b>stretch</b>: default; stretches a felx item to fill the container</li>
+            <li><b>baseline</b>: aligns a flex item such as its baseline are aligned with other baselines</li>
+        </ul>
+        <p>To better demonstrate this, we have to increase the height of the flex container.</p>
+        <div class="container29">
+            <div>3</div>
+            <div>2</div>
+            <div id="flex-item">1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>

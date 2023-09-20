@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Timeout and Interval </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Timeour and Interval </h1>
+            <h2> Javascript Timeout </h2>
+            <button onclick="btn()"> Button </button>
+            <script>
+                function btn() {
+                    var Timeout = setTimeout(function() {
+                        alert("Assalamualaikum Brother");
+                    }, 3000);
+                }
+            </script>
+            <button onclick="btn1()"> Jangan tekan </button>
+            <script>
+                function btn1() {
+                    var myTimeout = setTimeout(btn1, 3000);
+                    alert("Punten, bade meser emih");
+                }
+            </script>
+
+            <h2> Canceling a Timeout </h2> 
+            <p id="msg"> tekan button sebelum 3 detik kalo tidak ditekan akan muncul dialog </p>
+            <button onclick="cancelTimeout()"> Cancel Timeout </button>
+            <script>
+                var myTimeout = setTimeout(function() {
+                    alert("Halo bang");
+                }, 3000);
+                
+                function cancelTimeout() {
+                    clearTimeout(myTimeout);
+                    document.getElementById("msg").innerHTML = "<b>Timeout</b> berhasil di batalkan";
+                }
+            </script>
+
+            <h2> Javascript Interval </h2>
+            <p id="demo">1</p>
+            <script>
+                var x = 1;
+
+                var myInterval = setInterval(function() {
+                    x += 1;
+                    document.getElementById("demo").innerHTML = x;
+                }, 1000);
+            </script>
+
+            <h2> Stopping an Interval </h2> 
+            <p id="demo_1">1</p>
+            <button onclick="stopInterval()"> Button stop </button>
+            <script>
+                var ardi = 0;
+                var Interval = setInterval(function() {
+                    //adds 1 to x
+                    x += 1;
+                    document.getElementById("demo_1").innerHTML = x;
+                }, 100);
+
+                function stopInterval() {
+                    clearInterval(Interval);
+                    clearInterval(myInterval);
+                }
+            </script>
+        </div>
+    </body>
+</html>

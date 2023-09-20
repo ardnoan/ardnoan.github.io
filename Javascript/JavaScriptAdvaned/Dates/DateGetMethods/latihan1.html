@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Date Get Methods </title>
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: navy;
+                color: white;
+                margin: 20px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px 0 black;
+            }
+            div > h1 {
+                font-size: 300%;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > tbody > tr > td {
+                border-bottom: 1px solid silver;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Date Get Methods </h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Method </th>
+                        <th> Description </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Date.now() </td>
+                        <td> REturns the number of milliseconds elapsed since January 1, 1970 </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getFullYear() </td>
+                        <td> REturns the year of the speecified date </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getMonth() </td>
+                        <td> Returns the monsth index (0-11) of the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getDate() </td>
+                        <td> Returns the day of the month for the specified date </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getDay() </td>
+                        <td> Returns the day index of the week for the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getHours() </td>
+                        <td> Returns the hour of the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getMinutes() </td>
+                        <td> Returns the minutes in the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getSeconds() </td>
+                        <td> Returns the seconds in the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getMilliseconds() </td>
+                        <td> Returns the milliseconds in the specified date. </td>
+                    </tr>
+                    <tr>
+                        <td> Date.getTime(givenData) </td> 
+                        <td> Returns the time elapsed between January 1, 1970 and the givenData </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2> Date.now Method </h2>
+            <p> The number of milliseconds passed since January 1, 1970 is <span id="demo_1"></span></p>
+            <script>
+                var now = Date.now();
+                document.getElementById("demo_1").innerHTML = now;
+            </script>
+
+            <h2> Date.getFullYear() Method </h2>
+            <p> The year is <span id="demo_2"></span></p>
+            <script>
+                var date = new Date();
+                var year = date.getFullYear();
+                document.getElementById("demo_2").innerHTML = year;
+            </script>
+
+            <h2> Date.getMonth() Method </h2>
+            <p> The months is <span id="demo_2_1"></span></p>
+            <script>
+                var date1 = new Date();
+                var month = date1.getMonth();
+                document.getElementById("demo_2_1").innerHTML = month;
+            </script>
+
+            <h2> Date.getDate() Method </h2>
+            <p> The day of the month is <span id="demo_3"></span></p>
+            <script>
+                var date2 = new Date();
+                var day = date2.getDate();
+                document.getElementById("demo_3").innerHTML = day;
+            </script>
+
+            <h2> Date.getDay() Method </h2>
+            <p> The day of the week is <span id="demo_4"></span></p>
+            <script>
+                var date3 = new Date();
+                var day1 = date3.getDay();
+                document.getElementById("demo_4").innerHTML = day1;
+            </script>
+
+            <h2> Date.getHours() Method </h2>
+            <p> The current hour is <span id="demo_5"></span></p>
+            <script>
+                var date4 = new Date();
+                var hour = date4.getHours();
+                document.getElementById("demo_5").innerHTML = hour;
+            </script>
+
+            <h2> Date.getMinutes() Method </h2>
+            <p> The minutes in the specified date is <span id="demo_6"></span></p>
+            <script>
+                var date5 = new Date();
+                var minutes = date5.getMinutes();
+                document.getElementById("demo_6").innerHTML = minutes;
+            </script>
+
+            <h2> Date.getSeconds() Method </h2>
+            <p> The seconds in the specified date is <span id="demo_7"></span></p>
+            <script>
+                var date6 = new Date();
+                var seconds = date6.getSeconds();
+                document.getElementById("demo_7").innerHTML = seconds;
+            </script>
+
+            <h2> Date.getMilliseconds() Method </h2>
+            <p> The milliseconds in the specified date is <span id="demo_8"></span></p>
+            <script>
+                var date7 = new Date();
+                var milliseconds = date7.getMilliseconds();
+                document.getElementById("demo_8").innerHTML = milliseconds;
+            </script>
+            
+            <h2> Date.getTime(givenData) Method </h2>
+            <p id="demo_9"> The milliseconds elapsed between <b>january 1, 1970</b> and <b>June 4, 2000</b> is <span id="demo_9"></span></p>
+            <script>
+                var date8 = new Date();
+                var milliseconds1 = date8.getTime(date);
+                document.getElementById("demo_9").innerHTML = milliseconds1;
+            </script>
+        </div>
+    </body>
+</html>

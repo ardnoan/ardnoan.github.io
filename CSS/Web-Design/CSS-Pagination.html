@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagination</title>
+        <style type="text/css">
+            hr {
+                color: red;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .pagination-center {
+                text-align: center;
+            }
+            .pagination {
+                display: inline-block; /* makes the ul an inline element but with controllable width and height */
+                margin: 0;
+                padding: 0;
+            }
+            .pagination1 {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                border: 1px solid #0076ff;
+            }
+            .pagination li {
+                display: inline; /* makes the li inline elements */
+            }
+            .pagination1 li {
+                display: inline; 
+            }
+            .pagination a {
+                color: black;
+                text-decoration: none;
+                padding: 7px 14px;
+                float: left; /* floats the a elemnts to the left of each other */
+            }
+            .pagination1 a {
+                color: black;
+                text-decoration: none;
+                padding: 7px 14px;
+                float: left; /* floats the anchor elements to the left of other */
+                border-right: 1px solid #0076ff;
+            }
+            .pagination-color a:hover {
+                background: #0076ff;
+                color: #f8f9f9;
+            }
+            .transition {
+                transition-duration: 0.5; /* sets the duration of the effect */
+            }
+            .active {
+                color: white !important;
+                background: #0076ff;
+            }
+
+            .pag-med {
+                font-size: 20px;
+            }
+            .pag-us {
+                border-radius: 5px;
+            }
+            .pagination1 li:last-child > a { /*selects the last link */
+                border: none; /* removes borders of the last link */
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="pagination">
+            <li><a href="#">[</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">]</a></li>
+        </ul>
+        <hr>
+        <div class="pagination-center">
+            <ul class="pagination">
+                <li><a href="#">[</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="pagination-center">
+            <ul class="pagination1">
+                <li><a href="#">[</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="pagination-center">
+            <p>Tap the links so see the mouse over (hover) effects.</p>
+            <ul class="pagination1 pagination-color transition">
+                <li><a href="#">[</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="pagination-center">
+            <p>Tap the links so see the mouse over (hover) effects.</p>
+            <ul class="pagination1 pagination-color transition">
+                <li><a href="#">[</a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="pagination-center">
+            <p>Tap the links so see the mouse over (hover) effects.</p>
+            <ul class="pagination1 pagination-color transition pag-med">
+                <li><a href="#">[</a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <div class="pagination-center">
+            <p>Tap the links so see the mouse over (hover) effects.</p>
+            <ul class="pagination1 pagination-color transition pag-us">
+                <li><a href="#">[</a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">]</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

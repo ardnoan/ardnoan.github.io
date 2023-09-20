@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 form inputs </title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <div>
+            <h1> Javascript Form inputs </h1>
+            <h2>How to Get an Input's Value </h2> 
+            <form>
+                <input type="text" name="firstName" id="firstName">
+                <button type="button" onclick="getValue()"> Get Value </button>
+            </form>
+            <script>
+                function getValue() {
+                    var val = document.getElementById("firstName").value;
+                    alert("The value is " + val);
+                }
+            </script>
+            <hr>
+
+            <form>
+                <input type="text" name="firstName1">
+                <button onclick="getValue1()"> Get Value </button>
+            </form>
+            <script>
+                function getValue1() {
+                    var lue = document.getElementsByName("firstName1")[0].value;
+                    alert("The value is " + lue);
+                }
+            </script>
+
+            <h2> Validasi Empty TExt Input </h2>
+            <form action="#" onsubmit="return validateForm()"> 
+                <label> First name: <input type="text" name="firstName2"></label>
+                <input type="submit">
+            </form>
+            <p> This demo requires <b>internet connection</b></p>
+            <script>
+                function validateForm() {
+                    var firstName2 = document.getElementsByName("firstName2")[0].value;
+                    if(firstName2 == "") {
+                        alert("Please enter a value on the text field!");
+                        return false;
+                    }
+                }
+            </script>
+
+            <h2> Limit Number of Characters </h2>
+            <p> Try to input a text with more than 10 characters to see how it works. </p>
+            <form action="#" onsubmit="return validate()">
+                <label> Username: <input type="text" name="userName"></label>
+                <input type="submit">
+            </form>
+            <p> This demo requires <b>internet connection</b></p>
+            <script>
+                function validate() {
+                    var userName = document.getElementsByName("userName")[0].value;
+                    var length = userName.length;
+                    if(length > 10) {
+                        alert("You cannot input more than 10 character and jangan ribet namanya nanti kalau ada apa apa susah!");
+                        return false;
+                    }
+                }
+            </script>
+
+            <h2> Validasi Numbers </h2>
+            <p> Try to input a number below 18 to see how it works </p>
+            <form action="#" onsubmit="return validate1()">
+                <label> Age: <input type="number" name="age"></label>
+                <input type="submit">
+            </form>
+            <p> This demo requires <b>internet connection</b></p>
+            <script>
+                function validate1() {
+                    var age = document.getElementsByName("age")[0].value;
+                    if(age < 18) {
+                        alert("The age of the user is less than 18, form will not be submitted.");
+                        return false;
+                    }
+                }
+            </script>
+
+            <h2> Using HTML5 Attributes </h2>
+            <p> Try to submit the form without inputting a text to see how it works. </p>
+            <form action="#">
+                <label> First name: <input type="text" name="firstName" required></label>
+                <input type="submit">
+            </form>
+            <p> This demo requires <b>internet connection </b></p>
+            <br><br><br><br>
+
+            <p> Try to input a number that's outside the range of <b>18-65</b> to see how it works. </p>
+            <form action="#">
+                <label> Age: <input type="number" name="age" min="18" max="65" required></label>
+                <input type="submit">
+            </form>
+            <p> This demo requires <b>internet connection</b>.</p>
+        </div>
+    </body>
+</html>

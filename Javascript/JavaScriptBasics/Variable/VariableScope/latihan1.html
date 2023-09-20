@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Latihan 1 Variable Scope </title> 
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                background: rgb(225, 225, 225);
+                border: 1px solid black;
+                border-radius: 2px;
+                box-shadow: 1px 2px 1px 2px;
+                color: rgb(70, 70, 70);
+                margin: 10px;
+                padding: 10px;
+            }
+            div > h1 {
+                text-align: center;
+                color: navy;
+            }
+            button {
+                margin: 5px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table > thead > tr > th {
+                border-bottom: 2px solid black;
+            }
+            table > thead, tbody {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Javascript Variable Scope </h1>
+        <h2> Global Variable </h2>
+        <button onclick="glo()"> Show Favorite Fruit </button>
+        <p id="demo"></p>
+        <script>
+            var fruit = "mango";
+            // fruit can be used here 
+
+            function glo() {
+                // fruit can be used here
+                alert(fruit);
+            }
+        </script>
+        <button onclick="glo_1()"> Show </button>
+        <script>
+            glo_1(); // call the function first
+
+            // fruit can be used here 
+            document.getElementById("demo").innerHTML = "I love " + fruit1;
+
+            function glo_1() {
+                fruit1 = "Mangoes";
+                alert(fruit1);
+                // fruit can be used here
+            }
+        </script>
+
+        <h2> Local Variable </h2>
+        <button onclick="lokal()"> Show </button>
+        <p id="demo_1"> My id is <b>demo</b>. The <b>fruit</b> variable will not be printed here. </p>
+        <script>
+            //fruit can NOT be used here 
+            document.getElementById("demo_1").innerHTML = fruit2;
+
+            function lokal() {
+                var fruit2 = "banana";
+                alert(fruit2);
+                //fruit can be used here
+            }
+        </script>
+
+        <h2> Javascript Functions </h2>
+        <button onclick="variable1()"> Call </button>
+        <p id="demo_2"></p>
+        <script>
+            function variable() {
+                document.getElementById("demo_2").innerHTML = "Halo";
+            }
+
+            // variable() can be used here
+
+            function variable1() {
+                // variable() can be used here
+                variable();
+                document.getElementById("demo_2").innerHTML = "Sayang";
+            }
+        </script>
+
+        <button onclick="variable2()"> Call </button>
+        <p id="demo_3"></p>
+        <script>
+            // getSum() can NOT be used here
+
+            function variable2() {
+                function getSum(x, y) {
+                    return x + y;
+                }
+                // getSum() can be used here
+                document.getElementById("demo_3").innerHTML = "The sum of 5 and 3 is " + getSum(5, 3);
+            }
+        </script>
+    </body>
+</html>
