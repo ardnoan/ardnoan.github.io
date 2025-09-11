@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
         header.style.background = 'linear-gradient(135deg, rgba(97, 97, 97, 0.95), rgba(80, 227, 194, 0.95))';
     } else {
         header.style.background = 'linear-gradient(135deg, rgba(97, 97, 97, 0.95), rgba(80, 227, 194, 0.85))';
-        
+
     }
 });
 
@@ -298,21 +298,43 @@ style.textContent = `
 document.head.appendChild(style);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const fullscreenBtn = document.getElementById("fullscreen-btn");
+    const fullscreenBtn = document.getElementById("fullscreen-btn");
 
-  fullscreenBtn.addEventListener("click", () => {
-    if (!document.fullscreenElement) {
-      // Masuk fullscreen
-      document.documentElement.requestFullscreen().catch(err => {
-        alert(`Error: ${err.message}`);
-      });
-      fullscreenBtn.classList.remove("fa-expand");
-      fullscreenBtn.classList.add("fa-compress");
-    } else {
-      // Keluar fullscreen
-      document.exitFullscreen();
-      fullscreenBtn.classList.remove("fa-compress");
-      fullscreenBtn.classList.add("fa-expand");
+    fullscreenBtn.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            // Masuk fullscreen
+            document.documentElement.requestFullscreen().catch(err => {
+                alert(`Error: ${err.message}`);
+            });
+            fullscreenBtn.classList.remove("fa-expand");
+            fullscreenBtn.classList.add("fa-compress");
+        } else {
+            // Keluar fullscreen
+            document.exitFullscreen();
+            fullscreenBtn.classList.remove("fa-compress");
+            fullscreenBtn.classList.add("fa-expand");
+        }
+    });
+});
+
+// Ambil elemen
+const pdfModal = document.getElementById('pdfModal');
+const openPdfBtn = document.getElementById('openPdfBtn');
+const closeBtn = document.querySelector('.close-btn');
+
+// Buka modal saat tombol diklik
+openPdfBtn.addEventListener('click', () => {
+    pdfModal.style.display = 'block';
+});
+
+// Tutup modal saat tombol close diklik
+closeBtn.addEventListener('click', () => {
+    pdfModal.style.display = 'none';
+});
+
+// Tutup modal saat klik di luar konten
+window.addEventListener('click', (e) => {
+    if (e.target == pdfModal) {
+        pdfModal.style.display = 'none';
     }
-  });
 });
